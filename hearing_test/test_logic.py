@@ -66,8 +66,8 @@ class HearingTest(ABC):
         ...
 
 
-class DigitInNoise(HearingTest):
-    """Class to govern the logic of the digit-in-noise test."""
+class SpeechInNoise(HearingTest):
+    """Class to govern the logic of the speech-in-noise test."""
 
     def __init__(
         self,
@@ -77,7 +77,7 @@ class DigitInNoise(HearingTest):
         reversal_limit: int,
         minimum_threshold: int,
     ):
-        """Initialize the DigitInNoise class.
+        """Initialize the SpeechInNoise class.
 
         Args:
             correct_threshold (int): how many correct answers before decreasing the SNR

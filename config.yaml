@@ -1,23 +1,22 @@
 test:
-  hearing-test: digit-in-noise
   start_snr: 5
   correct_threshold: 2
   minimum_threshold: -40
   incorrect_threshold: 1
   step_size: [5, 3, 1]
   reversal_limit: 10
-  stimuli_type: digits
   record_save_dir: "records"
-  noise:
-    type: babble #[white, babble]
-    src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/audio_processing/noise/babble.wav"
-  Prepend_wav_file: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/DIN/The_Digits_Are.wav"
-  prepend_str_len: 3
+  hearing-test:
+    DIN:
+      noise:
+        type: babble #[white, babble]
+        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/audio_processing/noise/babble.wav"
+      Prepend_wav_file: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/DIN/The_Digits_Are.wav"
+      prepend_str_len: 3
+      stimuli-recordings: "media/digit_recordings/22k"
 
 response_capturing: cli #[cli, asr]
-stimuli_vocalizer:
-  name: tts #[tts, recorded]
-  src: "media/digit_recordings/22k"
+stimuli_vocalizer: tts #[tts, recorded]
 
 ml:
   asr_type: SpeechBrain #[SpeechBrain, SimpleASR]

@@ -13,11 +13,9 @@ from get_response.asr import ASR, SimpleASR, SpeechBrainASR
 from get_response.base import CaptureResponse
 from get_response.cli import CLI
 from get_response.recorder import Recorder
-from hearing_test.test_logic import DigitInNoise
-from stimuli_generator.questions import DigitQuestions
+from hearing_test.test_logic import SpeechInNoise
+from hearing_test.test_types import DIN
 from vocalizer.vocalizer import TTS, Recorded, Vocalizer
-from nltk.stem import WordNetLemmatizer
-import nltk
 
 
 class TestManager(ABC):
@@ -30,15 +28,14 @@ class TestManager(ABC):
             configs (dict): Path to the configuration file.
         """
         self.conf = configs
-        self.hearing_test = DigitInNoise(
+        self.hearing_test = SpeechInNoise(
             correct_threshold=self.conf["test"]["correct_threshold"],
             incorrect_threshold=self.conf["test"]["incorrect_threshold"],
             step_size=self.conf["test"]["step_size"],
             reversal_limit=self.conf["test"]["reversal_limit"],
             minimum_threshold=self.conf["test"]["minimum_threshold"],
         )
-
-        self.stimuli_generator = DigitQuestions()
+        self.test_type = self._get_test_type()
 
         self.response_capturer = self._capture_method()
 
@@ -50,34 +47,24 @@ class TestManager(ABC):
             save_dir=configs["test"]["record_save_dir"],
         )
 
-        self.noise = self._get_noise()
+        self.noise = self.test_type.get_noise(self.conf)
 
         self.sound_generator = self._get_sound_generator()
 
         self.start_snr = self.conf["test"]["start_snr"]
 
+    def _get_test_type(self):
+        ##todo: add more test types (FAAF, ASL, CHAT), add from config file
+
+        return DIN()
+
     def _get_sound_generator(self) -> Vocalizer:
-        if self.conf["stimuli_vocalizer"]["name"] == "recorded":
-            return Recorded(Path(self.conf["stimuli_vocalizer"]["src"]))
-        elif self.conf["stimuli_vocalizer"]["name"] == "tts":
+        if self.conf["stimuli_vocalizer"] == "recorded":
+            return Recorded(Path(self.test_type.get_recording(self.conf)))
+        elif self.conf["stimuli_vocalizer"] == "tts":
             return TTS(device="cpu")
         else:
             raise NotImplementedError
-
-    def _get_noise(self):
-        """Get the proper noise generator based on config file.
-
-        Raises:
-            NotImplementedError: If the noise type is not implemented.
-
-        Returns:
-            Noise: The noise generator.
-        """
-        if self.conf["test"]["noise"]["type"] == "white":
-            return WhiteNoise()
-        elif self.conf["test"]["noise"]["type"] == "babble":
-            return Babble(noise_src=self.conf["test"]["noise"]["src"])
-        raise NotImplementedError
 
     @abstractmethod
     def get_response(self) -> list[str]:
@@ -108,18 +95,6 @@ class CliTestManager(TestManager):
             configs (dict): Loaded configuration.
         """
         super().__init__(configs)
-        self.digit_convertor = {
-            "0": "zero",
-            "1": "one",
-            "2": "two",
-            "3": "three",
-            "4": "four",
-            "5": "five",
-            "6": "six",
-            "7": "seven",
-            "8": "eight",
-            "9": "nine",
-        }
 
     def _capture_method(self) -> CaptureResponse:
         """Return the object that get response from terminal.
@@ -135,14 +110,11 @@ class CliTestManager(TestManager):
         Returns:
             list[str]: List of words in the participant's response.
         """
+        # todo: Change message to something generic
         print(Fore.GREEN + "Enter the number you heard")
         logger.debug("Enter the number you heard")
 
-        listed_response = [
-            self.digit_convertor[i]
-            for i in self.response_capturer.get()
-            if i in self.digit_convertor
-        ]
+        listed_response = self.test_type.cli_post_process(self.response_capturer.get())
         logger.debug(listed_response)
         return listed_response
 
@@ -157,14 +129,14 @@ class ASRTestManager(TestManager):
             configs (dict): Loaded configuration.
         """
         super().__init__(configs)
-        self._prepend = AudioSegment.from_wav(configs["test"]["Prepend_wav_file"])
-        self._prepend_len = configs["test"]["prepend_str_len"]
-        self._lemmatizer = self._get_lemmatizer()
+        self.get_prepend_data(configs)
 
-    def _get_lemmatizer(self):
-        nltk.download("wordnet")
-        lemmatizer = WordNetLemmatizer()
-        return lemmatizer
+    def get_prepend_data(self, configs):
+        src, length = self.test_type.get_prepend_wav_file(configs)
+        if length > 0:
+            # todo: check these two, delete if not used
+            self._prepend = AudioSegment.from_wav(src)
+            self._prepend_len = length
 
     def _capture_method(self) -> CaptureResponse:
         return self.get_asr()
@@ -187,88 +159,6 @@ class ASRTestManager(TestManager):
             return SimpleASR()
         raise NotImplementedError
 
-    def _post_process(self, responses: list[str]) -> list[str]:
-        """Post process the transcribe and remove common mistakes.
-
-        Args:
-            responses (list[str]): List of words in the participant's response.
-
-        Returns:
-            list[str]: List of words in the participant's response after changing the common mistakes.
-        """
-        common_mistakes = {
-            "ate": "eight",
-            "for": "four",
-            "too": "two",
-            "through": "two",
-            "to": "two",
-            "tree": "three",
-            "sixth": "six",
-            "seventy": "seven",
-            "fifth": "five",
-            "fourth": "four",
-            "fly": "five",
-            "tool": "two",
-            "tune": "two",
-            "tape": "eight",
-            "won": "one",
-            "tape": "eight",
-            "won": "one",
-            "fire": "five",
-            "i": "one",
-            "it": "eight",
-            "seventh": "seven",
-            "eighth": "eight",
-            "ninth": "nine",
-            "third": "three",
-            "bore": "four",
-            "bride": "five",
-            "bribe": "five",
-            "or": "four",
-            "ford": "four",
-            "aid": "eight",
-            "o": "zero",
-            "oh": "zero",
-            "sex": "six",
-            "age": "eight",
-            "due": "two",
-            "du": "two",
-            "wait": "eight",
-            "want": "one",
-            "fay": "five",
-            "fhi": "five",
-            "run": "one",
-            "sikh": "six",
-            "seek": "six",
-            "sick": "six",
-            "sik": "six",
-            "age": "eight",
-            "fore": "four",
-            "full": "four",
-            "free": "three",
-            "wom": "one",
-            "h": "eight",
-            "chu": "two",
-            "fife": "five",
-            "a": "eight",
-            "set": "six",
-            "ward": "one",
-            "hit": "eight",
-            "hate": "eight",
-            "height": "eight",
-            "ave": "eight",
-            "true": "two",
-            "fort": "four",
-            "do": "two",
-        }
-
-        lemmatized_response = [self._lemmatizer.lemmatize(x) for x in responses]
-        clean_response = [
-            common_mistakes[x] if x in common_mistakes else x
-            for x in lemmatized_response
-        ]
-        return clean_response
-
     def get_response(self) -> list[str]:
         """Get the response from the participant.
 
@@ -277,13 +167,14 @@ class ASRTestManager(TestManager):
         """
         logger.debug("Repeat the number you heard")
 
+        # todo: Change message to something generic
         print(Fore.GREEN + "Repeat the numbers you heard")
 
         file_src = self.recorder.listen()
 
         transcribe = self.response_capturer.get(src=file_src).lower()
         logger.debug(transcribe)
-        results = self._post_process(transcribe.split(" "))
+        results = self.test_type.asr_post_process(transcribe)
         logger.debug(results)
         try:
             os.remove(file_src.split("/")[-1])

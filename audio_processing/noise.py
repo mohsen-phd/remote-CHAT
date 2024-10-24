@@ -71,7 +71,7 @@ class WhiteNoise(Noise):
 
 
 class Babble(Noise):
-    """A class for generating babble noise from w wave file."""
+    """A class for generating babble noise from a wave file."""
 
     def __init__(self, noise_src: str) -> None:
         """Initialize the class and load the noise file.

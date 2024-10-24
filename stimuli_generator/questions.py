@@ -51,6 +51,7 @@ class DigitQuestions(Questions):
             "eight",
             "nine",
         ]
+
         super().__init__()
 
     def get_stimuli(self) -> str:

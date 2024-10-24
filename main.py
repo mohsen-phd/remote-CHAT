@@ -64,14 +64,14 @@ def main():
     while not manager.hearing_test.stop_condition():
         print(Fore.RED + "Press Enter to play the next digits")
         input()
-        question = manager.stimuli_generator.get_stimuli()
+        question = manager.test_type.stimuli_generator.get_stimuli()
         print(Fore.YELLOW + "Listen to the numbers")
         logger.debug(f"{iteration} :The stimuli is: {question}")
         play_stimuli(manager.sound_generator, snr_db, question, manager.noise)
 
         transcribe = manager.get_response()
 
-        matched = manager.stimuli_generator.check_answer(transcribe)
+        matched = manager.test_type.stimuli_generator.check_answer(transcribe)
         logger.debug(f"Matched: {matched}")
 
         if matched:

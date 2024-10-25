@@ -214,20 +214,6 @@ class DIN(TestTypes):
             )
         raise NotImplementedError
 
-    def get_prepend_wav_file(self, configs: dict) -> tuple[str, int]:
-        """Get the prepend wav file and its length. This is appended to the start of participant's response.
-
-        Args:
-            configs (dict): Configuration dictionary containing test settings.
-
-        Returns:
-            tuple[str, int]: The wav file source and the length of the prepend string in number of words.
-        """
-        # todo: check this function, delete if not needed.
-        wav_src = configs["test"]["hearing-test"]["DIN"]["Prepend_wav_file"]
-        sentence_word_len = configs["test"]["hearing-test"]["DIN"]["prepend_str_len"]
-        return wav_src, sentence_word_len
-
 
 class FAAF(TestTypes):
     """Implementing the FAAF test."""

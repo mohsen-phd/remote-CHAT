@@ -11,8 +11,6 @@ test:
       noise:
         type: babble #[white, babble]
         src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/audio_processing/noise/babble.wav"
-      Prepend_wav_file: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/DIN/The_Digits_Are.wav"
-      prepend_str_len: 3
       stimuli-recordings: "media/digit_recordings/22k"
 
 response_capturing: cli #[cli, asr]

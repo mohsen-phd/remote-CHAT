@@ -129,14 +129,6 @@ class ASRTestManager(TestManager):
             configs (dict): Loaded configuration.
         """
         super().__init__(configs)
-        self.get_prepend_data(configs)
-
-    def get_prepend_data(self, configs):
-        src, length = self.test_type.get_prepend_wav_file(configs)
-        if length > 0:
-            # todo: check these two, delete if not used
-            self._prepend = AudioSegment.from_wav(src)
-            self._prepend_len = length
 
     def _capture_method(self) -> CaptureResponse:
         return self.get_asr()

@@ -6,7 +6,11 @@ from abc import ABC, abstractmethod
 import numpy as np
 from scipy.io import wavfile
 
-from audio_processing.util import convert_to_specific_rms, rms_amplitude
+from audio_processing.util import (
+    calculate_db_spl,
+    convert_to_specific_db_spl,
+    rms_amplitude,
+)
 
 
 class Noise(ABC):
@@ -67,7 +71,7 @@ class WhiteNoise(Noise):
 
 
 class Babble(Noise):
-    """A class for generating babble noise from w wave file."""
+    """A class for generating babble noise from a wave file."""
 
     def __init__(self, noise_src: str) -> None:
         """Initialize the class and load the noise file.
@@ -91,9 +95,9 @@ class Babble(Noise):
         Returns:
             np.ndarray: numpy array containing the noise signal.
         """
-        noise_amplitude = self._get_noise_amplitude(signal, desired_snr_db)
-
-        scaled_noise = convert_to_specific_rms(self._noise, noise_amplitude)
+        signal_db = 65
+        noise_db = signal_db - desired_snr_db
+        scaled_noise = convert_to_specific_db_spl(self._noise, noise_db)
         signal_len = len(signal)
         noise_start_point = random.randint(0, len(scaled_noise) - signal_len)
         return scaled_noise[noise_start_point : noise_start_point + signal_len]

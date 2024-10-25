@@ -1,4 +1,5 @@
 """Convert text to speech."""
+
 from abc import ABC, abstractmethod
 from pathlib import Path
 
@@ -67,7 +68,10 @@ class Recorded(Vocalizer):
 
 
 class TTS(Vocalizer):
-    """Class for generating waveform from string."""
+    """Class for generating waveform from string.
+
+    From Hugging Face repo: https://huggingface.co/speechbrain/tts-hifigan-ljspeech
+    """
 
     def __init__(self, device: str = "cpu") -> None:
         """Initialize the class and load  tacotron2 and hifi_gan.

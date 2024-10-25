@@ -110,8 +110,7 @@ class CliTestManager(TestManager):
         Returns:
             list[str]: List of words in the participant's response.
         """
-        # todo: Change message to something generic
-        print(Fore.GREEN + "Enter the number you heard")
+        print(Fore.GREEN + "Please enter your response")
         logger.debug("Enter the number you heard")
 
         listed_response = self.test_type.cli_post_process(self.response_capturer.get())
@@ -159,8 +158,7 @@ class ASRTestManager(TestManager):
         """
         logger.debug("Repeat the number you heard")
 
-        # todo: Change message to something generic
-        print(Fore.GREEN + "Repeat the numbers you heard")
+        print(Fore.GREEN + "Please give your response")
 
         file_src = self.recorder.listen()
 

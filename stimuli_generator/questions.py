@@ -76,3 +76,35 @@ class DigitQuestions(Questions):
             return True
         else:
             return False
+
+
+# todo: Implement the ASL class
+class ASL(Questions):
+    """Class for modeling ASL test questions."""
+
+    def __init__(self) -> None:
+        """Initialize the questions object by storing the text of the question."""
+
+        super().__init__()
+
+    def get_stimuli(self) -> list[str]:
+        """Generate a sample stimuli.
+
+        Generate a sample stimuli consist of three words
+        by randomly selecting from the list of vocab.
+
+        Returns:
+            list[str]: stimuli for the question.
+        """
+        pass
+
+    def check_answer(self, answer: list[str]) -> bool:
+        """Check the given words are the same as the one presented to the patient.
+
+        Args:
+            answer (list[str]): The patient's response.
+
+        Returns:
+            bool: Is a match or not.
+        """
+        pass

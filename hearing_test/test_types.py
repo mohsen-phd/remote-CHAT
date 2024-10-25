@@ -221,7 +221,10 @@ class DIN(TestTypes):
         """Get the stimuli src for the test.
 
         Returns:
-            str: The stimuli src for the test.
+            Path: The stimuli src for the test.
+
+        Raises:
+            NotImplementedError: If the stimuli vocalizer type is not supported.
         """
         if self.config["stimuli_vocalizer"] == "tts":
             return Path(

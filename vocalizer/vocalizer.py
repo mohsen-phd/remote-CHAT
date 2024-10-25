@@ -46,6 +46,8 @@ class Recorded(Vocalizer):
         Returns:
             np.ndarray: Audio signal.
         """
+        # todo: move this to test_type for each class
+
         digits = self._extract_numbers(text)
         full_audio = np.array([])
         for digit in digits:

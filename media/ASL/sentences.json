@@ -1,0 +1,1621 @@
+{
+    "1-1": {
+        "text": "They moved the furniture",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "1-2": {
+        "text": "He's wiping the table",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "1-3": {
+        "text": "He hit his head",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "1-4": {
+        "text": "The yellow leaves are falling",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "1-5": {
+        "text": "The cat played with some wool",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "1-6": {
+        "text": "The bag was very heavy",
+        "keywords": [
+            1,
+            3,
+            4
+        ]
+    },
+    "1-7": {
+        "text": "The towel dripped on the carpet",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "1-8": {
+        "text": "The bull chased the lady",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "1-9": {
+        "text": "The man dug his garden",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "1-10": {
+        "text": "The room has a lovely view",
+        "keywords": [
+            1,
+            4,
+            5
+        ]
+    },
+    "1-11": {
+        "text": "The girl helped in the kitchen",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "1-12": {
+        "text": "The old shoes were muddy",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "1-13": {
+        "text": "Father's hiding the presents",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "1-14": {
+        "text": "The milk boiled over",
+        "keywords": [
+            1,
+            2,
+            3
+        ]
+    },
+    "1-15": {
+        "text": "The neighbour knocked at the door",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "2-1": {
+        "text": "He tore his shirt",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "2-2": {
+        "text": "They finished the jigsaw",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "2-3": {
+        "text": "She brought her camera",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "2-4": {
+        "text": "The lady watered her plants",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "2-5": {
+        "text": "The salt cellar's full",
+        "keywords": [
+            1,
+            2,
+            3
+        ]
+    },
+    "2-6": {
+        "text": "The boy hit his thumb",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "2-7": {
+        "text": "The mother shook her head",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "2-8": {
+        "text": "The snow lay on the hills",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "2-9": {
+        "text": "The father used a towel",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "2-10": {
+        "text": "The tree was in the back garden",
+        "keywords": [
+            1,
+            5,
+            6
+        ]
+    },
+    "2-11": {
+        "text": "The yacht sailed past",
+        "keywords": [
+            1,
+            2
+        ]
+    },
+    "2-12": {
+        "text": "The lady pushed the pram",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "2-13": {
+        "text": "They're leaving today",
+        "keywords": [
+            0,
+            1,
+            2
+        ]
+    },
+    "2-14": {
+        "text": "The picture hung on the wall",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "2-15": {
+        "text": "The children sit under the tree",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "3-1": {
+        "text": "The lunch was very early",
+        "keywords": [
+            1,
+            3,
+            4
+        ]
+    },
+    "3-2": {
+        "text": "The dirty boy is washing",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "3-3": {
+        "text": "He hid his money",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "3-4": {
+        "text": "The curtains were too short",
+        "keywords": [
+            1,
+            3,
+            4
+        ]
+    },
+    "3-5": {
+        "text": "The knife cut the cake",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "3-6": {
+        "text": "They emptied their pockets",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "3-7": {
+        "text": "The new shoes were tight",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "3-8": {
+        "text": "The coat hangs in a cupboard",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "3-9": {
+        "text": "The sun shone through the clouds",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "3-10": {
+        "text": "She took her purse",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "3-11": {
+        "text": "The team lost the match",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "3-12": {
+        "text": "The shirt caught on a nail",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "3-13": {
+        "text": "They picked some raspberries",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "3-14": {
+        "text": "The man climbed the mountain",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "3-15": {
+        "text": "The lady hurt her arm",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "4-1": {
+        "text": "The old clothes were dirty",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "4-2": {
+        "text": "He carried a stick",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "4-3": {
+        "text": "She read her book",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "4-4": {
+        "text": "The new house was empty",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "4-5": {
+        "text": "The thief brought a ladder",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "4-6": {
+        "text": "The horse stands by the gate",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "4-7": {
+        "text": "They're heading for the park",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "4-8": {
+        "text": "The gardener trimmed the hedge",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "4-9": {
+        "text": "They're standing up",
+        "keywords": [
+            0,
+            1,
+            2
+        ]
+    },
+    "4-10": {
+        "text": "Someone's hiding in the bushes",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "4-11": {
+        "text": "The waiter lit the candles",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "4-12": {
+        "text": "The baker iced the cake",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "4-13": {
+        "text": "The woman slipped on the ice",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "4-14": {
+        "text": "The small puppy was scared",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "4-15": {
+        "text": "The lady changed her mind",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "5-1": {
+        "text": "The daughter closed the box",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "5-2": {
+        "text": "He broke into the safe",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "5-3": {
+        "text": "The doctor carries a bag",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "5-4": {
+        "text": "The new game was silly",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "5-5": {
+        "text": "The little boy was tired",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "5-6": {
+        "text": "They saw the sign",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "5-7": {
+        "text": "She's wrapping the parcel",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "5-8": {
+        "text": "The children laughed at the clown",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "5-9": {
+        "text": "The apple pie was hot",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "5-10": {
+        "text": "The ship sailed up the river",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "5-11": {
+        "text": "The house had a lovely garden",
+        "keywords": [
+            1,
+            4,
+            5
+        ]
+    },
+    "5-12": {
+        "text": "The noisy dog is barking",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "5-13": {
+        "text": "They bought some tickets",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "5-14": {
+        "text": "The man goes to the bank",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "5-15": {
+        "text": "The nurse helped the child",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "6-1": {
+        "text": "The girl knew the story",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "6-2": {
+        "text": "He reached for a cup",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "6-3": {
+        "text": "The lady was quite cross",
+        "keywords": [
+            1,
+            3,
+            4
+        ]
+    },
+    "6-4": {
+        "text": "The rope was too short",
+        "keywords": [
+            1,
+            3,
+            4
+        ]
+    },
+    "6-5": {
+        "text": "She's listening to the radio",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "6-6": {
+        "text": "The husband cleaned the car",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "6-7": {
+        "text": "The postman leaned on the fence",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "6-8": {
+        "text": "The china vase was broken",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "6-9": {
+        "text": "The other team won",
+        "keywords": [
+            1,
+            2,
+            3
+        ]
+    },
+    "6-10": {
+        "text": "They locked the safe",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "6-11": {
+        "text": "The leaves dropped from the trees",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "6-12": {
+        "text": "The men watched the race",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "6-13": {
+        "text": "The bird's building a nest",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "6-14": {
+        "text": "The woman called her dog",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "6-15": {
+        "text": "They're waving at the train",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "7-1": {
+        "text": "The cat scratched the chair",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "7-2": {
+        "text": "She tapped at the window",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "7-3": {
+        "text": "The man painted the gate",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "7-4": {
+        "text": "He slid on the floor",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "7-5": {
+        "text": "They're lifting the box",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "7-6": {
+        "text": "The woman listened to her friend",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "7-7": {
+        "text": "The driver hooted his horn",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "7-8": {
+        "text": "The cake tasted nice",
+        "keywords": [
+            1,
+            2,
+            3
+        ]
+    },
+    "7-9": {
+        "text": "The sailor stood on the deck",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "7-10": {
+        "text": "The young girls were pretty",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "7-11": {
+        "text": "They painted the ceiling",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "7-12": {
+        "text": "The back door was shut",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "7-13": {
+        "text": "The tree lost its leaves",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "7-14": {
+        "text": "The boy eats with his fork",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "7-15": {
+        "text": "The young mother's shopping",
+        "keywords": [
+            1,
+            2,
+            3
+        ]
+    },
+    "8-1": {
+        "text": "The girl sharpened her pencil",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "8-2": {
+        "text": "She closed her eyes",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "8-3": {
+        "text": "The puppy licked his master",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "8-4": {
+        "text": "The plant grows on the wall",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "8-5": {
+        "text": "The family's having a picnic",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "8-6": {
+        "text": "The train arrived on time",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "8-7": {
+        "text": "They won the game",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "8-8": {
+        "text": "The lady waited for her husband",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "8-9": {
+        "text": "The post office was near",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "8-10": {
+        "text": "They rowed the boat",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "8-11": {
+        "text": "The old fox was sly",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "8-12": {
+        "text": "The baby lost his rattle",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "8-13": {
+        "text": "He dug with his spade",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "8-14": {
+        "text": "The boiled egg was soft",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "8-15": {
+        "text": "The two ladies were watching",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "9-1": {
+        "text": "The car engine's running",
+        "keywords": [
+            1,
+            2,
+            3
+        ]
+    },
+    "9-2": {
+        "text": "They parked by the station",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "9-3": {
+        "text": "The lemons were quite bitter",
+        "keywords": [
+            1,
+            3,
+            4
+        ]
+    },
+    "9-4": {
+        "text": "They're cutting the grass",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "9-5": {
+        "text": "The woman called a doctor",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "9-6": {
+        "text": "The man shaved with a razor",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "9-7": {
+        "text": "He tied his shoelaces",
+        "keywords": [
+            0,
+            1,
+            3
+        ]
+    },
+    "9-8": {
+        "text": "The bus is leaving early",
+        "keywords": [
+            1,
+            3,
+            4
+        ]
+    },
+    "9-9": {
+        "text": "She's sewing on a button",
+        "keywords": [
+            0,
+            1,
+            4
+        ]
+    },
+    "9-10": {
+        "text": "The horse kicked the rider",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "9-11": {
+        "text": "The yellow bananas are ripe",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "9-12": {
+        "text": "The lady has a fur coat",
+        "keywords": [
+            1,
+            4,
+            5
+        ]
+    },
+    "9-13": {
+        "text": "The cat jumped onto the table",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "9-14": {
+        "text": "The book sits on the shelf",
+        "keywords": [
+            1,
+            2,
+            5
+        ]
+    },
+    "9-15": {
+        "text": "The boy told a joke",
+        "keywords": [
+            1,
+            2,
+            4
+        ]
+    },
+    "10-1": {
+        "text": "She sings in the bath",
+        "keywords": []
+    },
+    "10-2": {
+        "text": "The meat was too tough",
+        "keywords": []
+    },
+    "10-3": {
+        "text": "The child ate some jam",
+        "keywords": []
+    },
+    "10-4": {
+        "text": "They're stealing the apples",
+        "keywords": []
+    },
+    "10-5": {
+        "text": "The children dried the dishes",
+        "keywords": []
+    },
+    "10-6": {
+        "text": "The paper boy was cheeky",
+        "keywords": []
+    },
+    "10-7": {
+        "text": "The little car was slow",
+        "keywords": []
+    },
+    "10-8": {
+        "text": "The bath taps are dripping",
+        "keywords": []
+    },
+    "10-9": {
+        "text": "They came at Easter",
+        "keywords": []
+    },
+    "10-10": {
+        "text": "He's wearing a tie",
+        "keywords": []
+    },
+    "10-11": {
+        "text": "The new towel was clean",
+        "keywords": []
+    },
+    "10-12": {
+        "text": "The water poured from a jug",
+        "keywords": []
+    },
+    "10-13": {
+        "text": "The red apples were in a bowl",
+        "keywords": []
+    },
+    "10-14": {
+        "text": "The bus stopped at the shops",
+        "keywords": []
+    },
+    "10-15": {
+        "text": "The man drew with a pencil",
+        "keywords": []
+    },
+    "11-1": {
+        "text": "The lady cut her finger",
+        "keywords": []
+    },
+    "11-2": {
+        "text": "The horses stood under the tree",
+        "keywords": []
+    },
+    "11-3": {
+        "text": "Mother's talking to the milkman",
+        "keywords": []
+    },
+    "11-4": {
+        "text": "She polished her shoes",
+        "keywords": []
+    },
+    "11-5": {
+        "text": "Some friends stayed for supper",
+        "keywords": []
+    },
+    "11-6": {
+        "text": "The pudding was very good",
+        "keywords": []
+    },
+    "11-7": {
+        "text": "The apples came in a bag",
+        "keywords": []
+    },
+    "11-8": {
+        "text": "The greedy boy was hungry",
+        "keywords": []
+    },
+    "11-9": {
+        "text": "The three men were angry",
+        "keywords": []
+    },
+    "11-10": {
+        "text": "The children cleared the table",
+        "keywords": []
+    },
+    "11-11": {
+        "text": "The man forgot his change",
+        "keywords": []
+    },
+    "11-12": {
+        "text": "The clothes are covered in mud",
+        "keywords": []
+    },
+    "11-13": {
+        "text": "The raincoat's wet through",
+        "keywords": []
+    },
+    "11-14": {
+        "text": "The three friends are cycling",
+        "keywords": []
+    },
+    "11-15": {
+        "text": "They tied the rope",
+        "keywords": []
+    },
+    "12-1": {
+        "text": "Christmas is coming soon",
+        "keywords": []
+    },
+    "12-2": {
+        "text": "The tall man was thin",
+        "keywords": []
+    },
+    "12-3": {
+        "text": "The girl broke a vase",
+        "keywords": []
+    },
+    "12-4": {
+        "text": "The other team are losing",
+        "keywords": []
+    },
+    "12-5": {
+        "text": "The girl's playing tennis",
+        "keywords": []
+    },
+    "12-6": {
+        "text": "The lady spoke to the driver",
+        "keywords": []
+    },
+    "12-7": {
+        "text": "The noise scared the sheep",
+        "keywords": []
+    },
+    "12-8": {
+        "text": "She's sitting on the swing",
+        "keywords": []
+    },
+    "12-9": {
+        "text": "The red ball's bouncing",
+        "keywords": []
+    },
+    "12-10": {
+        "text": "The children heard the doorbell",
+        "keywords": []
+    },
+    "12-11": {
+        "text": "They worked in the rain",
+        "keywords": []
+    },
+    "12-12": {
+        "text": "The children carried the suitcase",
+        "keywords": []
+    },
+    "12-13": {
+        "text": "The new teacher's nice",
+        "keywords": []
+    },
+    "12-14": {
+        "text": "The traffic lights are green",
+        "keywords": []
+    },
+    "12-15": {
+        "text": "They're going to the seaside",
+        "keywords": []
+    },
+    "13-1": {
+        "text": "The story's very exciting",
+        "keywords": []
+    },
+    "13-2": {
+        "text": "He's kicking the door",
+        "keywords": []
+    },
+    "13-3": {
+        "text": "The pool was very deep",
+        "keywords": []
+    },
+    "13-4": {
+        "text": "Mother served the soup",
+        "keywords": []
+    },
+    "13-5": {
+        "text": "The woman used her key",
+        "keywords": []
+    },
+    "13-6": {
+        "text": "The red dress was pretty",
+        "keywords": []
+    },
+    "13-7": {
+        "text": "The pears were too hard",
+        "keywords": []
+    },
+    "13-8": {
+        "text": "He turned on the taps",
+        "keywords": []
+    },
+    "13-9": {
+        "text": "She tore her dress",
+        "keywords": []
+    },
+    "13-10": {
+        "text": "Mother's filling the kettle",
+        "keywords": []
+    },
+    "13-11": {
+        "text": "The lady writes to her sister",
+        "keywords": []
+    },
+    "13-12": {
+        "text": "They're looking at the clock",
+        "keywords": []
+    },
+    "13-13": {
+        "text": "The farmer's buying some pigs",
+        "keywords": []
+    },
+    "13-14": {
+        "text": "The old man is leaving",
+        "keywords": []
+    },
+    "13-15": {
+        "text": "The boy ate his lunch",
+        "keywords": []
+    },
+    "14-1": {
+        "text": "The chocolate box was empty",
+        "keywords": []
+    },
+    "14-2": {
+        "text": "The boy filled the buckets",
+        "keywords": []
+    },
+    "14-3": {
+        "text": "The lorry drove up the hill",
+        "keywords": []
+    },
+    "14-4": {
+        "text": "They called the police",
+        "keywords": []
+    },
+    "14-5": {
+        "text": "The lady wore her coat",
+        "keywords": []
+    },
+    "14-6": {
+        "text": "The policeman stopped the traffic",
+        "keywords": []
+    },
+    "14-7": {
+        "text": "The dog heard a noise",
+        "keywords": []
+    },
+    "14-8": {
+        "text": "The rose bush was blooming",
+        "keywords": []
+    },
+    "14-9": {
+        "text": "The cows grazed in the fields",
+        "keywords": []
+    },
+    "14-10": {
+        "text": "The sun came out",
+        "keywords": []
+    },
+    "14-11": {
+        "text": "He's starting the engine",
+        "keywords": []
+    },
+    "14-12": {
+        "text": "He's visiting his uncle",
+        "keywords": []
+    },
+    "14-13": {
+        "text": "The jam sticks to the plate",
+        "keywords": []
+    },
+    "14-14": {
+        "text": "They're bringing some pears",
+        "keywords": []
+    },
+    "14-15": {
+        "text": "The garden's very neat",
+        "keywords": []
+    },
+    "15-1": {
+        "text": "The red bus was late",
+        "keywords": []
+    },
+    "15-2": {
+        "text": "They're leaning on the ladder",
+        "keywords": []
+    },
+    "15-3": {
+        "text": "The ice cream is melting",
+        "keywords": []
+    },
+    "15-4": {
+        "text": "The green apples were sour",
+        "keywords": []
+    },
+    "15-5": {
+        "text": "The family ate supper",
+        "keywords": []
+    },
+    "15-6": {
+        "text": "The horse was quite old",
+        "keywords": []
+    },
+    "15-7": {
+        "text": "The towel's quite dry",
+        "keywords": []
+    },
+    "15-8": {
+        "text": "The birds sang from the tree",
+        "keywords": []
+    },
+    "15-9": {
+        "text": "The lion escaped from the zoo",
+        "keywords": []
+    },
+    "15-10": {
+        "text": "The man took a picture",
+        "keywords": []
+    },
+    "15-11": {
+        "text": "They're buying some lunch",
+        "keywords": []
+    },
+    "15-12": {
+        "text": "He's combing his hair",
+        "keywords": []
+    },
+    "15-13": {
+        "text": "They watched the sunset",
+        "keywords": []
+    },
+    "15-14": {
+        "text": "Someone's listening at the door",
+        "keywords": []
+    },
+    "15-15": {
+        "text": "The girl told her mother",
+        "keywords": []
+    },
+    "16-1": {
+        "text": "They did their homework",
+        "keywords": []
+    },
+    "16-2": {
+        "text": "The sister hurt her leg",
+        "keywords": []
+    },
+    "16-3": {
+        "text": "The two boys are laughing",
+        "keywords": []
+    },
+    "16-4": {
+        "text": "The big needle was sharp",
+        "keywords": []
+    },
+    "16-5": {
+        "text": "The hill was very steep",
+        "keywords": []
+    },
+    "16-6": {
+        "text": "Roses grow in the garden",
+        "keywords": []
+    },
+    "16-7": {
+        "text": "The puppy chased the ball",
+        "keywords": []
+    },
+    "16-8": {
+        "text": "The father answered the door",
+        "keywords": []
+    },
+    "16-9": {
+        "text": "The friends came for tea",
+        "keywords": []
+    },
+    "16-10": {
+        "text": "The old man was poor",
+        "keywords": []
+    },
+    "16-11": {
+        "text": "They ate some plums",
+        "keywords": []
+    },
+    "16-12": {
+        "text": "The mice saw the trap",
+        "keywords": []
+    },
+    "16-13": {
+        "text": "The car hit the tree",
+        "keywords": []
+    },
+    "16-14": {
+        "text": "They're hanging up their coats",
+        "keywords": []
+    },
+    "16-15": {
+        "text": "She's holding a brush",
+        "keywords": []
+    },
+    "17-1": {
+        "text": "The man climbed the ladder",
+        "keywords": []
+    },
+    "17-2": {
+        "text": "Mother cooked the dinner",
+        "keywords": []
+    },
+    "17-3": {
+        "text": "The ice rink was closed",
+        "keywords": []
+    },
+    "17-4": {
+        "text": "The ice cream was cold",
+        "keywords": []
+    },
+    "17-5": {
+        "text": "They closed the curtains",
+        "keywords": []
+    },
+    "17-6": {
+        "text": "The doctor came quickly",
+        "keywords": []
+    },
+    "17-7": {
+        "text": "The ice melted in the sun",
+        "keywords": []
+    },
+    "17-8": {
+        "text": "They ran up the hill",
+        "keywords": []
+    },
+    "17-9": {
+        "text": "The milk was very cold",
+        "keywords": []
+    },
+    "17-10": {
+        "text": "The father signed a letter",
+        "keywords": []
+    },
+    "17-11": {
+        "text": "He remembered the way",
+        "keywords": []
+    },
+    "17-12": {
+        "text": "The loud noise was sudden",
+        "keywords": []
+    },
+    "17-13": {
+        "text": "The boy grazed his knee",
+        "keywords": []
+    },
+    "17-14": {
+        "text": "The lady has small feet",
+        "keywords": []
+    },
+    "17-15": {
+        "text": "They helped with the dishes",
+        "keywords": []
+    },
+    "18-1": {
+        "text": "They watched the cricket",
+        "keywords": []
+    },
+    "18-2": {
+        "text": "The girl carried a basket",
+        "keywords": []
+    },
+    "18-3": {
+        "text": "The baby sleeps in a cot",
+        "keywords": []
+    },
+    "18-4": {
+        "text": "The daughter drank some lemonade",
+        "keywords": []
+    },
+    "18-5": {
+        "text": "The little girl was staring",
+        "keywords": []
+    },
+    "18-6": {
+        "text": "They're living by the sea",
+        "keywords": []
+    },
+    "18-7": {
+        "text": "The church stood on the hill",
+        "keywords": []
+    },
+    "18-8": {
+        "text": "The farmer sowed some seeds",
+        "keywords": []
+    },
+    "18-9": {
+        "text": "The east wind was cold",
+        "keywords": []
+    },
+    "18-10": {
+        "text": "The blue towel was damp",
+        "keywords": []
+    },
+    "18-11": {
+        "text": "The man forgot his hat",
+        "keywords": []
+    },
+    "18-12": {
+        "text": "Mother's reading a story",
+        "keywords": []
+    },
+    "18-13": {
+        "text": "She ironed her skirt",
+        "keywords": []
+    },
+    "18-14": {
+        "text": "The floor was quite slippery",
+        "keywords": []
+    },
+    "18-15": {
+        "text": "The biscuit tin was empty",
+        "keywords": []
+    }
+}

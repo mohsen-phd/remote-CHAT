@@ -164,7 +164,7 @@ class DIN(TestTypes):
         Returns:
             str: The recording src for the test.
         """
-        return configs["test"]["hearing-test"]["DIN"]["stimuli-recordings"]
+        return configs["test"]["hearing-test"]["DIN"]["stimuli-recordings-natural"]
 
     def cli_post_process(self, response: str) -> list[str]:
         """Post process the response from the CLI. and remove any common mistakes.

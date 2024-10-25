@@ -67,7 +67,7 @@ def main():
         question = manager.test_type.stimuli_generator.get_stimuli()
         print(Fore.YELLOW + "Listen to the numbers")
         logger.debug(f"{iteration} :The stimuli is: {question}")
-        play_stimuli(manager.sound_generator, snr_db, question, manager.noise)
+        play_stimuli(manager.test_type, snr_db, question, manager.noise)
 
         transcribe = manager.get_response()
 

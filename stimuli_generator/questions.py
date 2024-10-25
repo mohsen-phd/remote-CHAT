@@ -25,11 +25,11 @@ class Questions(ABC):
         pass
 
     @abstractmethod
-    def get_stimuli(self) -> str:
+    def get_stimuli(self) -> list[str]:
         """Generate a sample stimuli.
 
         Returns:
-            str: stimuli for the question.
+            list[str]: stimuli for the question.
         """
         pass
 
@@ -39,33 +39,22 @@ class DigitQuestions(Questions):
 
     def __init__(self) -> None:
         """Initialize the questions object by storing the text of the question."""
-        self.vocab_list = [
-            "zero",
-            "one",
-            "two",
-            "three",
-            "four",
-            "five",
-            "six",
-            "seven",
-            "eight",
-            "nine",
-        ]
+        self.vocab_list = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
         super().__init__()
 
-    def get_stimuli(self) -> str:
+    def get_stimuli(self) -> list[str]:
         """Generate a sample stimuli.
 
           Generate a sample stimuli consist of three words
           by randomly selecting from the list of vocab.
 
         Returns:
-            str: stimuli for the question.
+            list[str]: stimuli for the question.
         """
         self.main_words = random.sample(self.vocab_list, 3)
-        self.question = "The number is " + " ".join(self.main_words)
-        return self.question
+        self.question = "The number is " + " ".join(str(self.main_words))
+        return self.main_words
 
     def check_answer(self, answer: list[str]) -> bool:
         """Check the given number is the same as the one  presented to the patient.

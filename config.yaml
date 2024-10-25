@@ -11,7 +11,9 @@ test:
       noise:
         type: babble #[white, babble]
         src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/audio_processing/noise/babble.wav"
-      stimuli-recordings-natural: "media/digit_recordings/22k"
+      stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/digit_recordings/natural/22k"
+      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/digit_recordings/tts/22k"
+
     ASL:
       noise:
         type: babble #[white, babble]
@@ -20,7 +22,7 @@ test:
       stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/mello"
 
 response_capturing: cli #[cli, asr]
-stimuli_vocalizer: tts #[tts, recorded]
+stimuli_vocalizer: recorded #[tts, recorded]
 
 ml:
   asr_type: SpeechBrain #[SpeechBrain, SimpleASR]

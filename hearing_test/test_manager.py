@@ -2,20 +2,16 @@
 
 import os
 from abc import ABC, abstractmethod
-from pathlib import Path
 
 from colorama import Fore
 from loguru import logger
-from pydub import AudioSegment
 
-from audio_processing.noise import Babble, WhiteNoise
 from get_response.asr import ASR, SimpleASR, SpeechBrainASR
 from get_response.base import CaptureResponse
 from get_response.cli import CLI
 from get_response.recorder import Recorder
 from hearing_test.test_logic import SpeechInNoise
 from hearing_test.test_types import DIN
-from vocalizer.vocalizer import TTS, Recorded, Vocalizer
 
 
 class TestManager(ABC):
@@ -49,22 +45,12 @@ class TestManager(ABC):
 
         self.noise = self.test_type.get_noise(self.conf)
 
-        self.sound_generator = self._get_sound_generator()
-
         self.start_snr = self.conf["test"]["start_snr"]
 
     def _get_test_type(self):
         ##todo: add more test types (FAAF, ASL, CHAT), add from config file
 
-        return DIN()
-
-    def _get_sound_generator(self) -> Vocalizer:
-        if self.conf["stimuli_vocalizer"] == "recorded":
-            return Recorded(Path(self.test_type.get_recording(self.conf)))
-        elif self.conf["stimuli_vocalizer"] == "tts":
-            return TTS(device="cpu")
-        else:
-            raise NotImplementedError
+        return DIN(self.conf)
 
     @abstractmethod
     def get_response(self) -> list[str]:

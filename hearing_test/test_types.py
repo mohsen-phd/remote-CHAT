@@ -1,9 +1,13 @@
 from abc import ABC, abstractmethod
+from pathlib import Path
 
 import nltk
+import numpy as np
 from nltk.stem import WordNetLemmatizer
+from scipy.io import wavfile
 
 from audio_processing.noise import Babble, Noise, WhiteNoise
+from audio_processing.util import convert_to_specific_db_spl
 from stimuli_generator.questions import DigitQuestions
 
 
@@ -58,23 +62,40 @@ class TestTypes(ABC):
         """
         ...
 
+    @abstractmethod
+    def get_sound(self, stimuli: list[str]) -> np.ndarray:
+        """Get the sound for the test.
+
+        Args:
+            stimuli (list[str]): List of stimuli.
+
+        Returns:
+            np.ndarray: Audio signal.
+        """
+        ...
+
 
 class DIN(TestTypes):
     """Implementing the DIN test."""
 
-    def __init__(self) -> None:
-        """Initialize the DIN test."""
+    def __init__(self, config: dict) -> None:
+        """Initialize the DIN test.
+
+        Args:
+            config (dict): configuration dictionary.
+        """
+        self.config = config
         self.digit_convertor = {
-            "0": "zero",
-            "1": "one",
-            "2": "two",
-            "3": "three",
-            "4": "four",
-            "5": "five",
-            "6": "six",
-            "7": "seven",
-            "8": "eight",
-            "9": "nine",
+            "zero": "0",
+            "one": "1",
+            "two": "2",
+            "three": "3",
+            "four": "4",
+            "five": "5",
+            "six": "6",
+            "seven": "7",
+            "eight": "8",
+            "nine": "9",
         }
 
         self.common_mistakes = {
@@ -145,6 +166,7 @@ class DIN(TestTypes):
         self._lemmatizer = self._get_lemmatizer()
 
         self.stimuli_generator = DigitQuestions()
+        self.stimuli_src = self._get_stimuli_src()
 
     def _get_lemmatizer(self) -> WordNetLemmatizer:
         """Load the NLTK lemmatizer.
@@ -175,7 +197,7 @@ class DIN(TestTypes):
         Returns:
             list[str]: List of clean words.
         """
-        return [self.digit_convertor[i] for i in response if i in self.digit_convertor]
+        return [response[0], response[1], response[2]]
 
     def asr_post_process(self, response: str) -> list[str]:
         """Post process the response from the ASR. and remove any common mistakes.
@@ -186,13 +208,31 @@ class DIN(TestTypes):
         Returns:
             list[str]: list of clean words.
         """
-        responses_list = response.split(" ")
+        responses_list = response.lower().split(" ")
         lemmatized_response = [self._lemmatizer.lemmatize(x) for x in responses_list]
-
-        return [
+        removed_common_mistakes = [
             self.common_mistakes[x] if x in self.common_mistakes else x
             for x in lemmatized_response
         ]
+        converted_to_digits = [self.digit_convertor[x] for x in removed_common_mistakes]
+        return converted_to_digits
+
+    def _get_stimuli_src(self) -> Path:
+        """Get the stimuli src for the test.
+
+        Returns:
+            str: The stimuli src for the test.
+        """
+        if self.config["stimuli_vocalizer"] == "tts":
+            return Path(
+                self.config["test"]["hearing-test"]["DIN"]["stimuli-recordings-tts"]
+            )
+        elif self.config["stimuli_vocalizer"] == "recorded":
+            return Path(
+                self.config["test"]["hearing-test"]["DIN"]["stimuli-recordings-natural"]
+            )
+        else:
+            raise NotImplementedError
 
     def get_noise(self, configs: dict) -> Noise:
         """Get the noise for the test.
@@ -213,6 +253,22 @@ class DIN(TestTypes):
                 noise_src=configs["test"]["hearing-test"]["DIN"]["noise"]["src"]
             )
         raise NotImplementedError
+
+    def get_sound(self, stimuli: list[int]) -> np.ndarray:
+        """Use the recorded audio to generate the waveform.
+
+        Args:
+            stimuli (list[str]): The generated stimuli as a list of string.
+
+        Returns:
+            np.ndarray: Audio signal.
+        """
+        full_audio = np.array([])
+        for digit in stimuli:
+            _, digit_audio = wavfile.read(self.stimuli_src / f"{digit}.wav")
+            full_audio = np.concatenate((full_audio, digit_audio))
+        full_audio = convert_to_specific_db_spl(full_audio, 65)
+        return full_audio
 
 
 class FAAF(TestTypes):

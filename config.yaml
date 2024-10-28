@@ -22,8 +22,8 @@ test:
       stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/mello"
 
 response_capturing: cli #[cli, asr]
-stimuli_vocalizer: recorded #[tts, recorded]
-test_name: DIN #[DIN, ASL]
+vocalization_mode: recorded #[tts, recorded]
+test_name: din #[din, asl]
 
 ml:
   asr_type: SpeechBrain #[SpeechBrain, SimpleASR]

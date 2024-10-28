@@ -129,4 +129,10 @@ class ASLQuestions(Questions):
         Returns:
             bool: Is a match or not.
         """
-        pass
+        if answer == ["0"]:
+            return False
+        elif answer == ["1"]:
+            return True
+        else:
+            # todo: Implement the logic for checking the answer for ASR and complete word matching.
+            return False

@@ -1,4 +1,5 @@
 """Utility functions for audio processing."""
+
 import numpy as np
 from loguru import logger
 

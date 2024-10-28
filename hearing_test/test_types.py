@@ -1,13 +1,18 @@
+"""
+This module defines various types of hearing tests, including DIN, ASL, FAAF, and CHAT.
+
+Each test type inherits from the abstract base class TestTypes and implements specific methods.
+"""
+
 from abc import ABC, abstractmethod
 from pathlib import Path
 
 import nltk
 import numpy as np
 from nltk.stem import WordNetLemmatizer
-from scipy.io import wavfile
 
 from audio_processing.noise import Babble, Noise, WhiteNoise
-from audio_processing.util import convert_to_specific_db_spl
+from audio_processing.util import convert_to_specific_db_spl, read_wav_file
 from stimuli_generator.questions import ASLQuestions, DigitQuestions
 
 
@@ -72,6 +77,9 @@ class TestTypes(ABC):
 
     def _get_stimuli_src(self, test_name) -> Path:
         """Get the stimuli src for the test.
+
+        Args:
+            test_name (str): The name of the test.
 
         Returns:
             Path: The stimuli src for the test.
@@ -255,7 +263,7 @@ class DIN(TestTypes):
         """
         full_audio = np.array([])
         for digit in stimuli:
-            _, digit_audio = wavfile.read(self.stimuli_src / f"{digit}.wav")
+            _, digit_audio = read_wav_file(self.stimuli_src / f"{digit}.wav")
             full_audio = np.concatenate((full_audio, digit_audio))
         full_audio = convert_to_specific_db_spl(full_audio, 65)
         return full_audio
@@ -287,7 +295,7 @@ class ASL(TestTypes):
         """
         stimulus_id = stimuli[0]
 
-        _, digit_audio = wavfile.read(self.stimuli_src / f"{stimulus_id}.wav")
+        _, digit_audio = read_wav_file(self.stimuli_src / f"{stimulus_id}.wav")
         converted_audio = convert_to_specific_db_spl(digit_audio, 65)
         return converted_audio
 

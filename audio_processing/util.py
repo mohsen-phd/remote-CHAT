@@ -2,6 +2,28 @@
 
 import numpy as np
 from loguru import logger
+from scipy.io import wavfile
+
+
+def read_wav_file(filename):
+    """Read a WAV file and normalize the signal if necessary.
+
+    Args:
+        filename (str): Path to the WAV file.
+
+    Returns:
+        tuple: A tuple containing the sample rate and the normalized signal.
+    """
+    # Read the WAV file
+    sample_rate, signal = wavfile.read(filename)
+
+    # Normalize if the signal is integer-based
+    if signal.dtype == np.int16:
+        signal = signal / 32768.0  # Normalize to [-1, 1]
+    elif signal.dtype == np.int32:
+        signal = signal / 2147483648.0  # Normalize to [-1, 1]
+
+    return sample_rate, signal
 
 
 def rms_amplitude(signal: np.ndarray) -> float:
@@ -55,6 +77,20 @@ def calculate_db_spl(signal: np.ndarray) -> float:
     return db_spl
 
 
+def trim_zeros(signal: np.ndarray) -> tuple:
+    """Trim leading and trailing zeros from a signal.
+
+    Args:
+        signal (np.ndarray): Input signal.
+
+    Returns:
+        tuple: A tuple containing the trimmed signal, start index, and end index.
+    """
+    non_zero_indices = np.nonzero(signal)[0]
+    start, end = non_zero_indices[0], non_zero_indices[-1]
+    return signal[start : end + 1], start, end
+
+
 def convert_to_specific_db_spl(signal: np.ndarray, target_level: float) -> np.ndarray:
     """Get a signal and change it's level to a specific dB SPL.
 
@@ -65,8 +101,9 @@ def convert_to_specific_db_spl(signal: np.ndarray, target_level: float) -> np.nd
     Returns:
         np.ndarray: signal with the desired level.
     """
+    trimmed_signal, start, end = trim_zeros(signal)
     # Calculate the current level of the signal
-    current_level = calculate_db_spl(signal)
+    current_level = calculate_db_spl(trimmed_signal)
 
     # Calculate the difference between the current and desired level
     diff = target_level - current_level
@@ -75,9 +112,14 @@ def convert_to_specific_db_spl(signal: np.ndarray, target_level: float) -> np.nd
     factor = 10 ** (diff / 20)
 
     # Multiply the signal by the factor
-    signal = signal * factor
-    logger.debug(f"Current level: {calculate_db_spl(signal):.2f} dB SPL")
-    return signal
+    # Apply the gain to the active portion of the signal
+    adjusted_trimmed_signal = trimmed_signal * factor
+
+    # Recreate the full signal with the adjusted active portion
+    adjusted_signal = np.copy(signal)
+    adjusted_signal[start : end + 1] = adjusted_trimmed_signal
+    logger.debug(f"Current level: {calculate_db_spl(adjusted_signal):.2f} dB SPL")
+    return adjusted_signal
 
 
 def convert_to_specific_rms(signal: np.ndarray, desired_rms: float) -> np.ndarray:

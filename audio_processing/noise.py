@@ -4,10 +4,8 @@ import random
 from abc import ABC, abstractmethod
 
 import numpy as np
-from scipy.io import wavfile
 
 from audio_processing.util import (
-    calculate_db_spl,
     convert_to_specific_db_spl,
     read_wav_file,
     rms_amplitude,

@@ -9,6 +9,7 @@ from scipy.io import wavfile
 from audio_processing.util import (
     calculate_db_spl,
     convert_to_specific_db_spl,
+    read_wav_file,
     rms_amplitude,
 )
 
@@ -79,7 +80,7 @@ class Babble(Noise):
         Args:
             noise_src (str): path of the wave file containing the noise.
         """
-        self._sample_rate, self._noise = wavfile.read(noise_src)
+        self._sample_rate, self._noise = read_wav_file(noise_src)
 
     def generate_noise(self, signal: np.ndarray, desired_snr_db: float) -> np.ndarray:
         """Generate a babble noise signal.

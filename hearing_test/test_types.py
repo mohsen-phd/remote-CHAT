@@ -311,7 +311,7 @@ class ASL(TestTypes):
         """
         return [response[0]]
 
-    # todo:update for ASL
+    # todo:update for ASL, do lemmatization. remove 's.
     def asr_post_process(self, response: str) -> list[str]:
         """Post process the response from the ASR. and remove any common mistakes.
 

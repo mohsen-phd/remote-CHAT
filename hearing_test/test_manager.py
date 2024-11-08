@@ -48,7 +48,7 @@ class TestManager(ABC):
         self.start_snr = self.conf["test"]["start_snr"]
 
     def _get_test_type(self):
-        ##todo: add more test types (FAAF, ASL, CHAT), add from config file
+        ##todo: add more test types (FAAF, CHAT), add from config file
         if self.conf["test_name"] == "din":
             return DIN(self.conf)
         elif self.conf["test_name"] == "asl":

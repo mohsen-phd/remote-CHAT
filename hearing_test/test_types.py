@@ -4,15 +4,18 @@ This module defines various types of hearing tests, including DIN, ASL, FAAF, an
 Each test type inherits from the abstract base class TestTypes and implements specific methods.
 """
 
+import string
 from abc import ABC, abstractmethod
 from pathlib import Path
 
+import contractions
 import nltk
 import numpy as np
 from nltk.stem import WordNetLemmatizer
 
 from audio_processing.noise import Babble, Noise, WhiteNoise
 from audio_processing.util import convert_to_specific_db_spl, read_wav_file
+from hearing_test.util import british_to_american, expand_contractions, lemmatizer
 from stimuli_generator.questions import ASLQuestions, DigitQuestions
 
 
@@ -273,7 +276,6 @@ class DIN(TestTypes):
 class ASL(TestTypes):
     """Implementing the ASL test."""
 
-    # todo: implement ASL
     def __init__(self, config: dict) -> None:
         """Initialize the DIN test.
 
@@ -300,7 +302,6 @@ class ASL(TestTypes):
         converted_audio = convert_to_specific_db_spl(digit_audio, 65)
         return converted_audio
 
-    # todo:update for ASL
     def cli_post_process(self, response: str) -> list[str]:
         """Post process the response from the CLI. and remove any common mistakes.
 
@@ -310,7 +311,7 @@ class ASL(TestTypes):
         Returns:
             list[str]: List of clean words.
         """
-        return [response[0]]
+        return list(response)[:1]
 
     # todo:update for ASL, do lemmatization. remove 's.
     def asr_post_process(self, response: str) -> list[str]:
@@ -322,14 +323,25 @@ class ASL(TestTypes):
         Returns:
             list[str]: list of clean words.
         """
-        responses_list = response.lower().split(" ")
-        lemmatized_response = [self._lemmatizer.lemmatize(x) for x in responses_list]
-        removed_common_mistakes = [
-            self.common_mistakes[x] if x in self.common_mistakes else x
-            for x in lemmatized_response
-        ]
-        converted_to_digits = [self.digit_convertor[x] for x in removed_common_mistakes]
-        return converted_to_digits
+        # Convert to lowercase
+        response = response.lower()
+        response = expand_contractions(response)
+        # Remove punctuation
+        response = response.translate(str.maketrans("", "", string.punctuation))
+        response = "".join(
+            [char for char in response if char.isalpha() or char.isspace()]
+        )
+        response = british_to_american(response)
+
+        response = response.replace("'s", " is ")
+        response = response.replace("'re", " are ")
+
+        response = response.strip()
+
+        # Tokenize
+        clean_response = lemmatizer(response)
+
+        return [clean_response]
 
     # todo:update for ASL
     def get_noise(self, configs: dict) -> Noise:

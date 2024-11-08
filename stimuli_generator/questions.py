@@ -3,6 +3,9 @@
 import json
 import random
 from abc import ABC, abstractmethod
+import re
+
+from hearing_test.util import expand_contractions
 
 
 class Questions(ABC):
@@ -129,10 +132,34 @@ class ASLQuestions(Questions):
         Returns:
             bool: Is a match or not.
         """
+
         if answer == ["0"]:
             return False
         elif answer == ["1"]:
             return True
         else:
-            # todo: Implement the logic for checking the answer for ASR and complete word matching.
+            answer = ["The meat was too tough"]
+
+            return self._check_asr_answer(answer[0])
+
+    def _check_asr_answer(self, answer: str) -> bool:
+        """Check the asr output and see if the given answer was correct.
+
+        Args:
+            answer (str): The patient's response, transcribed by ASR.
+
+        Returns:
+            bool: Is a match or not.
+        """
+        answer_without_space = re.sub(r"\s+", "", answer)
+
+        correct_count = 0
+        for word in self.main_words:
+            word = expand_contractions(word).split(" ")[0]
+            if word in answer_without_space:
+                correct_count += 1
+
+        if correct_count >= (len(self.main_words) - 1):
+            return True
+        else:
             return False

@@ -25,9 +25,9 @@ def preparation() -> dict[str, str]:
     # test_name = input(Fore.GREEN + "Enter test name: ")
     # todo:replace the following lines with the above lines
     participant_id = 100
-    test_number = 1
+    test_number = 2
     response_capturing_mode = "cli"
-    test_name = "din"
+    test_name = "asl"
     vocalization_mode = "recorded"
 
     save_dir = f"records/{participant_id}"
@@ -68,6 +68,7 @@ def read_configs(custom_config: dict) -> dict:
     return configs
 
 
+# todo: check ASL with ASR.
 def main():
     """Code entry point."""
     custom_config = preparation()

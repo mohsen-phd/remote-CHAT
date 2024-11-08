@@ -1,5 +1,6 @@
 """Utility module for the main script."""
 
+import json
 import numpy as np
 import yaml
 from loguru import logger
@@ -67,3 +68,16 @@ def get_test_manager(configs: dict) -> TestManager:
         return ASRTestManager(configs)
     else:
         raise NotImplementedError
+
+
+def save_results(results: dict):
+    """Save the results of the test.
+
+    Args:
+        results (dict): Results of the test.
+    """
+    with open(
+        f"records/snr_results/{results['config']['test_number']}/participant_id.json",
+        "w",
+    ) as outfile:
+        json.dump(results, outfile)

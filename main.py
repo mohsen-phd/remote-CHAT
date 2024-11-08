@@ -6,7 +6,7 @@ import sys
 from colorama import Fore
 from loguru import logger
 
-from util import get_test_manager, play_stimuli, read_conf
+from util import get_test_manager, play_stimuli, read_conf, save_results
 
 logger.remove(0)
 logger.add(sys.stderr, level="DEBUG")
@@ -26,7 +26,7 @@ def preparation() -> dict[str, str]:
     # todo:replace the following lines with the above lines
     participant_id = 100
     test_number = 1
-    response_capturing_mode = "asr"
+    response_capturing_mode = "cli"
     test_name = "din"
     vocalization_mode = "recorded"
 
@@ -38,6 +38,7 @@ def preparation() -> dict[str, str]:
     logger.debug(f"\nParticipant ID: {participant_id}")
     input(Fore.RED + "Press enter to start the test ")
     custom_config = {
+        "participant_id": participant_id,
         "save_dir": save_dir,
         "test_number": test_number,
         "response_capturing_mode": response_capturing_mode,
@@ -72,23 +73,26 @@ def main():
     custom_config = preparation()
     configs = read_configs(custom_config)
     manager = get_test_manager(configs)
-
+    track_results = {}
     snr_db = manager.start_snr
     correct_count = incorrect_count = 0
     iteration = 1
     while not manager.hearing_test.stop_condition():
+        this_round = {}
+        this_round["snr"] = snr_db
         print(Fore.RED + "Press Enter to play the next digits")
         input()
         stimuli_id, stimuli_text = manager.test_type.stimuli_generator.get_stimuli()
         print(Fore.YELLOW + "Listen to the numbers")
         logger.debug(f"{iteration} :The stimuli is: {stimuli_text}")
+        this_round["stimuli"] = stimuli_text
         play_stimuli(manager.test_type, snr_db, stimuli_id, manager.noise)
 
         transcribe = manager.get_response()
-
+        this_round["response"] = transcribe
         matched = manager.test_type.stimuli_generator.check_answer(transcribe)
         logger.debug(f"Matched: {matched}")
-
+        this_round["matched"] = matched
         if matched:
             correct_count += 1
         else:
@@ -99,12 +103,16 @@ def main():
         )
         manager.hearing_test.update_variables(matched, snr_db)
         logger.debug(f"New SNR: {new_snr_db}")
+        track_results[iteration] = this_round
         if new_snr_db != snr_db:
             snr_db = new_snr_db
             correct_count = incorrect_count = 0
         iteration += 1
 
     logger.debug(f"Final SRT: {manager.hearing_test.srt} \n")
+    track_results["SRT"] = manager.hearing_test.srt
+    track_results["config"] = custom_config
+    save_results(track_results)
     print(Fore.RED + "End of the test")
 
 

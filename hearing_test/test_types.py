@@ -212,7 +212,8 @@ class DIN(TestTypes):
         Returns:
             list[str]: List of clean words.
         """
-        return [response[0], response[1], response[2]]
+        response_list = list(response)
+        return response_list[:3]
 
     def asr_post_process(self, response: str) -> list[str]:
         """Post process the response from the ASR. and remove any common mistakes.

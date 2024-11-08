@@ -3,6 +3,29 @@
 import numpy as np
 from loguru import logger
 from scipy.io import wavfile
+from scipy.signal import resample
+
+
+def convert_sample_rate(
+    signal: np.ndarray, current_sr: int, target_sr: int
+) -> np.ndarray:
+    """Convert the sample rate of a signal.
+
+    Args:
+        signal (np.ndarray): Input signal.
+        current_sr (int): Current sample rate.
+        target_sr (int): Target sample rate.
+
+    Returns:
+        np.ndarray: Signal with the target sample rate.
+    """
+    signal_duration_seconds = len(signal) / current_sr  # Number of seconds in signal X
+    num_target_samples = int(
+        (signal_duration_seconds * target_sr)
+    )  # Number of samples to downsample
+    new_signal = resample(signal, num_target_samples)
+
+    return new_signal
 
 
 def read_wav_file(filename):

@@ -1,12 +1,26 @@
 """Run ASR and convert audio to text."""
+
 import math
 from abc import abstractmethod
 
 import tensorflow as tf
+import torch
 from pydub import AudioSegment
 from pydub.silence import detect_nonsilent
 from speechbrain.pretrained import EncoderDecoderASR
+from transformers import (
+    AutoModelForSpeechSeq2Seq,
+    AutoProcessor,
+    SpeechT5ForSpeechToText,
+    SpeechT5Processor,
+    Wav2Vec2ForCTC,
+    Wav2Vec2Processor,
+    WhisperForConditionalGeneration,
+    WhisperProcessor,
+    pipeline,
+)
 
+from audio_processing.util import convert_sample_rate, read_wav_file
 from get_response.base import CaptureResponse
 
 
@@ -16,15 +30,6 @@ class ASR(CaptureResponse):
     def __init__(self) -> None:
         """Initialize the class."""
         self.file_path = ""
-
-    @abstractmethod
-    def _transcribe(self) -> str:
-        """Get a wav file address and return the transcription of it.
-
-        Returns:
-            str: transcribe of the file.
-        """
-        ...
 
     @abstractmethod
     def get(self) -> str:
@@ -218,3 +223,100 @@ class SimpleASR(ASR):
             str: File transcription.
         """
         return self._transcribe(src)
+
+
+class FBWav2Vec2(ASR):
+    """Initialize a Facebook Wav2Vec2 model.
+
+    the model is based on this hugging face repository:
+    https://huggingface.co/facebook/wav2vec2-base-960h
+
+    """
+
+    def __init__(self) -> None:
+        """Initialize a Facebook Wav2Vec asr model."""
+        super().__init__()
+        self.processor = Wav2Vec2Processor.from_pretrained(
+            "facebook/wav2vec2-large-960h-lv60-self"
+        )
+        self.model = Wav2Vec2ForCTC.from_pretrained(
+            "facebook/wav2vec2-large-960h-lv60-self"
+        )
+
+    def get(self, src: str) -> str:
+        """Transcribe the input file.
+
+        Args:
+            src (str): File address.
+
+        Returns:
+            str: File transcription.
+        """
+        sampling_rate, audio_waveform = read_wav_file(src)
+
+        if sampling_rate != 16000:
+            audio_waveform = convert_sample_rate(audio_waveform, sampling_rate, 16000)
+            sampling_rate = 16000
+
+        input_values = self.processor(
+            audio_waveform,
+            return_tensors="pt",
+            padding="longest",
+            sampling_rate=sampling_rate,
+        ).input_values
+
+        # retrieve logits
+        logits = self.model(input_values).logits
+
+        # take argmax and decode
+        predicted_ids = torch.argmax(logits, dim=-1)
+        transcription = self.processor.batch_decode(predicted_ids)
+        return transcription[0]
+
+
+class Whisper(ASR):
+    """Initialize a Whisper model.
+
+    The model is based on this hugging face repository:
+    https://huggingface.co/openai/whisper-large-v3
+    """
+
+    def __init__(self) -> None:
+        """Initialize a Whisper asr model."""
+        super().__init__()
+
+        self.device = "mps"
+        self.torch_dtype = torch.float16
+
+        # self.model_id = "openai/whisper-large-v3-turbo"
+        self.model_id = "openai/whisper-medium"
+
+        self.model = AutoModelForSpeechSeq2Seq.from_pretrained(
+            self.model_id,
+            torch_dtype=self.torch_dtype,
+            low_cpu_mem_usage=True,
+            use_safetensors=True,
+        ).to(self.device)
+
+        self.processor = AutoProcessor.from_pretrained(self.model_id)
+
+        self.pipe = pipeline(
+            "automatic-speech-recognition",
+            model=self.model,
+            tokenizer=self.processor.tokenizer,
+            feature_extractor=self.processor.feature_extractor,
+            torch_dtype=self.torch_dtype,
+            device=self.device,
+        )
+
+    def get(self, src: str) -> str:
+        """Transcribe the input file.
+
+        Args:
+            src (str): File address.
+
+        Returns:
+            str: File transcription.
+        """
+        result = self.pipe(src)
+        return result["text"]

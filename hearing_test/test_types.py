@@ -87,11 +87,11 @@ class TestTypes(ABC):
         Raises:
             NotImplementedError: If the stimuli vocalizer type is not supported.
         """
-        if self.config["stimuli_vocalizer"] == "tts":
+        if self.config["vocalization_mode"] == "tts":
             return Path(
                 self.config["test"]["hearing-test"][test_name]["stimuli-recordings-tts"]
             )
-        elif self.config["stimuli_vocalizer"] == "recorded":
+        elif self.config["vocalization_mode"] == "recorded":
             return Path(
                 self.config["test"]["hearing-test"][test_name][
                     "stimuli-recordings-natural"

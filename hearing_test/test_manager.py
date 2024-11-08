@@ -6,7 +6,7 @@ from abc import ABC, abstractmethod
 from colorama import Fore
 from loguru import logger
 
-from get_response.asr import ASR, SimpleASR, SpeechBrainASR
+from get_response.asr import ASR, SimpleASR, SpeechBrainASR, Whisper, FBWav2Vec2
 from get_response.base import CaptureResponse
 from get_response.cli import CLI
 from get_response.recorder import Recorder
@@ -137,6 +137,10 @@ class ASRTestManager(TestManager):
             )
         elif self.conf["ml"]["asr_type"] == "SimpleASR":
             return SimpleASR()
+        elif self.conf["ml"]["asr_type"] == "whisper":
+            return Whisper()
+        elif self.conf["ml"]["asr_type"] == "wav2vec2":
+            return FBWav2Vec2()
         raise NotImplementedError
 
     def get_response(self) -> list[str]:

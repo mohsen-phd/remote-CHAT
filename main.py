@@ -9,7 +9,8 @@ from loguru import logger
 from util import get_test_manager, play_stimuli, read_conf, save_results
 
 logger.remove(0)
-logger.add(sys.stderr, level="DEBUG")
+# logger.add(sys.stderr, level="DEBUG")
+logger.add(sys.stderr, level="INFO")
 
 
 def preparation() -> dict[str, str]:
@@ -68,7 +69,6 @@ def read_configs(custom_config: dict) -> dict:
     return configs
 
 
-# todo: check ASL with ASR.
 def main():
     """Code entry point."""
     custom_config = preparation()
@@ -83,13 +83,15 @@ def main():
         this_round["snr"] = snr_db
         print(Fore.RED + "Press Enter to play the next digits")
         input()
-        stimuli_id, stimuli_text = manager.test_type.stimuli_generator.get_stimuli()
-        print(Fore.YELLOW + "Listen to the numbers")
+        stimuli_id, stimuli_text, response_getting_prompt = (
+            manager.test_type.stimuli_generator.get_stimuli()
+        )
+        print(Fore.YELLOW + "Please listen")
         logger.debug(f"{iteration} :The stimuli is: {stimuli_text}")
         this_round["stimuli"] = stimuli_text
         play_stimuli(manager.test_type, snr_db, stimuli_id, manager.noise)
 
-        transcribe = manager.get_response()
+        transcribe = manager.get_response(response_getting_prompt)
         this_round["response"] = transcribe
         matched = manager.test_type.stimuli_generator.check_answer(transcribe)
         logger.debug(f"Matched: {matched}")

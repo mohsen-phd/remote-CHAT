@@ -20,6 +20,12 @@ test:
         src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/audio_processing/noise/babble.wav"
       stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/natural/22k/test"
       stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/mello"
+    FAAF:
+      noise:
+        type: babble #[white, babble]
+        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/audio_processing/noise/babble.wav"
+      stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/FAAF/natural"
+      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/mello"
 
 response_capturing: cli #[cli, asr]
 vocalization_mode: recorded #[tts, recorded]

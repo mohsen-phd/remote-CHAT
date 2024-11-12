@@ -59,8 +59,11 @@ class TestManager(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def get_response(self) -> list[str]:
+    def get_response(self, prompt: str) -> list[str]:
         """Get the response from the participant.
+
+        Args:
+            prompt (str): The prompt to present to the participant.
 
         Returns:
             list[str]: List of words in the participant's response.
@@ -96,14 +99,17 @@ class CliTestManager(TestManager):
         """
         return CLI()
 
-    def get_response(self) -> list[str]:
+    def get_response(self, prompt: str) -> list[str]:
         """Get the response from the participant.
+
+        Args:
+            prompt (str): The prompt to present to the participant.
 
         Returns:
             list[str]: List of words in the participant's response.
         """
-        print(Fore.GREEN + "Please enter your response")
-        logger.debug("Enter the number you heard")
+        print(Fore.GREEN + prompt)
+        logger.debug(prompt)
 
         listed_response = self.test_type.cli_post_process(self.response_capturer.get())
         logger.debug(listed_response)
@@ -146,15 +152,18 @@ class ASRTestManager(TestManager):
             return FBWav2Vec2()
         raise NotImplementedError
 
-    def get_response(self) -> list[str]:
+    def get_response(self, prompt: str) -> list[str]:
         """Get the response from the participant.
+
+        Args:
+            prompt (str): The prompt to present to the participant.
 
         Returns:
             list[str]: List of words in the participant's response.
         """
-        logger.debug("Repeat the number you heard")
+        logger.debug(prompt)
 
-        print(Fore.GREEN + "Please give your response")
+        print(Fore.GREEN + prompt)
 
         file_src = self.recorder.listen()
 

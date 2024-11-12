@@ -38,6 +38,19 @@ class Questions(ABC):
         """
         pass
 
+    def _read_json(self, src: str) -> dict:
+        """Read the json file and return the data.
+
+        Args:
+            src (str): json file location
+
+        Returns:
+            dict: data in the json file
+        """
+        with open(src) as f:
+            data = json.load(f)
+        return data
+
 
 class DigitQuestions(Questions):
     """Class for modeling digit-in-noise test questions."""
@@ -94,17 +107,7 @@ class ASLQuestions(Questions):
     def __init__(self) -> None:
         """Initialize the questions object by storing the text of the question."""
         super().__init__()
-        self.stimuli_list = self._read_asl_stimuli()
-
-    def _read_asl_stimuli(self) -> dict:
-        """Read the ASL stimuli from the a json file.
-
-        Returns:
-            dict: The stimuli.
-        """
-        with open("media/ASL/sentences.json") as f:
-            stimuli = json.load(f)
-        return stimuli
+        self.stimuli_list = self._read_json("media/ASL/sentences.json")
 
     def get_stimuli(self) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.
@@ -175,9 +178,8 @@ class FAAF(Questions):
 
     def __init__(self) -> None:
         """Initialize the questions object by storing the text of the question."""
-        self.question = ""
-        self.main_words = []
-        self.question_id = []
+        super().__init__()
+        self.stimuli_list = self._read_json("media/FAAF/stimuli.json")
 
     @abstractmethod
     def check_answer(self, answer: str) -> bool:

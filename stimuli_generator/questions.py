@@ -5,7 +5,7 @@ import random
 from abc import ABC, abstractmethod
 import re
 
-from hearing_test.util import expand_contractions
+from hearing_test.util import expand_contractions, lemmatizer, remove_contractions
 
 
 class Questions(ABC):
@@ -84,7 +84,6 @@ class DigitQuestions(Questions):
             return False
 
 
-# todo: Implement the ASL class
 class ASLQuestions(Questions):
     """Class for modeling ASL test questions."""
 
@@ -132,14 +131,11 @@ class ASLQuestions(Questions):
         Returns:
             bool: Is a match or not.
         """
-
         if answer == ["0"]:
             return False
         elif answer == ["1"]:
             return True
         else:
-            answer = ["The meat was too tough"]
-
             return self._check_asr_answer(answer[0])
 
     def _check_asr_answer(self, answer: str) -> bool:
@@ -154,8 +150,10 @@ class ASLQuestions(Questions):
         answer_without_space = re.sub(r"\s+", "", answer)
 
         correct_count = 0
-        for word in self.main_words:
-            word = expand_contractions(word).split(" ")[0]
+        processed_main_words = lemmatizer(
+            remove_contractions(" ".join(self.main_words))
+        ).split(" ")
+        for word in processed_main_words:
             if word in answer_without_space:
                 correct_count += 1
 

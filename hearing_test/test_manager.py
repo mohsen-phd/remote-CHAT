@@ -11,7 +11,7 @@ from get_response.base import CaptureResponse
 from get_response.cli import CLI
 from get_response.recorder import Recorder
 from hearing_test.test_logic import SpeechInNoise
-from hearing_test.test_types import ASL, DIN
+from hearing_test.test_types import ASL, CHAT, DIN, FAAF
 
 
 class TestManager(ABC):
@@ -48,11 +48,14 @@ class TestManager(ABC):
         self.start_snr = self.conf["test"]["start_snr"]
 
     def _get_test_type(self):
-        ##todo: add more test types (FAAF, CHAT), add from config file
         if self.conf["test_name"] == "din":
             return DIN(self.conf)
         elif self.conf["test_name"] == "asl":
             return ASL(self.conf)
+        elif self.conf["test_name"] == "faaf":
+            return FAAF(self.conf)
+        elif self.conf["test_name"] == "chat":
+            return CHAT(self.conf)
         raise NotImplementedError
 
     @abstractmethod

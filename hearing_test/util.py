@@ -1,4 +1,5 @@
 import re
+from typing import Optional
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -16,7 +17,7 @@ def expand_contractions(text: str) -> str:
         str: The text with expanded contractions.
     """
     contractions_dict = {
-        "'s": "",  # father's -> father
+        "'s": " is",  # father's -> father
         "'re": " are",  # you're -> you are
         "'ve": " have",  # I've -> I have
         "'ll": " will",  # you'll -> you will
@@ -25,6 +26,25 @@ def expand_contractions(text: str) -> str:
         "'m": " am",  # I'm -> I am
         "'t": " not",  # doesn't -> does not (extra handling required to avoid overlap with "n't")
     }
+
+    for contraction, replacement in contractions_dict.items():
+        text = re.sub(rf"{contraction}\b", replacement, text)
+    return text
+
+
+def remove_contractions(text: str) -> str:
+
+    contractions_dict = {
+        "'s": "",  # father's -> father
+        "'re": "",  # you're -> you are
+        "'ve": "",  # I've -> I have
+        "'ll": "",  # you'll -> you will
+        "'d": "",  # he'd -> he would
+        "n't": "",  # can't -> cannot
+        "'m": "",  # I'm -> I am
+        "'t": "",  # doesn't -> does not (extra handling required to avoid overlap with "n't")
+    }
+
     for contraction, replacement in contractions_dict.items():
         text = re.sub(rf"{contraction}\b", replacement, text)
     return text
@@ -80,7 +100,7 @@ def british_to_american(text: str) -> str:
     return " ".join(words)
 
 
-def get_wordnet_pos(tag: str) -> str:
+def get_wordnet_pos(tag: str) -> Optional[str]:
     """Convert POS tag to WordNet POS tag.
 
     Args:
@@ -101,7 +121,7 @@ def get_wordnet_pos(tag: str) -> str:
     elif tag.startswith("R"):
         return wordnet.ADV
     else:
-        raise ValueError("Invalid POS tag")
+        return None
 
 
 def lemmatizer(text: str) -> str:

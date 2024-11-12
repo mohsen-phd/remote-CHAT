@@ -26,7 +26,7 @@ def preparation() -> dict[str, str]:
     # todo:replace the following lines with the above lines
     participant_id = 100
     test_number = 2
-    response_capturing_mode = "cli"
+    response_capturing_mode = "asr"
     test_name = "asl"
     vocalization_mode = "recorded"
 

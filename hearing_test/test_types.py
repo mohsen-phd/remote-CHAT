@@ -8,7 +8,6 @@ import string
 from abc import ABC, abstractmethod
 from pathlib import Path
 
-import contractions
 import nltk
 import numpy as np
 from nltk.stem import WordNetLemmatizer
@@ -313,7 +312,6 @@ class ASL(TestTypes):
         """
         return list(response)[:1]
 
-    # todo:update for ASL, do lemmatization. remove 's.
     def asr_post_process(self, response: str) -> list[str]:
         """Post process the response from the ASR. and remove any common mistakes.
 

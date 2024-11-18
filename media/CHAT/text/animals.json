@@ -1,0 +1,167 @@
+{
+    "1": {
+        "statement": "She has a playful puppy at home.",
+        "question": "What kind of pet does she have at home?",
+        "keyword": "puppy"
+    },
+    "2": {
+        "statement": "They enjoy feeding birds in the park.",
+        "question": "What do they enjoy doing in the park?",
+        "keyword": "feeding birds"
+    },
+    "3": {
+        "statement": "He takes his cat for walks in the garden.",
+        "question": "Where does he take his cat for walks?",
+        "keyword": "garden"
+    },
+    "4": {
+        "statement": "Her favorite animal is a dolphin.",
+        "question": "What is her favorite animal?",
+        "keyword": "dolphin"
+    },
+    "5": {
+        "statement": "They have a fish tank filled with goldfish.",
+        "question": "What type of fish do they have in their tank?",
+        "keyword": "goldfish"
+    },
+    "6": {
+        "statement": "He enjoys watching documentaries about wildlife.",
+        "question": "What does he enjoy watching about wildlife?",
+        "keyword": "documentaries"
+    },
+    "7": {
+        "statement": "She often visits the local animal shelter.",
+        "question": "Where does she often visit?",
+        "keyword": "animal shelter"
+    },
+    "8": {
+        "statement": "They love to take care of their rabbits.",
+        "question": "What animals do they love to take care of?",
+        "keyword": "rabbits"
+    },
+    "9": {
+        "statement": "He likes to train his dog to do tricks.",
+        "question": "What does he like to train his dog to do?",
+        "keyword": "tricks"
+    },
+    "10": {
+        "statement": "She enjoys grooming her long haired cat.",
+        "question": "What does she enjoy doing with her cat?",
+        "keyword": "grooming her long haired"
+    },
+    "11": {
+        "statement": "They often go for hikes with their dog.",
+        "question": "What do they often do with their dog?",
+        "keyword": "go for hikes"
+    },
+    "12": {
+        "statement": "He has a collection of animal figurines.",
+        "question": "What does he have a collection of?",
+        "keyword": "animal figurines"
+    },
+    "13": {
+        "statement": "She loves the sound of crickets.",
+        "question": "What sound does she love?",
+        "keyword": "crickets"
+    },
+    "14": {
+        "statement": "They feed their dog twice a day.",
+        "question": "How often do they feed their dog?",
+        "keyword": "twice a day"
+    },
+    "15": {
+        "statement": "He often visits the zoo to see lions.",
+        "question": "What animals does he go to see at the zoo?",
+        "keyword": "lions"
+    },
+    "16": {
+        "statement": "She enjoys watching her hamster run on a wheel.",
+        "question": "What does she enjoy watching her hamster do?",
+        "keyword": "run on a wheel"
+    },
+    "17": {
+        "statement": "They have a parrot that can talk.",
+        "question": "What type of bird do they have?",
+        "keyword": "parrot"
+    },
+    "18": {
+        "statement": "He likes to pet friendly dogs at the park.",
+        "question": "What does he like to do at the park?",
+        "keyword": "pet friendly dogs"
+    },
+    "19": {
+        "statement": "She often takes her dog to obedience classes.",
+        "question": "Where does she take her dog?",
+        "keyword": "obedience classes"
+    },
+    "20": {
+        "statement": "They have a backyard where their cats play.",
+        "question": "Where do their cats play?",
+        "keyword": "backyard"
+    },
+    "21": {
+        "statement": "He enjoys training his bird to speak.",
+        "question": "What does he enjoy training his bird to do?",
+        "keyword": "speak"
+    },
+    "22": {
+        "statement": "She often watches animal shows on TV.",
+        "question": "What does she often watch on TV?",
+        "keyword": "animal shows"
+    },
+    "23": {
+        "statement": "They take care of their turtle in a pond.",
+        "question": "Where do they take care of their turtle?",
+        "keyword": "pond"
+    },
+    "26": {
+        "statement": "They often go camping with their dog.",
+        "question": "What do they often do with their dog?",
+        "keyword": "camping"
+    },
+    "27": {
+        "statement": "He has a lizard as a pet.",
+        "question": "What type of pet does he have?",
+        "keyword": "lizard"
+    },
+    "28": {
+        "statement": "She enjoys teaching her dog new commands.",
+        "question": "What does she enjoy teaching her dog?",
+        "keyword": "new commands"
+    },
+    "29": {
+        "statement": "They like to take pictures of wild animals.",
+        "question": "What do they like to take pictures of?",
+        "keyword": "wild animals"
+    },
+    "30": {
+        "statement": "He feeds his cat dry food every morning.",
+        "question": "What does he feed his cat every morning?",
+        "keyword": "dry food"
+    },
+    "31": {
+        "statement": "She likes to watch fish swim in her aquarium.",
+        "question": "What does she like to watch in her aquarium?",
+        "keyword": "fish swim"
+    },
+    "32": {
+        "statement": "They enjoy having picnics with their pets.",
+        "question": "What do they enjoy having with their pets?",
+        "keyword": "picnics"
+    },
+    "33": {
+        "statement": "He often trains his dog at the park.",
+        "question": "Where does he often train his dog?",
+        "keyword": "park"
+    },
+    "34": {
+        "statement": "She loves adopting animals.",
+        "question": "What does she love to do?",
+        "keyword": "adopting animals"
+    },
+    "35": {
+        "statement": "They keep their bird cage clean and tidy.",
+        "question": "What do they keep clean and tidy?",
+        "keyword": "bird cage"
+    }
+}

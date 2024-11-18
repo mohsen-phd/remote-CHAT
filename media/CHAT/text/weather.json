@@ -1,0 +1,177 @@
+{
+    "1": {
+        "statement": "It often rains in spring.",
+        "question": "When does it often rain?",
+        "keyword": "spring"
+    },
+    "2": {
+        "statement": "Summer is known for its long day.",
+        "question": "What  is summer known for?",
+        "keyword": "long day"
+    },
+    "3": {
+        "statement": "Winter brings snow.",
+        "question": "What does winter bring?",
+        "keyword": "snow"
+    },
+    "4": {
+        "statement": "Autumn is famous for colorful leaves.",
+        "question": "What is autumn famous for?",
+        "keyword": "colorful leaves"
+    },
+    "5": {
+        "statement": "She enjoys sunny days.",
+        "question": "What does she enjoy?",
+        "keyword": "sunny days"
+    },
+    "6": {
+        "statement": "They prefer cold weather for hiking.",
+        "question": "What type of weather do they prefer for hiking?",
+        "keyword": "cold"
+    },
+    "7": {
+        "statement": "He likes to drink hot chocolate in winter.",
+        "question": "What does he like to drink in winter?",
+        "keyword": "hot chocolate"
+    },
+    "8": {
+        "statement": "He prefers to stay indoor in rainy days.",
+        "question": "When does he prefer to stay indoor?",
+        "keyword": "in rainy days"
+    },
+    "9": {
+        "statement": "She loves it when flowers bloom.",
+        "question": "What does she loves?",
+        "keyword": "when flowers bloom"
+    },
+    "10": {
+        "statement": "Thunderstorms are common in summer.",
+        "question": "What is common in summer?",
+        "keyword": "Thunderstorms"
+    },
+    "11": {
+        "statement": "He enjoys watching snow fall in winter.",
+        "question": "What does he enjoy watching?",
+        "keyword": "snow"
+    },
+    "12": {
+        "statement": "The weather is usually mild in autumn.",
+        "question": "What is the weather usually like in autumn?",
+        "keyword": "mild"
+    },
+    "13": {
+        "statement": "She takes allergy medication during spring.",
+        "question": "what does she take in spring?",
+        "keyword": "allergy medication"
+    },
+    "14": {
+        "statement": "Sunny weather makes her happy.",
+        "question": "What does makes her happy?",
+        "keyword": "sunny weather"
+    },
+    "15": {
+        "statement": "They like to go for walks in cold weather.",
+        "question": "When do they like to go for walks?",
+        "keyword": "in cold weather"
+    },
+    "16": {
+        "statement": "He wears a jacket when it gets chilly.",
+        "question": "What does he do when it gets chilly?",
+        "keyword": "wears a jacket"
+    },
+    "17": {
+        "statement": "She enjoys clear skies during summer.",
+        "question": "What does she enjoy in summer?",
+        "keyword": "clear skies"
+    },
+    "18": {
+        "statement": "Foggy mornings are common in autumn.",
+        "question": "What is common in autumn?",
+        "keyword": "foggy mornings"
+    },
+    "19": {
+        "statement": "He prefers warm weather for outdoor sports.",
+        "question": "What weather does he prefer for outdoor sports?",
+        "keyword": "warm"
+    },
+    "20": {
+        "statement": "She loves to take pictures of snowy landscapes.",
+        "question": "What does she love to take pictures of?",
+        "keyword": "snowy landscapes"
+    },
+    "21": {
+        "statement": "The air is fresh in fall.",
+        "question": "How is the air in fall?",
+        "keyword": "fresh"
+    },
+    "22": {
+        "statement": "Raincoats are essential during the rainy season.",
+        "question": "What is essential during the rainy season?",
+        "keyword": "raincoats"
+    },
+    "23": {
+        "statement": "He enjoys the sun in summer.",
+        "question": "What does he enjoy in summer?",
+        "keyword": "sun"
+    },
+    "24": {
+        "statement": "Snowflakes are unique and beautiful.",
+        "question": "What are unique and beautiful?",
+        "keyword": "Snowflakes"
+    },
+    "25": {
+        "statement": "They often have barbecues in warm weather.",
+        "question": "what do they do in warm weather?",
+        "keyword": "have barbecues"
+    },
+    "26": {
+        "statement": "She likes to eat soup in winter.",
+        "question": "What does she like to do in winter?",
+        "keyword": "eat soup"
+    },
+    "27": {
+        "statement": "She collects leaves in autumn .",
+        "question": "What does she collect in autumn?",
+        "keyword": "leaves"
+    },
+    "28": {
+        "statement": "Thunderstorms are very loud .",
+        "question": "How are thunderstorms?",
+        "keyword": "loud"
+    },
+    "29": {
+        "statement": "He likes to run in the morning.",
+        "question": "When does he like to run?",
+        "keyword": "morning"
+    },
+    "30": {
+        "statement": "She wears sunglasses on sunny days.",
+        "question": "What does she wear on sunny days?",
+        "keyword": "sunglasses"
+    },
+    "31": {
+        "statement": "He prefers to stay indoors during heavy rain.",
+        "question": "When does he prefer to stay indoors?",
+        "keyword": "during heavy rain"
+    },
+    "32": {
+        "statement": "She enjoys watching the leaves change color.",
+        "question": "What does she enjoy watching change color?",
+        "keyword": "leaves"
+    },
+    "33": {
+        "statement": "They often go skiing in winter.",
+        "question": "What do they often do in winter?",
+        "keyword": "skiing"
+    },
+    "34": {
+        "statement": "He likes to plant flowers.",
+        "question": "What does he like to do?",
+        "keyword": "plant flowers"
+    },
+    "35": {
+        "statement": "He likes to surf in summer.",
+        "question": "What does he like to do in summer?",
+        "keyword": "surf"
+    }
+}

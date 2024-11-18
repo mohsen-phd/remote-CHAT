@@ -1,0 +1,177 @@
+{
+    "1": {
+        "statement": "She enjoys studying math in school.",
+        "question": "What subject does she enjoy studying?",
+        "keyword": "math"
+    },
+    "2": {
+        "statement": "They often participate in group projects.",
+        "question": "What do they often participate in?",
+        "keyword": "group projects"
+    },
+    "3": {
+        "statement": "He prefers online courses for flexibility.",
+        "question": "What does he prefer for flexibility?",
+        "keyword": "online courses"
+    },
+    "4": {
+        "statement": "She likes reading books for knowledge.",
+        "question": "Why does she like reading books?",
+        "keyword": "knowledge"
+    },
+    "5": {
+        "statement": "They frequently visit the library after school.",
+        "question": "Where do they frequently visit after school?",
+        "keyword": "library"
+    },
+    "6": {
+        "statement": "He enjoys giving presentations in class.",
+        "question": "What does he enjoy doing in class?",
+        "keyword": "giving presentations"
+    },
+    "7": {
+        "statement": "She often studies with her friends at home.",
+        "question": "Where does she often study with friends?",
+        "keyword": "at home"
+    },
+    "8": {
+        "statement": "They like to attend school events together.",
+        "question": "What do they like attending together?",
+        "keyword": "school events"
+    },
+    "9": {
+        "statement": "He usually completes his homework on time.",
+        "question": "When does he usually complete his homework?",
+        "keyword": "on time"
+    },
+    "10": {
+        "statement": "She loves learning new languages at school.",
+        "question": "What does she love learning at school?",
+        "keyword": "new languages"
+    },
+    "11": {
+        "statement": "They often take notes during lectures.",
+        "question": "What do they often do during lectures?",
+        "keyword": "take notes"
+    },
+    "12": {
+        "statement": "He prefers studying in quiet environments.",
+        "question": "Where does he prefer studying?",
+        "keyword": "quiet environments"
+    },
+    "13": {
+        "statement": "She enjoys participating in school clubs.",
+        "question": "What does she enjoy participating in?",
+        "keyword": "school clubs"
+    },
+    "14": {
+        "statement": "They like discussing topics with their teachers.",
+        "question": "Who do they like discussing topics with?",
+        "keyword": "their teachers"
+    },
+    "15": {
+        "statement": "He often helps his classmates with homework.",
+        "question": "Who does he often help with homework?",
+        "keyword": "his classmates"
+    },
+    "16": {
+        "statement": "She loves doing experiments in science class.",
+        "question": "What does she love doing in science class?",
+        "keyword": "experiments"
+    },
+    "17": {
+        "statement": "They frequently prepare for exams together.",
+        "question": "What do they frequently prepare for together?",
+        "keyword": "exams"
+    },
+    "18": {
+        "statement": "He enjoys reading about history during class.",
+        "question": "What does he enjoy reading about during class?",
+        "keyword": "history"
+    },
+    "19": {
+        "statement": "She likes working on art projects in school.",
+        "question": "What does she like working on in school?",
+        "keyword": "art projects"
+    },
+    "20": {
+        "statement": "They often engage in discussions about literature.",
+        "question": "What do they often discuss about?",
+        "keyword": "literature"
+    },
+    "21": {
+        "statement": "He prefers practical lessons over theoretical ones.",
+        "question": "What type of lessons does he prefer?",
+        "keyword": "practical lessons"
+    },
+    "22": {
+        "statement": "She enjoys tutoring younger students after school.",
+        "question": "What does she enjoy doing after school?",
+        "keyword": "tutoring younger students"
+    },
+    "23": {
+        "statement": "They love learning about technology in class.",
+        "question": "What do they love learning about in class?",
+        "keyword": "technology"
+    },
+    "24": {
+        "statement": "He often asks questions to understand better.",
+        "question": "What does he often do to understand better?",
+        "keyword": "asks questions"
+    },
+    "25": {
+        "statement": "She likes studying various subjects every term.",
+        "question": "What does she like studying every term?",
+        "keyword": "various subjects"
+    },
+    "26": {
+        "statement": "They often celebrate academic achievements together.",
+        "question": "What do they often celebrate together?",
+        "keyword": "academic achievements"
+    },
+    "27": {
+        "statement": "He enjoys attending guest lectures at school.",
+        "question": "What does he enjoy attending at school?",
+        "keyword": "guest lectures"
+    },
+    "28": {
+        "statement": "She loves writing essays for her classes.",
+        "question": "What does she love doing for her classes?",
+        "keyword": "writing essays"
+    },
+    "29": {
+        "statement": "They like exploring new educational resources.",
+        "question": "What do they like exploring?",
+        "keyword": "new educational resources"
+    },
+    "30": {
+        "statement": "He prefers interactive lessons over lectures.",
+        "question": "What does he prefer over lectures?",
+        "keyword": "interactive lessons"
+    },
+    "31": {
+        "statement": "She enjoys collaborating on projects with peers.",
+        "question": "What does she enjoy doing with peers?",
+        "keyword": "collaborating on projects"
+    },
+    "32": {
+        "statement": "They often engage in extracurricular activities.",
+        "question": "What do they often engage in?",
+        "keyword": "extracurricular activities"
+    },
+    "33": {
+        "statement": "He likes participating in school competitions.",
+        "question": "What does he like participating in?",
+        "keyword": "school competitions"
+    },
+    "34": {
+        "statement": "She often reflects on her learning experiences.",
+        "question": "What does she often reflect on?",
+        "keyword": "learning experiences"
+    },
+    "35": {
+        "statement": "They use technology to enhance learning.",
+        "question": "What do they do to enhance learning?",
+        "keyword": "use technology"
+    }
+}

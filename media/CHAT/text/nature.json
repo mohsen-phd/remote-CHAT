@@ -1,0 +1,177 @@
+{
+    "1": {
+        "statement": "She enjoys hiking in the mountains every summer.",
+        "question": "What does she enjoy doing every summer?",
+        "keyword": "hiking"
+    },
+    "2": {
+        "statement": "They are planting trees to improve air quality.",
+        "question": "Why are they planting trees?",
+        "keyword": "improve air quality"
+    },
+    "3": {
+        "statement": "He loves observing birds in their natural habitats.",
+        "question": "What does he love observing in nature?",
+        "keyword": "birds"
+    },
+    "4": {
+        "statement": "The park features beautiful walking trails and lakes.",
+        "question": "What does the park feature?",
+        "keyword": "walking trails and lakes"
+    },
+    "5": {
+        "statement": "She is learning about renewable energy sources.",
+        "question": "What is she learning about?",
+        "keyword": "renewable energy sources"
+    },
+    "6": {
+        "statement": "They often go camping in the forest.",
+        "question": "Where do they often go camping?",
+        "keyword": "in the forest"
+    },
+    "7": {
+        "statement": "He enjoys photographing wildlife in national parks.",
+        "question": "What does he enjoy photographing?",
+        "keyword": "wildlife"
+    },
+    "8": {
+        "statement": "The community is organizing a clean up event.",
+        "question": "What is the community organizing?",
+        "keyword": "a clean up event"
+    },
+    "9": {
+        "statement": "She loves gardening and growing her own food.",
+        "question": "What does she love doing?",
+        "keyword": "gardening and growing"
+    },
+    "10": {
+        "statement": "They are studying the effects of climate change.",
+        "question": "What are they studying?",
+        "keyword": "effects of climate change"
+    },
+    "11": {
+        "statement": "He finds peace in nature during his walks.",
+        "question": "Where does he find peace?",
+        "keyword": "in nature"
+    },
+    "12": {
+        "statement": "The river is home to many fish species.",
+        "question": "What is the river home to?",
+        "keyword": "fish species"
+    },
+    "13": {
+        "statement": "She advocates for wildlife conservation.",
+        "question": "What does she advocate for?",
+        "keyword": "wildlife conservation"
+    },
+    "14": {
+        "statement": "They often visit beaches to enjoy the ocean.",
+        "question": "Where do they often visit?",
+        "keyword": "beaches"
+    },
+    "15": {
+        "statement": "He participates in local environmental initiatives.",
+        "question": "What does he participate in?",
+        "keyword": "environmental initiatives"
+    },
+    "16": {
+        "statement": "The mountain views are breathtaking at sunrise.",
+        "question": "When are the mountain views breathtaking?",
+        "keyword": "sunrise"
+    },
+    "17": {
+        "statement": "She enjoys reading about different ecosystems.",
+        "question": "What does she enjoy reading about?",
+        "keyword": "different ecosystems"
+    },
+    "18": {
+        "statement": "They support sustainable farming practices in their area.",
+        "question": "What do they support in their area?",
+        "keyword": "sustainable farming"
+    },
+    "19": {
+        "statement": "He often goes fishing in the nearby lake.",
+        "question": "Where does he often go fishing?",
+        "keyword": "nearby lake"
+    },
+    "20": {
+        "statement": "The weather affects many plants and animals.",
+        "question": "What does the weather affect?",
+        "keyword": "plants and animals"
+    },
+    "21": {
+        "statement": "She participates in beach clean ups every month.",
+        "question": "what does she do every month?",
+        "keyword": "beach clean ups"
+    },
+    "22": {
+        "statement": "They are building a wildlife habitat in the city.",
+        "question": "What are they building in the city?",
+        "keyword": "wildlife habitat"
+    },
+    "23": {
+        "statement": "He enjoys kayaking in calm waters on weekends.",
+        "question": "what does she enjoy doing?",
+        "keyword": "kayaking"
+    },
+    "24": {
+        "statement": "The garden attracts various butterflies and bees.",
+        "question": "What does the garden attract?",
+        "keyword": "butterflies and bees"
+    },
+    "25": {
+        "statement": "She loves studying the stars and planets.",
+        "question": "What does she love studying?",
+        "keyword": "stars and planets"
+    },
+    "26": {
+        "statement": "They often hike to observe local wildlife.",
+        "question": "What do they often hike to observe?",
+        "keyword": "local wildlife"
+    },
+    "27": {
+        "statement": "He enjoys camping under the starry sky.",
+        "question": "What does he enjoy doing at night?",
+        "keyword": "camping"
+    },
+    "28": {
+        "statement": "The forest is full of diverse plant life.",
+        "question": "What is the forest full of?",
+        "keyword": "plant life"
+    },
+    "29": {
+        "statement": "She loves exploring national parks during vacations.",
+        "question": "What does she love exploring during vacations?",
+        "keyword": "national parks"
+    },
+    "30": {
+        "statement": "They often take nature walks to relax.",
+        "question": "what do they do to relax?",
+        "keyword": "take nature walks"
+    },
+    "31": {
+        "statement": "He participates in a local birdwatching group.",
+        "question": "What group does he participate in?",
+        "keyword": "birdwatching group"
+    },
+    "32": {
+        "statement": "The lake provides a habitat for animals.",
+        "question": "What does the lake provide?",
+        "keyword": "habitat for animals"
+    },
+    "33": {
+        "statement": "She enjoys growing new plants in her garden.",
+        "question": "What does she enjoy doing?",
+        "keyword": "growing new plants"
+    },
+    "34": {
+        "statement": "They are working on reducing plastic waste.",
+        "question": "What are they working on?",
+        "keyword": "reducing plastic waste"
+    },
+    "35": {
+        "statement": "He loves the sound of rain in nature.",
+        "question": "What does he love in nature?",
+        "keyword": "sound of rain"
+    }
+}

@@ -1,0 +1,177 @@
+{
+    "1": {
+        "statement": "She enjoys studying biology in college.",
+        "question": "What subject does she enjoy studying?",
+        "keyword": "biology"
+    },
+    "2": {
+        "statement": "They plan to start their new jobs.",
+        "question": "What do they plan to start?",
+        "keyword": "new jobs"
+    },
+    "3": {
+        "statement": "He often studies at night.",
+        "question": "When does he often study?",
+        "keyword": "at night"
+    },
+    "4": {
+        "statement": "The teacher gives homework on Mondays.",
+        "question": "When does the teacher give homework?",
+        "keyword": "Mondays"
+    },
+    "5": {
+        "statement": "She prefers working in a quiet environment.",
+        "question": "Where does she prefer working?",
+        "keyword": "quiet environment"
+    },
+    "6": {
+        "statement": "They completed their project last week.",
+        "question": "When did they complete their project?",
+        "keyword": "last week"
+    },
+    "7": {
+        "statement": "He takes notes during the lectures.",
+        "question": "What does he do during lectures?",
+        "keyword": "takes notes"
+    },
+    "8": {
+        "statement": "She aims to graduate with honors.",
+        "question": "What does she aim to achieve?",
+        "keyword": "graduate with honors"
+    },
+    "9": {
+        "statement": "They hold meetings to discuss project.",
+        "question": "What do they hold meetings for?",
+        "keyword": "discuss project"
+    },
+    "10": {
+        "statement": "He studies best in the morning.",
+        "question": "When does he study best?",
+        "keyword": "morning"
+    },
+    "11": {
+        "statement": "The internship provides work experience.",
+        "question": "What does the internship provide?",
+        "keyword": "work experience"
+    },
+    "12": {
+        "statement": "She reviews her notes before exams.",
+        "question": "What does she review before exams?",
+        "keyword": "notes"
+    },
+    "13": {
+        "statement": "He works part time while attending university.",
+        "question": "What does he do while attending university?",
+        "keyword": "works part time"
+    },
+    "14": {
+        "statement": "The library has many articles.",
+        "question": "What does the library have?",
+        "keyword": "articles"
+    },
+    "15": {
+        "statement": "They often collaborate on group assignments.",
+        "question": "What do they often collaborate on?",
+        "keyword": "group assignments"
+    },
+    "16": {
+        "statement": "She attends workshops to improve her skills.",
+        "question": "What does she attend?",
+        "keyword": "workshops"
+    },
+    "17": {
+        "statement": "He prefers online courses for flexibility.",
+        "question": "Why does he prefer online courses?",
+        "keyword": "for flexibility"
+    },
+    "18": {
+        "statement": "The seminar covers marketing topics.",
+        "question": "What does the seminar cover?",
+        "keyword": "marketing topics"
+    },
+    "19": {
+        "statement": "She practices public speaking every week.",
+        "question": "what does she practice ?",
+        "keyword": "public speaking"
+    },
+    "20": {
+        "statement": "They discuss their ideas during brainstorming sessions.",
+        "question": "What do they discuss during sessions?",
+        "keyword": "ideas"
+    },
+    "21": {
+        "statement": "The manager encourages teamwork among employees.",
+        "question": "What does the manager encourage?",
+        "keyword": "teamwork"
+    },
+    "22": {
+        "statement": "He learns best through experience.",
+        "question": "How does he learn best?",
+        "keyword": "through experience"
+    },
+    "23": {
+        "statement": "The course requires students to write essays.",
+        "question": "What does the course require students to do?",
+        "keyword": "write essays"
+    },
+    "24": {
+        "statement": "She balances work and study effectively.",
+        "question": "What does she balance?",
+        "keyword": "work and study"
+    },
+    "25": {
+        "statement": "They provide feedback to improve performance.",
+        "question": "What do they provide to improve performance?",
+        "keyword": "feedback"
+    },
+    "26": {
+        "statement": "He aims to secure a promotion soon.",
+        "question": "What does he aim to secure?",
+        "keyword": "promotion"
+    },
+    "27": {
+        "statement": "The assignment is due by Friday.",
+        "question": "When is the assignment due?",
+        "keyword": "Friday"
+    },
+    "28": {
+        "statement": "She often reads articles related to her field.",
+        "question": "What does she often read?",
+        "keyword": "articles"
+    },
+    "29": {
+        "statement": "They attend networking events for career opportunities.",
+        "question": "Why do they attend networking events?",
+        "keyword": "career opportunities"
+    },
+    "30": {
+        "statement": "He finds group work challenging.",
+        "question": "What does he find challenging?",
+        "keyword": "group work"
+    },
+    "31": {
+        "statement": "She prepares presentations for team meetings.",
+        "question": "What does she prepare for meetings?",
+        "keyword": "presentations"
+    },
+    "32": {
+        "statement": "They celebrated at the end of projects.",
+        "question": "What did they do at the end of projects?",
+        "keyword": "celebrated"
+    },
+    "33": {
+        "statement": "He uses software to enhance his productivity.",
+        "question": "What does he use to enhance productivity?",
+        "keyword": "software"
+    },
+    "34": {
+        "statement": "The curriculum includes practical assignments.",
+        "question": "What does the curriculum include?",
+        "keyword": "practical assignments"
+    },
+    "35": {
+        "statement": "She takes breaks to refresh her mind.",
+        "question": "Why does she take breaks?",
+        "keyword": "refresh her mind"
+    }
+}

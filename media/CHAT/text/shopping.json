@@ -1,0 +1,177 @@
+{
+    "1": {
+        "statement": "She enjoys shopping for clothes during sales.",
+        "question": "What does she enjoy shopping for during sales?",
+        "keyword": "clothes"
+    },
+    "2": {
+        "statement": "They often compare prices before buying.",
+        "question": "What do they often compare before buying?",
+        "keyword": "prices"
+    },
+    "3": {
+        "statement": "He prefers shopping online for convenience.",
+        "question": "What does he prefer for convenience?",
+        "keyword": "shopping online"
+    },
+    "4": {
+        "statement": "She likes trying new recipes.",
+        "question": "What does she like trying?",
+        "keyword": "new recipes"
+    },
+    "5": {
+        "statement": "They frequently visit local markets for fresh produce.",
+        "question": "Where do they frequently visit for produce?",
+        "keyword": "local markets"
+    },
+    "6": {
+        "statement": "He enjoys browsing for books.",
+        "question": "What does he enjoy browsing for?",
+        "keyword": "books"
+    },
+    "7": {
+        "statement": "She often looks for discounts on groceries.",
+        "question": "What does she often look for?",
+        "keyword": "discounts"
+    },
+    "8": {
+        "statement": "They like to buy gifts for each other.",
+        "question": "What do they like to buy for each other?",
+        "keyword": "gifts"
+    },
+    "9": {
+        "statement": "He usually checks reviews before purchasing products.",
+        "question": "What does he usually check before purchasing?",
+        "keyword": "reviews"
+    },
+    "10": {
+        "statement": "She enjoys collecting unique kitchen gadgets.",
+        "question": "What does she enjoy collecting?",
+        "keyword": "unique kitchen gadgets"
+    },
+    "11": {
+        "statement": "They often shop for home decor items together.",
+        "question": "What do they often shop for together?",
+        "keyword": "home decor items"
+    },
+    "12": {
+        "statement": "He prefers buying organic food for health.",
+        "question": "What does he prefer buying for health?",
+        "keyword": "organic food"
+    },
+    "13": {
+        "statement": "She loves exploring charity shops for bargains.",
+        "question": "Where does she love exploring for bargains?",
+        "keyword": "charity shops"
+    },
+    "14": {
+        "statement": "They usually plan their shopping trips ahead.",
+        "question": "What do they usually plan ahead?",
+        "keyword": "shopping trips"
+    },
+    "15": {
+        "statement": "He enjoys discovering new products online.",
+        "question": "What does he enjoy discovering online?",
+        "keyword": "new products"
+    },
+    "16": {
+        "statement": "She often makes a list before grocery shopping.",
+        "question": "What does she often make before shopping?",
+        "keyword": "a list"
+    },
+    "17": {
+        "statement": "They like to support local businesses when shopping.",
+        "question": "What do they like to support when shopping?",
+        "keyword": "local businesses"
+    },
+    "18": {
+        "statement": "He prefers using cash for small purchases.",
+        "question": "What does he prefer using for small purchases?",
+        "keyword": "cash"
+    },
+    "19": {
+        "statement": "She enjoys tasting samples while shopping.",
+        "question": "What does she enjoy while shopping?",
+        "keyword": "tasting samples"
+    },
+    "20": {
+        "statement": "They often browse for travel deals online.",
+        "question": "What do they often browse for online?",
+        "keyword": "travel deals"
+    },
+    "21": {
+        "statement": "He likes to read labels before buying food.",
+        "question": "What does he like to read before buying food?",
+        "keyword": "labels"
+    },
+    "22": {
+        "statement": "She loves planning her shopping trips strategically.",
+        "question": "What does she love planning strategically?",
+        "keyword": "shopping trips"
+    },
+    "23": {
+        "statement": "They often share shopping tips with friends.",
+        "question": "What do they often share with friends?",
+        "keyword": "shopping tips"
+    },
+    "24": {
+        "statement": "He enjoys finding good deals on electronics.",
+        "question": "What does he enjoy finding deals on?",
+        "keyword": "electronics"
+    },
+    "25": {
+        "statement": "She likes to shop for seasonal items.",
+        "question": "What does she like to shop for?",
+        "keyword": "seasonal items"
+    },
+    "26": {
+        "statement": "They enjoy going window shopping on weekends.",
+        "question": "What do they enjoy doing on weekends?",
+        "keyword": "window shopping"
+    },
+    "27": {
+        "statement": "He often buys books from online retailers.",
+        "question": "Where does he often buy books from?",
+        "keyword": "online retailers"
+    },
+    "28": {
+        "statement": "She enjoys planning meals based on sales.",
+        "question": "What does she enjoy planning based on sales?",
+        "keyword": "meals"
+    },
+    "29": {
+        "statement": "They frequently attend local craft fairs together.",
+        "question": "What do they frequently attend together?",
+        "keyword": "local craft fairs"
+    },
+    "30": {
+        "statement": "He prefers eco friendly products when possible.",
+        "question": "What does he prefer when possible?",
+        "keyword": "eco friendly products"
+    },
+    "31": {
+        "statement": "She often visits specialty shops for unique finds.",
+        "question": "Where does she often visit for unique finds?",
+        "keyword": "specialty shops"
+    },
+    "32": {
+        "statement": "They enjoy browsing for fashion trends online.",
+        "question": "What do they enjoy browsing for online?",
+        "keyword": "fashion trends"
+    },
+    "33": {
+        "statement": "He likes to shop for fitness gear regularly.",
+        "question": "What does he like to shop for regularly?",
+        "keyword": "fitness gear"
+    },
+    "34": {
+        "statement": "She enjoys comparing different brands before buying.",
+        "question": "What does she enjoy comparing before buying?",
+        "keyword": "different brands"
+    },
+    "35": {
+        "statement": "They often discuss new products they discover.",
+        "question": "What do they often discuss?",
+        "keyword": "new products"
+    }
+}

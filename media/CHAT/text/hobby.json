@@ -1,0 +1,177 @@
+{
+    "1": {
+        "statement": "She enjoys painting landscapes on weekends.",
+        "question": "What does she enjoy painting on weekends?",
+        "keyword": "landscapes"
+    },
+    "2": {
+        "statement": "He plays guitar in a local band.",
+        "question": "What does he play in a local band?",
+        "keyword": "guitar"
+    },
+    "3": {
+        "statement": "They love gardening and growing vegetables.",
+        "question": "What do they grow in their garden?",
+        "keyword": "vegetables"
+    },
+    "4": {
+        "statement": "She collects stamps from different countries.",
+        "question": "What does she collect from different countries?",
+        "keyword": "stamps"
+    },
+    "5": {
+        "statement": "He enjoys hiking in the mountains every summer.",
+        "question": "When does he enjoy hiking in the mountains?",
+        "keyword": "summer"
+    },
+    "6": {
+        "statement": "They attend cooking classes to learn new recipes.",
+        "question": "What do they attend?",
+        "keyword": "cooking classes"
+    },
+    "7": {
+        "statement": "She loves to knit scarves for her friends.",
+        "question": "What does she knit for her friends?",
+        "keyword": "scarves"
+    },
+    "8": {
+        "statement": "He practices yoga every morning for relaxation.",
+        "question": "Why does he practice yoga every morning?",
+        "keyword": "relaxation"
+    },
+    "9": {
+        "statement": "They watch movies together every Friday night.",
+        "question": "When do they watch movies together?",
+        "keyword": "Friday night"
+    },
+    "10": {
+        "statement": "She enjoys reading mystery novels before bed.",
+        "question": "What does she enjoy reading before bed?",
+        "keyword": "mystery novels"
+    },
+    "11": {
+        "statement": "He builds model airplanes in his spare time.",
+        "question": "What does he build in his spare time?",
+        "keyword": "model airplanes"
+    },
+    "12": {
+        "statement": "They go fishing at the lake every summer.",
+        "question": "Where do they go fishing every summer?",
+        "keyword": "lake"
+    },
+    "13": {
+        "statement": "She takes dance classes on Saturday mornings.",
+        "question": "When does she take dance classes?",
+        "keyword": "Saturday mornings"
+    },
+    "14": {
+        "statement": "He enjoys photography during his travels.",
+        "question": "What does he enjoy during his travels?",
+        "keyword": "photography"
+    },
+    "15": {
+        "statement": "They play board games with friends on weekends.",
+        "question": "When do they play board games with friends?",
+        "keyword": "weekends"
+    },
+    "16": {
+        "statement": "She listens to podcasts while jogging in the park.",
+        "question": "What does she listen to while jogging?",
+        "keyword": "podcasts"
+    },
+    "17": {
+        "statement": "He creates digital art on his computer.",
+        "question": "What does he create on his computer?",
+        "keyword": "digital art"
+    },
+    "18": {
+        "statement": "They enjoy cycling along the river paths.",
+        "question": "Where do they enjoy cycling?",
+        "keyword": "river paths"
+    },
+    "19": {
+        "statement": "She practices meditation for mental peace.",
+        "question": "Why does she practice meditation?",
+        "keyword": "mental peace"
+    },
+    "20": {
+        "statement": "He plays chess with his grandfather every Sunday.",
+        "question": "When does he play chess with his grandfather?",
+        "keyword": "Sunday"
+    },
+    "21": {
+        "statement": "They enjoy exploring new hiking trails together.",
+        "question": "What do they enjoy exploring together?",
+        "keyword": "hiking trails"
+    },
+    "22": {
+        "statement": "She makes jewelry as a creative hobby.",
+        "question": "What does she make as a hobby?",
+        "keyword": "jewelry"
+    },
+    "23": {
+        "statement": "He attends art workshops to improve his skills.",
+        "question": "What does he attend to improve his skills?",
+        "keyword": "art workshops"
+    },
+    "24": {
+        "statement": "They like to visit museums on weekends.",
+        "question": "what do they like to do on weekends?",
+        "keyword": "visit museums"
+    },
+    "25": {
+        "statement": "She enjoys writing poetry in her journal.",
+        "question": "What does she enjoy writing in her journal?",
+        "keyword": "poetry"
+    },
+    "26": {
+        "statement": "He goes to the gym to stay fit.",
+        "question": "Why does he go to the gym?",
+        "keyword": "to stay fit"
+    },
+    "27": {
+        "statement": "They learn new languages together online.",
+        "question": "What do they learn together online?",
+        "keyword": "new languages"
+    },
+    "28": {
+        "statement": "She practices calligraphy as a relaxing activity.",
+        "question": "What does she practice as a relaxing activity?",
+        "keyword": "calligraphy"
+    },
+    "29": {
+        "statement": "He enjoys cooking gourmet meals for his family.",
+        "question": "Who does he cook gourmet meals for?",
+        "keyword": "his family"
+    },
+    "30": {
+        "statement": "They spend weekends volunteering at the shelter.",
+        "question": "Where do they volunteer on weekends?",
+        "keyword": "shelter"
+    },
+    "31": {
+        "statement": "She enjoys crafting scrapbooks with photos.",
+        "question": "What does she enjoy crafting with photos?",
+        "keyword": "scrapbooks"
+    },
+    "32": {
+        "statement": "He goes for runs in the early morning.",
+        "question": "When does he go for runs?",
+        "keyword": "early morning"
+    },
+    "33": {
+        "statement": "They explore local parks for picnics.",
+        "question": "Where do they explore for picnics?",
+        "keyword": "local parks"
+    },
+    "34": {
+        "statement": "She enjoys trying new recipes from cookbooks.",
+        "question": "What does she enjoy doing?",
+        "keyword": "new recipes"
+    },
+    "35": {
+        "statement": "He participates in online gaming tournaments regularly.",
+        "question": "What does he participate in regularly?",
+        "keyword": "online gaming tournaments"
+    }
+}

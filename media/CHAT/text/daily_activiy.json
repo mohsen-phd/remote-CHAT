@@ -1,0 +1,177 @@
+{
+    "1": {
+        "statement": "She brushes her teeth every morning.",
+        "question": "When does she brush her teeth?",
+        "keyword": "every morning"
+    },
+    "2": {
+        "statement": "He walks his dog before breakfast.",
+        "question": "When does he walk his dog?",
+        "keyword": "before breakfast"
+    },
+    "3": {
+        "statement": "They jog around the park together.",
+        "question": "Where do they jog?",
+        "keyword": "around the park"
+    },
+    "4": {
+        "statement": "Sarah writes in her journal nightly.",
+        "question": "What does Sarah write in?",
+        "keyword": "her journal"
+    },
+    "5": {
+        "statement": "Ben waters his plants on weekends.",
+        "question": "When does Ben water his plants?",
+        "keyword": "on weekends"
+    },
+    "6": {
+        "statement": "Lisa often cooks pasta for dinner.",
+        "question": "What does Lisa often cook?",
+        "keyword": "pasta"
+    },
+    "7": {
+        "statement": "The children play outside after lunch.",
+        "question": "When do the children play outside?",
+        "keyword": "after lunch"
+    },
+    "8": {
+        "statement": "My father reads the newspaper daily.",
+        "question": "What does my father read daily?",
+        "keyword": "the newspaper"
+    },
+    "9": {
+        "statement": "They set the table before each meal.",
+        "question": "When do they set the table?",
+        "keyword": "before each meal"
+    },
+    "10": {
+        "statement": "She usually drinks tea in the evening.",
+        "question": "When does she usually drink tea?",
+        "keyword": "in the evening"
+    },
+    "11": {
+        "statement": "Mark washes his car on Sundays.",
+        "question": "When does Mark wash his car?",
+        "keyword": "on Sundays"
+    },
+    "12": {
+        "statement": "I meditate quietly in my bedroom.",
+        "question": "Where do I meditate quietly?",
+        "keyword": "in my bedroom"
+    },
+    "13": {
+        "statement": "He takes a nap after working hard.",
+        "question": "When does he take a nap?",
+        "keyword": "after working hard"
+    },
+    "14": {
+        "statement": "Sara feeds her cat every morning.",
+        "question": "When does Sara feed her cat?",
+        "keyword": "every morning"
+    },
+    "15": {
+        "statement": "They have a picnic in the park.",
+        "question": "Where do they have a picnic?",
+        "keyword": "in the park"
+    },
+    "16": {
+        "statement": "She writes emails to her friends.",
+        "question": "Who does she write emails to?",
+        "keyword": "her friends"
+    },
+    "17": {
+        "statement": "Jack goes fishing in the summer.",
+        "question": "When does Jack go fishing?",
+        "keyword": "in the summer"
+    },
+    "18": {
+        "statement": "The team meets on Friday evenings.",
+        "question": "When does the team meet?",
+        "keyword": "on Friday evenings"
+    },
+    "19": {
+        "statement": "I do my laundry on Saturdays.",
+        "question": "When do I do my laundry?",
+        "keyword": "on Saturdays"
+    },
+    "20": {
+        "statement": "They swim at the beach on weekends.",
+        "question": "Where do they swim on weekends?",
+        "keyword": "at the beach"
+    },
+    "21": {
+        "statement": "Emma shops for groceries on Monday.",
+        "question": "When does Emma shop for groceries?",
+        "keyword": "on Monday"
+    },
+    "22": {
+        "statement": "They bake bread every Thursday.",
+        "question": "When do they bake bread?",
+        "keyword": "every Thursday"
+    },
+    "23": {
+        "statement": "He plays the guitar each morning.",
+        "question": "What does he play each morning?",
+        "keyword": "the guitar"
+    },
+    "24": {
+        "statement": "She waters her plants in the evening.",
+        "question": "When does she water her plants?",
+        "keyword": "in the evening"
+    },
+    "25": {
+        "statement": "Tom exercises at the gym after work.",
+        "question": "When does Tom exercise?",
+        "keyword": "after work"
+    },
+    "26": {
+        "statement": "She usually drives her car to work.",
+        "question": "How does she usually get to work?",
+        "keyword": "drives her car"
+    },
+    "27": {
+        "statement": "They listen to music during dinner.",
+        "question": "When do they listen to music?",
+        "keyword": "during dinner"
+    },
+    "28": {
+        "statement": "I cook breakfast every Saturday.",
+        "question": "When do I cook breakfast?",
+        "keyword": "every Saturday"
+    },
+    "29": {
+        "statement": "He paints in the studio at night.",
+        "question": "Where does he paint at night?",
+        "keyword": "in the studio"
+    },
+    "30": {
+        "statement": "She drinks coffee in the afternoon.",
+        "question": "When does she drink coffee?",
+        "keyword": "in the afternoon"
+    },
+    "31": {
+        "statement": "We meet our friends every Tuesday.",
+        "question": "When do we meet our friends?",
+        "keyword": "every Tuesday"
+    },
+    "32": {
+        "statement": "My sister watches TV after dinner.",
+        "question": "When does my sister watch TV?",
+        "keyword": "after dinner"
+    },
+    "33": {
+        "statement": "They walk by the lake on Sundays.",
+        "question": "When do they walk by the lake?",
+        "keyword": "on Sundays"
+    },
+    "34": {
+        "statement": "I call my mother every Wednesday.",
+        "question": "When do I call my mother?",
+        "keyword": "every Wednesday"
+    },
+    "35": {
+        "statement": "He cleans his room every Friday.",
+        "question": "When does he clean his room?",
+        "keyword": "every Friday"
+    }
+}

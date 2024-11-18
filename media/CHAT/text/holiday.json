@@ -1,0 +1,177 @@
+{
+    "1": {
+        "statement": "They celebrate Easter with colorful eggs.",
+        "question": "What do they celebrate Easter with?",
+        "keyword": "colorful eggs"
+    },
+    "2": {
+        "statement": "She hosts a barbecue for Independence Day.",
+        "question": "What does she host for Independence Day?",
+        "keyword": "barbecue"
+    },
+    "3": {
+        "statement": "He enjoys dressing up for Halloween night.",
+        "question": "What does he enjoy doing on Halloween?",
+        "keyword": "dressing up"
+    },
+    "4": {
+        "statement": "They celebrate their wedding anniversary in July.",
+        "question": "what do they celebrate in July?",
+        "keyword": "wedding anniversary"
+    },
+    "5": {
+        "statement": "She makes pumpkin pie for Thanksgiving dinner.",
+        "question": "What does she make for Thanksgiving dinner?",
+        "keyword": "pumpkin pie"
+    },
+    "6": {
+        "statement": "He likes to watch fireworks on New Year  Eve.",
+        "question": "When does he watch fireworks?",
+        "keyword": "New Year  Eve"
+    },
+    "7": {
+        "statement": "They go camping during the summer holidays.",
+        "question": "When do they go camping?",
+        "keyword": "summer holidays"
+    },
+    "8": {
+        "statement": "She sings songs with family on Christmas.",
+        "question": "What does she do with family on Christmas?",
+        "keyword": "sings songs"
+    },
+    "9": {
+        "statement": "He prepares a big meal for his birthday.",
+        "question": "What does he prepare for his birthday?",
+        "keyword": "big meal"
+    },
+    "10": {
+        "statement": "They exchange gifts on New Year  Day.",
+        "question": "When do they exchange gifts?",
+        "keyword": "New Year  Day"
+    },
+    "11": {
+        "statement": "She attends a music festival every summer.",
+        "question": "What does she attend every summer?",
+        "keyword": "music festival"
+    },
+    "12": {
+        "statement": "They have a picnic on Labor Day.",
+        "question": "What do they have on Labor Day?",
+        "keyword": "picnic"
+    },
+    "13": {
+        "statement": "He enjoys watching the parade on Thanksgiving.",
+        "question": "What does he enjoy watching on Thanksgiving?",
+        "keyword": "parade"
+    },
+    "14": {
+        "statement": "She decorates her office for the holidays.",
+        "question": "What does she decorate for the holidays?",
+        "keyword": "office"
+    },
+    "15": {
+        "statement": "They visit relatives during the winter break.",
+        "question": "When do they visit relatives?",
+        "keyword": "winter break"
+    },
+    "16": {
+        "statement": "He likes to light candles for Diwali.",
+        "question": "What does he like to light for Diwali?",
+        "keyword": "candles"
+    },
+    "17": {
+        "statement": "She plans a party for her graduation.",
+        "question": "What does she plan for her graduation?",
+        "keyword": "party"
+    },
+    "18": {
+        "statement": "They celebrate with colored powders.",
+        "question": "What do they celebrate with?",
+        "keyword": "colored powders"
+    },
+    "19": {
+        "statement": "He bring pizza for his friend  birthday.",
+        "question": "What does he brings for his friend  birthday?",
+        "keyword": "pizza"
+    },
+    "20": {
+        "statement": "She sends invitations for her wedding.",
+        "question": "What does she send for her wedding?",
+        "keyword": "invitations"
+    },
+    "21": {
+        "statement": "They go to the beach during summer vacations.",
+        "question": "Where do they go during summer vacations?",
+        "keyword": "beach"
+    },
+    "22": {
+        "statement": "He attends church services on Christmas Eve.",
+        "question": "When does he attend church services?",
+        "keyword": "Christmas Eve"
+    },
+    "23": {
+        "statement": "She enjoys crafting decorations for parties.",
+        "question": "What does she enjoy crafting for parties?",
+        "keyword": "decorations"
+    },
+    "24": {
+        "statement": "They play games during family reunions.",
+        "question": "What do they do during family reunions?",
+        "keyword": "play games"
+    },
+    "25": {
+        "statement": "He collects souvenirs from his travels.",
+        "question": "What does he collect from his travels?",
+        "keyword": "souvenirs"
+    },
+    "26": {
+        "statement": "She buys new clothes for special occasions.",
+        "question": "What does she buy for special occasions?",
+        "keyword": "new clothes"
+    },
+    "27": {
+        "statement": "They enjoy making resolutions for the New Year.",
+        "question": "What do they enjoy making for the New Year?",
+        "keyword": "resolutions"
+    },
+    "28": {
+        "statement": "He goes to a fireworks show every summer.",
+        "question": "What does he go to every summer?",
+        "keyword": "fireworks show"
+    },
+    "29": {
+        "statement": "She takes pictures during family gatherings.",
+        "question": "What does she do during family gatherings?",
+        "keyword": "takes pictures"
+    },
+    "30": {
+        "statement": "They celebrate Midsummer with bonfires and feasts.",
+        "question": "What do they celebrate Midsummer with?",
+        "keyword": "bonfires and feasts"
+    },
+    "31": {
+        "statement": "He decorates the house with lights for Christmas.",
+        "question": "What does he decorate for Christmas?",
+        "keyword": "the house"
+    },
+    "32": {
+        "statement": "She makes special dishes for Eid celebrations.",
+        "question": "What does she make for Eid celebrations?",
+        "keyword": "special dishes"
+    },
+    "33": {
+        "statement": "They throw a surprise party for their friend.",
+        "question": "What did they do for their friend?",
+        "keyword": "throw a surprise party"
+    },
+    "34": {
+        "statement": "He likes to wear orange costumes on Halloween.",
+        "question": "What does he like to wear on Halloween?",
+        "keyword": "orange costumes"
+    },
+    "35": {
+        "statement": "She enjoys spending time with family at holidays.",
+        "question": "What does she enjoy doing at holidays?",
+        "keyword": "spending time with family"
+    }
+}

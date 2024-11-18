@@ -1,0 +1,177 @@
+{
+    "1": {
+        "statement": "She loves visiting new countries every year.",
+        "question": "What does she love doing every year?",
+        "keyword": "visiting new countries"
+    },
+    "2": {
+        "statement": "They are planning a trip to Europe.",
+        "question": "Where are they planning a trip to?",
+        "keyword": "Europe"
+    },
+    "3": {
+        "statement": "He prefers traveling by train for comfort.",
+        "question": "How does he prefer traveling?",
+        "keyword": "by train"
+    },
+    "4": {
+        "statement": "The city has many historical landmarks.",
+        "question": "What does the city have?",
+        "keyword": "historical landmarks"
+    },
+    "5": {
+        "statement": "She enjoys trying local foods while traveling.",
+        "question": "What does she enjoy trying while traveling?",
+        "keyword": "local foods"
+    },
+    "6": {
+        "statement": "They visited several national parks last summer.",
+        "question": "When did they visit national parks?",
+        "keyword": "last summer"
+    },
+    "7": {
+        "statement": "He took many photos during his vacation.",
+        "question": "What did he take during his vacation?",
+        "keyword": "photos"
+    },
+    "8": {
+        "statement": "The hotel offers great views of the mountains.",
+        "question": "What does the hotel offer?",
+        "keyword": "great views"
+    },
+    "9": {
+        "statement": "She explores different cultures on her trips.",
+        "question": "What does she explore on her trips?",
+        "keyword": "different cultures"
+    },
+    "10": {
+        "statement": "They booked a guided tour for convenience.",
+        "question": "What did they book for convenience?",
+        "keyword": "guided tour"
+    },
+    "11": {
+        "statement": "He enjoys hiking in beautiful landscapes.",
+        "question": "What does he enjoy doing?",
+        "keyword": "hiking"
+    },
+    "12": {
+        "statement": "The airport is crowded during the holidays.",
+        "question": "When is the airport crowded?",
+        "keyword": "during the holidays"
+    },
+    "13": {
+        "statement": "She collects souvenirs from every destination.",
+        "question": "What does she collect?",
+        "keyword": "souvenirs"
+    },
+    "14": {
+        "statement": "They always research places before visiting.",
+        "question": "What do they do before visiting places?",
+        "keyword": "research"
+    },
+    "15": {
+        "statement": "He prefers cheap accommodations when traveling.",
+        "question": "What does he prefer when traveling?",
+        "keyword": "cheap accommodations"
+    },
+    "16": {
+        "statement": "The beach was relaxing.",
+        "question": "How was the beach?",
+        "keyword": "relaxing"
+    },
+    "17": {
+        "statement": "She enjoys meeting new people while traveling.",
+        "question": "What does she enjoy doing?",
+        "keyword": "meeting new people"
+    },
+    "18": {
+        "statement": "They visited museums in the city.",
+        "question": "What did they visit in the city?",
+        "keyword": "museums"
+    },
+    "19": {
+        "statement": "He often travels for work.",
+        "question": "Why does he often travel?",
+        "keyword": "work"
+    },
+    "20": {
+        "statement": "The guidebook provides travel tips.",
+        "question": "What does the guidebook provide?",
+        "keyword": "travel tips"
+    },
+    "21": {
+        "statement": "She likes to travel during the off season.",
+        "question": "When does she like to travel?",
+        "keyword": "off season"
+    },
+    "22": {
+        "statement": "They explored parks in the city.",
+        "question": "What did they explore in the city?",
+        "keyword": "parks"
+    },
+    "23": {
+        "statement": "He enjoys road trips with friends.",
+        "question": "Who does he enjoy road trips with?",
+        "keyword": "friends"
+    },
+    "24": {
+        "statement": "The city is known for its nightlife.",
+        "question": "What is the city known for?",
+        "keyword": "nightlife"
+    },
+    "25": {
+        "statement": "She took a ferry to the nearby island.",
+        "question": "What did she take to the nearby island?",
+        "keyword": "ferry"
+    },
+    "26": {
+        "statement": "They often rent bikes to explore new areas.",
+        "question": "What do they rent to explore?",
+        "keyword": "bikes"
+    },
+    "27": {
+        "statement": "He finds travel blogs helpful for planning.",
+        "question": "What does he find helpful for planning?",
+        "keyword": "travel blogs"
+    },
+    "28": {
+        "statement": "The view from the rooftop was breathtaking.",
+        "question": "How was the view from the rooftop?",
+        "keyword": "breathtaking"
+    },
+    "29": {
+        "statement": "She prefers tourist attractions.",
+        "question": "What does she prefer?",
+        "keyword": "tourist attractions"
+    },
+    "30": {
+        "statement": "They packed light for their backpacking trip.",
+        "question": "how did they pack for their trip?",
+        "keyword": "light"
+    },
+    "31": {
+        "statement": "He often travels to attend conferences abroad.",
+        "question": "Why does he often travel abroad?",
+        "keyword": "attend conferences"
+    },
+    "32": {
+        "statement": "The travel agency offers various packages.",
+        "question": "What does the travel agency offer?",
+        "keyword": "various packages"
+    },
+    "33": {
+        "statement": "She enjoys learning new languages while traveling.",
+        "question": "What does she enjoy learning while traveling?",
+        "keyword": "new languages"
+    },
+    "34": {
+        "statement": "They experienced different traditions.",
+        "question": "What did they experience ?",
+        "keyword": "different traditions"
+    },
+    "35": {
+        "statement": "He plans to visit Asia next summer.",
+        "question": "Where does he plan to visit next summer?",
+        "keyword": "Asia"
+    }
+}

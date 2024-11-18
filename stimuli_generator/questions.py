@@ -1,6 +1,7 @@
 """Module for storing question and their validation method."""
 
 import json
+import os
 import random
 from abc import ABC, abstractmethod
 import re
@@ -30,11 +31,11 @@ class Questions(ABC):
         pass
 
     @abstractmethod
-    def get_stimuli(self) -> tuple[list[str], list[str]]:
+    def get_stimuli(self) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.
 
         Returns:
-            tuple[list[str], list[str]]: stimuli ID and the main words in the stimuli.
+            tuple[list[str], list[str],str]: stimuli ID and the main words in the stimuli.
         """
         pass
 
@@ -116,7 +117,7 @@ class ASLQuestions(Questions):
         by randomly selecting from the list of vocab.
 
         Returns:
-            tuple[list[str], list[str]]: stimuli ID and the main words in the stimuli. The prompt to show the user when
+            tuple[list[str], list[str],str]: stimuli ID and the main words in the stimuli. The prompt to show the user when
             asking for a response.
         """
         set_num = random.randint(1, 18)
@@ -178,9 +179,25 @@ class CHAT(Questions):
     def __init__(self) -> None:
         """Initialize the questions object by storing the text of the question."""
         super().__init__()
-        self.stimuli_list = self._read_json("media/CHAT/text")
+        self.stimuli_list = self._read_chat_json("media/CHAT/text")
 
-    @abstractmethod
+    def _read_chat_json(self, root_src: str) -> dict:
+        """Read all the json file in the root and marge them into one dictionary.
+
+        Args:
+            root_src (str): src of root directory.
+
+        Returns:
+            dict: Merged json file.
+        """
+        data = {}
+        for root, _, files in os.walk(root_src):
+            for file in files:
+                with open(os.path.join(root, file)) as f:
+                    cat_id = file.split("-")[0]
+                    data[cat_id] = json.load(f)
+        return data
+
     def check_answer(self, answer: str) -> bool:
         """Based on question type, check if the answer is correct or not.
 
@@ -190,16 +207,22 @@ class CHAT(Questions):
         Returns:
             bool: Is a match or not.
         """
-        pass
+        ...
 
-    @abstractmethod
-    def get_stimuli(self) -> tuple[list[str], list[str]]:
+    def get_stimuli(self) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.
 
         Returns:
-            tuple[list[str], list[str]]: stimuli ID and the main words in the stimuli.
+            tuple[list[str], list[str],str]: stimuli ID and the main words in the stimuli. The prompt to show the user when.
         """
-        pass
+        category_num = random.randint(1, 15)
+        stimulus_num = random.randint(1, 35)
+        full_question_id = f"{category_num}-{stimulus_num}"
+        stimulus = self.stimuli_list[str(category_num)][str(stimulus_num)]
+        self.main_words = stimulus["statement"] + "," + stimulus["question"]
+        self.question_id = full_question_id
+        response_getting_prompt = "Please answer the question based on the statement."
+        return [full_question_id], self.main_words, response_getting_prompt
 
 
 # todo: finish the class for FAAF

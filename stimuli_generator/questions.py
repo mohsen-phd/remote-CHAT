@@ -172,6 +172,36 @@ class ASLQuestions(Questions):
             return False
 
 
+class CHAT(Questions):
+    """Abstract class for questions. Each type of question must use this api."""
+
+    def __init__(self) -> None:
+        """Initialize the questions object by storing the text of the question."""
+        super().__init__()
+        self.stimuli_list = self._read_json("media/CHAT/text")
+
+    @abstractmethod
+    def check_answer(self, answer: str) -> bool:
+        """Based on question type, check if the answer is correct or not.
+
+        Args:
+            answer (str): answer to the question given by the patient.
+
+        Returns:
+            bool: Is a match or not.
+        """
+        pass
+
+    @abstractmethod
+    def get_stimuli(self) -> tuple[list[str], list[str]]:
+        """Generate a sample stimuli.
+
+        Returns:
+            tuple[list[str], list[str]]: stimuli ID and the main words in the stimuli.
+        """
+        pass
+
+
 # todo: finish the class for FAAF
 class FAAF(Questions):
     """Abstract class for questions. Each type of question must use this api."""

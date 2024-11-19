@@ -15,7 +15,7 @@ from nltk.stem import WordNetLemmatizer
 from audio_processing.noise import Babble, Noise, WhiteNoise
 from audio_processing.util import convert_to_specific_db_spl, read_wav_file
 from hearing_test.util import british_to_american, expand_contractions, lemmatizer
-from stimuli_generator.questions import ASLQuestions, DigitQuestions
+from stimuli_generator.questions import ASLQuestions, DigitQuestions, CHATQuestions
 
 
 class TestTypes(ABC):
@@ -286,7 +286,8 @@ class ASL(TestTypes):
         self.stimuli_generator = ASLQuestions()
         self.stimuli_src = self._get_stimuli_src("ASL")
 
-    def get_sound(self, stimuli: list[int]) -> np.ndarray:
+    # todo: update it to look like CHAT
+    def get_sound(self, stimuli: list[str]) -> np.ndarray:
         """Use the recorded audio to generate the waveform.
 
         Args:
@@ -373,5 +374,86 @@ class FAAF(TestTypes):
 class CHAT(TestTypes):
     """Implementing the CHAT test."""
 
-    # todo: implement CHAT
-    pass
+    def __init__(self, config: dict) -> None:
+        """Initialize the DIN test.
+
+        Args:
+            config (dict): configuration dictionary.
+        """
+        super().__init__(config)
+
+        self.stimuli_generator = CHATQuestions()
+        self.stimuli_src = self._get_stimuli_src("CHAT")
+
+    def get_sound(
+        self, stimuli: list[str]
+    ) -> tuple[int | float, dict[str, np.ndarray]]:
+        """Use the recorded audio to generate the waveform.
+
+        Args:
+            stimuli (dict[str, np.ndarray]): A dictionary with tow key 'noisy' and 'clean' containing the audio signal.
+            the noise will be added to the signal in the noisy key only. The value are a list of np.ndarray containing the signal.
+
+
+        Returns:
+            tuple[int | float, dict[str, np.ndarray]]: Sampling rate and a dictionary containing the audio signal.
+            Dictionary contain two keys 'noisy' and 'clean' containing the audio signal indication noise should be added to which signal.
+        """
+        stimulus_id = stimuli[0]
+
+        sample_rate, statement = read_wav_file(
+            self.stimuli_src / f"{stimulus_id}-statement.wav"
+        )
+        converted_audio_statement = convert_to_specific_db_spl(statement, 65)
+
+        sample_rate, question = read_wav_file(
+            self.stimuli_src / f"{stimulus_id}-question.wav"
+        )
+        converted_audio_question = convert_to_specific_db_spl(question, 65)
+
+        return sample_rate, {
+            "noisy": converted_audio_statement,
+            "clean": converted_audio_question,
+        }
+
+    def cli_post_process(self, response: str) -> list[str]:
+        """Post process the response from the CLI. and remove any common mistakes.
+
+        Args:
+            response (str): Response captured by Keyboard.
+
+        Returns:
+            list[str]: List of clean words.
+        """
+        return list(response)[:1]
+
+    def asr_post_process(self, response: str) -> list[str]:
+        """Post process the response from the ASR. and remove any common mistakes.
+
+        Args:
+            response (str): Response transcribed by ASR.
+
+        Returns:
+            list[str]: list of clean words.
+        """
+        pass
+
+    def get_noise(self, configs: dict) -> Noise:
+        """Get the noise for the test.
+
+        Args:
+            configs (dict): Configuration dictionary containing test settings.
+
+        Returns:
+            Noise: Return the proper noise based on config file.
+
+        Raises:
+            NotImplementedError: If the noise type is not supported.
+        """
+        if configs["test"]["hearing-test"]["CHAT"]["noise"]["type"] == "white":
+            return WhiteNoise()
+        elif configs["test"]["hearing-test"]["CHAT"]["noise"]["type"] == "babble":
+            return Babble(
+                noise_src=configs["test"]["hearing-test"]["CHAT"]["noise"]["src"]
+            )
+        raise NotImplementedError

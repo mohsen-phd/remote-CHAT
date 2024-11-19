@@ -5,7 +5,7 @@ import os
 import random
 from abc import ABC, abstractmethod
 import re
-
+from openai import OpenAI
 from hearing_test.util import expand_contractions, lemmatizer, remove_contractions
 
 
@@ -173,13 +173,14 @@ class ASLQuestions(Questions):
             return False
 
 
-class CHAT(Questions):
+class CHATQuestions(Questions):
     """Abstract class for questions. Each type of question must use this api."""
 
     def __init__(self) -> None:
         """Initialize the questions object by storing the text of the question."""
         super().__init__()
         self.stimuli_list = self._read_chat_json("media/CHAT/text")
+        self.chatGPT = OpenAI(api_key="...")
 
     def _read_chat_json(self, root_src: str) -> dict:
         """Read all the json file in the root and marge them into one dictionary.
@@ -207,7 +208,8 @@ class CHAT(Questions):
         Returns:
             bool: Is a match or not.
         """
-        ...
+        statement = self.main_words[0]
+        question = self.main_words[1]
 
     def get_stimuli(self) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.
@@ -219,14 +221,14 @@ class CHAT(Questions):
         stimulus_num = random.randint(1, 35)
         full_question_id = f"{category_num}-{stimulus_num}"
         stimulus = self.stimuli_list[str(category_num)][str(stimulus_num)]
-        self.main_words = stimulus["statement"] + "," + stimulus["question"]
+        self.main_words = [stimulus["statement"], stimulus["question"]]
         self.question_id = full_question_id
         response_getting_prompt = "Please answer the question based on the statement."
         return [full_question_id], self.main_words, response_getting_prompt
 
 
 # todo: finish the class for FAAF
-class FAAF(Questions):
+class FAAFQuestions(Questions):
     """Abstract class for questions. Each type of question must use this api."""
 
     def __init__(self) -> None:

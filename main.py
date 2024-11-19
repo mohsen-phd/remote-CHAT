@@ -26,10 +26,10 @@ def preparation() -> dict[str, str]:
     # test_name = input(Fore.GREEN + "Enter test name: ")
     # todo:replace the following lines with the above lines
     participant_id = 100
-    test_number = 2
+    test_number = 3
     response_capturing_mode = "asr"
-    test_name = "asl"
-    vocalization_mode = "recorded"
+    test_name = "chat"
+    vocalization_mode = "tts"
 
     save_dir = f"records/{participant_id}"
     os.makedirs(save_dir, exist_ok=True)

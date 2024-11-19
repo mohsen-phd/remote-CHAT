@@ -43,11 +43,19 @@ def play_stimuli(
         stimuli (str): The stimuli to play.
         noise (Noise): object to generate noise.
     """
-    sound_wave = hearing_test.get_sound(stimuli)
-    sound_wave = np.pad(sound_wave, (5000, 5000), "constant", constant_values=(0, 0))
-    noise_signal = noise.generate_noise(sound_wave, snr_db)
-    noisy_wave = sound_wave + noise_signal
-    play_sound(wave=noisy_wave, fs=22050)
+    sample_rate, sound_wave_dict = hearing_test.get_sound(stimuli)
+
+    sound_wave_noisy = np.pad(
+        sound_wave_dict["noisy"], (5000, 5000), "constant", constant_values=(0, 0)
+    )
+    noise_signal = noise.generate_noise(sound_wave_noisy, snr_db)
+    noisy_wave = sound_wave_noisy + noise_signal
+    play_sound(wave=noisy_wave, fs=sample_rate)
+
+    sound_wave_clean = np.pad(
+        sound_wave_dict["clean"], (5000, 5000), "constant", constant_values=(0, 0)
+    )
+    play_sound(wave=sound_wave_clean, fs=sample_rate)
 
 
 def get_test_manager(configs: dict) -> TestManager:

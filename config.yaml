@@ -30,7 +30,7 @@ test:
       noise:
         type: babble #[white, babble]
         src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/audio_processing/noise/babble.wav"
-      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/mello"
+      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/tts"
 
 response_capturing: cli #[cli, asr]
 vocalization_mode: recorded #[tts, recorded]

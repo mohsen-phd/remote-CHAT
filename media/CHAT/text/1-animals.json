@@ -114,6 +114,16 @@
         "question": "Where do they take care of their turtle?",
         "keyword": "pond"
     },
+    "24": {
+        "statement": "He likes to watch birds singing in the park.",
+        "question": "What does he like to watch?",
+        "keyword": "birds singing"
+    },
+    "25": {
+        "statement": "She enjoys taking pictures of cats.",
+        "question": "What does she enjoy doing?",
+        "keyword": "taking pictures of cats"
+    },
     "26": {
         "statement": "They often go camping with their dog.",
         "question": "What do they often do with their dog?",

@@ -1,5 +1,6 @@
 """Utility functions for audio processing."""
 
+import librosa
 import numpy as np
 from loguru import logger
 from scipy.io import wavfile
@@ -37,14 +38,8 @@ def read_wav_file(filename):
     Returns:
         tuple: A tuple containing the sample rate and the normalized signal.
     """
-    # Read the WAV file
-    sample_rate, signal = wavfile.read(filename)
 
-    # Normalize if the signal is integer-based
-    if signal.dtype == np.int16:
-        signal = signal / 32768.0  # Normalize to [-1, 1]
-    elif signal.dtype == np.int32:
-        signal = signal / 2147483648.0  # Normalize to [-1, 1]
+    signal, sample_rate = librosa.load(filename)
 
     return sample_rate, signal
 

@@ -38,8 +38,7 @@ def read_wav_file(filename):
     Returns:
         tuple: A tuple containing the sample rate and the normalized signal.
     """
-
-    signal, sample_rate = librosa.load(filename)
+    signal, sample_rate = librosa.load(filename, sr=None)
 
     return sample_rate, signal
 

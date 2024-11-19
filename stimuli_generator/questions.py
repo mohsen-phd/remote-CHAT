@@ -180,7 +180,17 @@ class CHATQuestions(Questions):
         """Initialize the questions object by storing the text of the question."""
         super().__init__()
         self.stimuli_list = self._read_chat_json("media/CHAT/text")
-        self.chatGPT = OpenAI(api_key="...")
+        self.chatGPT = self._get_openai_client()
+
+    def _get_openai_client(self) -> OpenAI:
+        """Read the openai api key the text file and create a OpenAI client.
+
+        Returns:
+            OpenAI: OpenAI client.
+        """
+        with open("keys/openai.txt") as f:
+            api_key = f.read()
+        return OpenAI(api_key=api_key)
 
     def _read_chat_json(self, root_src: str) -> dict:
         """Read all the json file in the root and marge them into one dictionary.
@@ -210,6 +220,17 @@ class CHATQuestions(Questions):
         """
         statement = self.main_words[0]
         question = self.main_words[1]
+
+        prompt = f"based on the statement '{statement}' is '{answer}' the answer to the question '{question}'. respond with only yes or no"
+        chat_completion = self.chatGPT.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+        )
+        response = chat_completion.choices[0].message.content
+        if response.lower() == "yes":
+            return True
+        else:
+            return False
 
     def get_stimuli(self) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.

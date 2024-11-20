@@ -26,16 +26,17 @@ def preparation() -> dict[str, str]:
     # test_name = input(Fore.GREEN + "Enter test name: ")
     # todo:replace the following lines with the above lines
     participant_id = 100
-    test_number = 3
-    response_capturing_mode = "asr"
-    test_name = "chat"
+    test_number = 1
+    response_capturing_mode = "cli"
+    test_name = "asl"
+    test_name_presentation = "aslt"
     vocalization_mode = "tts"
 
     save_dir = f"records/{participant_id}"
     os.makedirs(save_dir, exist_ok=True)
-    os.makedirs(f"save_dir/{test_name}", exist_ok=True)
+    os.makedirs(f"save_dir/{test_name_presentation}", exist_ok=True)
 
-    logger.add(f"{save_dir}/{test_name}/out.log")
+    logger.add(f"{save_dir}/{test_name_presentation}/out.log")
     logger.debug(f"\nParticipant ID: {participant_id}")
     input(Fore.RED + "Press enter to start the test ")
     custom_config = {
@@ -45,6 +46,7 @@ def preparation() -> dict[str, str]:
         "response_capturing_mode": response_capturing_mode,
         "vocalization_mode": vocalization_mode,
         "test_name": test_name,
+        "test_name_presentation": test_name_presentation,
     }
     return custom_config
 
@@ -61,10 +63,11 @@ def read_configs(custom_config: dict) -> dict:
     configs = read_conf("config.yaml")
     configs["test"][
         "record_save_dir"
-    ] = f"{custom_config['save_dir']}/{custom_config['test_name']}"
+    ] = f"{custom_config['save_dir']}/{custom_config['test_name_presentation']}"
     configs["response_capturing"] = custom_config["response_capturing_mode"]
     configs["test_name"] = custom_config["test_name"]
     configs["vocalization_mode"] = custom_config["vocalization_mode"]
+    configs["test_name_presentation"] = custom_config["test_name_presentation"]
     logger.debug(f"Config file: {configs}")
     return configs
 

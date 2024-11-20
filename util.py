@@ -1,6 +1,7 @@
 """Utility module for the main script."""
 
 import json
+import os
 import numpy as np
 import yaml
 from loguru import logger
@@ -46,23 +47,25 @@ def play_stimuli(
     sample_rate, sound_wave_dict = hearing_test.get_sound(stimuli)
 
     padding_size = sample_rate // 3
-    sound_wave_noisy = np.pad(
-        sound_wave_dict["noisy"],
-        (padding_size, padding_size),
-        "constant",
-        constant_values=(0, 0),
-    )
-    noise_signal = noise.generate_noise(sound_wave_noisy, snr_db)
-    noisy_wave = sound_wave_noisy + noise_signal
-    play_sound(wave=noisy_wave, fs=sample_rate)
+    if "noisy" in sound_wave_dict:
+        sound_wave_noisy = np.pad(
+            sound_wave_dict["noisy"],
+            (padding_size, padding_size),
+            "constant",
+            constant_values=(0, 0),
+        )
+        noise_signal = noise.generate_noise(sound_wave_noisy, snr_db)
+        noisy_wave = sound_wave_noisy + noise_signal
+        play_sound(wave=noisy_wave, fs=sample_rate)
 
-    sound_wave_clean = np.pad(
-        sound_wave_dict["clean"],
-        (padding_size, padding_size),
-        "constant",
-        constant_values=(0, 0),
-    )
-    play_sound(wave=sound_wave_clean, fs=sample_rate)
+    if "clean" in sound_wave_dict:
+        sound_wave_clean = np.pad(
+            sound_wave_dict["clean"],
+            (padding_size, padding_size),
+            "constant",
+            constant_values=(0, 0),
+        )
+        play_sound(wave=sound_wave_clean, fs=sample_rate)
 
 
 def get_test_manager(configs: dict) -> TestManager:
@@ -91,8 +94,10 @@ def save_results(results: dict):
     Args:
         results (dict): Results of the test.
     """
+    filename = f"records/snr_results/{results['config']['test_name_presentation']}/{results['config']['participant_id']}.json"
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(
-        f"records/snr_results/{results['config']['test_name']}/{results['config']['participant_id']}.json",
+        filename,
         "w",
     ) as outfile:
         json.dump(results, outfile)

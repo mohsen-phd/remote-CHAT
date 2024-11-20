@@ -287,7 +287,9 @@ class ASL(TestTypes):
         self.stimuli_src = self._get_stimuli_src("ASL")
 
     # todo: update it to look like CHAT
-    def get_sound(self, stimuli: list[str]) -> np.ndarray:
+    def get_sound(
+        self, stimuli: list[str]
+    ) -> tuple[int | float, dict[str, np.ndarray]]:
         """Use the recorded audio to generate the waveform.
 
         Args:
@@ -298,9 +300,12 @@ class ASL(TestTypes):
         """
         stimulus_id = stimuli[0]
 
-        _, digit_audio = read_wav_file(self.stimuli_src / f"{stimulus_id}.wav")
+        sample_rate, digit_audio = read_wav_file(
+            self.stimuli_src / f"{stimulus_id}.wav"
+        )
         converted_audio = convert_to_specific_db_spl(digit_audio, 65)
-        return converted_audio
+
+        return sample_rate, {"noisy": converted_audio}
 
     def cli_post_process(self, response: str) -> list[str]:
         """Post process the response from the CLI. and remove any common mistakes.
@@ -342,7 +347,6 @@ class ASL(TestTypes):
 
         return [clean_response]
 
-    # todo:update for ASL
     def get_noise(self, configs: dict) -> Noise:
         """Get the noise for the test.
 
@@ -355,11 +359,11 @@ class ASL(TestTypes):
         Raises:
             NotImplementedError: If the noise type is not supported.
         """
-        if configs["test"]["hearing-test"]["DIN"]["noise"]["type"] == "white":
+        if configs["test"]["hearing-test"]["ASL"]["noise"]["type"] == "white":
             return WhiteNoise()
-        elif configs["test"]["hearing-test"]["DIN"]["noise"]["type"] == "babble":
+        elif configs["test"]["hearing-test"]["ASL"]["noise"]["type"] == "babble":
             return Babble(
-                noise_src=configs["test"]["hearing-test"]["DIN"]["noise"]["src"]
+                noise_src=configs["test"]["hearing-test"]["ASL"]["noise"]["src"]
             )
         raise NotImplementedError
 

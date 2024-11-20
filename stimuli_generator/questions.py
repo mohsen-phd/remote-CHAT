@@ -209,25 +209,27 @@ class CHATQuestions(Questions):
                     data[cat_id] = json.load(f)
         return data
 
-    def check_answer(self, answer: str) -> bool:
+    def check_answer(self, answer: list[str]) -> bool:
         """Based on question type, check if the answer is correct or not.
 
         Args:
-            answer (str): answer to the question given by the patient.
+            answer (list[str]): answer to the question given by the patient.
 
         Returns:
             bool: Is a match or not.
         """
+        if answer[0] == "":
+            return False
         statement = self.main_words[0]
         question = self.main_words[1]
 
-        prompt = f"based on the statement '{statement}' is '{answer}' the answer to the question '{question}'. respond with only yes or no"
+        prompt = f"based on the statement '{statement}' is '{answer[0]}' the answer to the question '{question}'. Ignore the plural and singular differences. Consider synonymous meanings. Only consider common synonyms and do not be very creative."
         chat_completion = self.chatGPT.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
         )
         response = chat_completion.choices[0].message.content
-        if response.lower() == "yes":
+        if "yes" in response.lower():
             return True
         else:
             return False

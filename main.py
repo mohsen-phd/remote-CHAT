@@ -9,8 +9,8 @@ from loguru import logger
 from util import get_test_manager, play_stimuli, read_conf, save_results
 
 logger.remove(0)
-# logger.add(sys.stderr, level="DEBUG")
-logger.add(sys.stderr, level="INFO")
+logger.add(sys.stderr, level="DEBUG")
+# logger.add(sys.stderr, level="INFO")
 
 
 def preparation() -> dict[str, str]:
@@ -33,9 +33,9 @@ def preparation() -> dict[str, str]:
 
     save_dir = f"records/{participant_id}"
     os.makedirs(save_dir, exist_ok=True)
-    os.makedirs(f"save_dir/{test_number}", exist_ok=True)
+    os.makedirs(f"save_dir/{test_name}", exist_ok=True)
 
-    logger.add(f"{save_dir}/{test_number}/out.log")
+    logger.add(f"{save_dir}/{test_name}/out.log")
     logger.debug(f"\nParticipant ID: {participant_id}")
     input(Fore.RED + "Press enter to start the test ")
     custom_config = {
@@ -61,7 +61,7 @@ def read_configs(custom_config: dict) -> dict:
     configs = read_conf("config.yaml")
     configs["test"][
         "record_save_dir"
-    ] = f"{custom_config['save_dir']}/{custom_config['test_number']}"
+    ] = f"{custom_config['save_dir']}/{custom_config['test_name']}"
     configs["response_capturing"] = custom_config["response_capturing_mode"]
     configs["test_name"] = custom_config["test_name"]
     configs["vocalization_mode"] = custom_config["vocalization_mode"]
@@ -78,6 +78,7 @@ def main():
     snr_db = manager.start_snr
     correct_count = incorrect_count = 0
     iteration = 1
+    os.system("cls" if os.name == "nt" else "clear")
     while not manager.hearing_test.stop_condition():
         this_round = {}
         this_round["snr"] = snr_db

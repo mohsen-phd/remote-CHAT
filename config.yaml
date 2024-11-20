@@ -29,7 +29,7 @@ test:
     CHAT:
       noise:
         type: babble #[white, babble]
-        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/audio_processing/noise/babble.wav"
+        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/speech_shaped_noise_CHAT_tts.wav"
       stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/tts"
 
 response_capturing: cli #[cli, asr]

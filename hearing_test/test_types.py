@@ -436,7 +436,7 @@ class CHAT(TestTypes):
         Returns:
             list[str]: list of clean words.
         """
-        pass
+        return [response.lower()]
 
     def get_noise(self, configs: dict) -> Noise:
         """Get the noise for the test.

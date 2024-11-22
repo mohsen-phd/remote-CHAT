@@ -19,9 +19,12 @@ from transformers import (
     WhisperProcessor,
     pipeline,
 )
+from transformers.utils import logging
 
 from audio_processing.util import convert_sample_rate, read_wav_file
 from get_response.base import CaptureResponse
+
+logging.set_verbosity_error()
 
 
 class ASR(CaptureResponse):
@@ -285,11 +288,11 @@ class Whisper(ASR):
         """Initialize a Whisper asr model."""
         super().__init__()
 
-        self.device = "mps"
-        self.torch_dtype = torch.float16
+        self.device = "mps"  # "cpu , mps"
 
-        # self.model_id = "openai/whisper-large-v3-turbo"
-        self.model_id = "openai/whisper-medium"
+        self.torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
+
+        self.model_id = "openai/whisper-large-v3-turbo"
 
         self.model = AutoModelForSpeechSeq2Seq.from_pretrained(
             self.model_id,
@@ -318,5 +321,5 @@ class Whisper(ASR):
         Returns:
             str: File transcription.
         """
-        result = self.pipe(src)
+        result = self.pipe(src, generate_kwargs={"language": "english"})
         return result["text"]

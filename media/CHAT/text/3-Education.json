@@ -1,177 +1,177 @@
 {
     "1": {
-        "statement": "She enjoys studying math in school.",
-        "question": "What subject does she enjoy studying?",
-        "keyword": "math"
+        "statement": "She studies biology every evening.",
+        "question": "What does she study?",
+        "answer": "Biology"
     },
     "2": {
-        "statement": "They often participate in group projects.",
-        "question": "What do they often participate in?",
-        "keyword": "group projects"
+        "statement": "He reads history books at night.",
+        "question": "What does he do?",
+        "answer": "reads history books"
     },
     "3": {
-        "statement": "He prefers online courses for flexibility.",
-        "question": "What does he prefer for flexibility?",
-        "keyword": "online courses"
+        "statement": "They write essays for class.",
+        "question": "What do they write?",
+        "answer": "Essays"
     },
     "4": {
-        "statement": "She likes reading books for knowledge.",
-        "question": "Why does she like reading books?",
-        "keyword": "knowledge"
+        "statement": "She solves math problems.",
+        "question": "What does she solve?",
+        "answer": "Math problems"
     },
     "5": {
-        "statement": "They frequently visit the library after school.",
-        "question": "Where do they frequently visit after school?",
-        "keyword": "library"
+        "statement": "He practices science experiments in the lab.",
+        "question": "What does he practice?",
+        "answer": "Science experiments"
     },
     "6": {
-        "statement": "He enjoys giving presentations in class.",
-        "question": "What does he enjoy doing in class?",
-        "keyword": "giving presentations"
+        "statement": "They attend lectures on physics.",
+        "question": "What lectures do they attend?",
+        "answer": "Lectures on physics"
     },
     "7": {
-        "statement": "She often studies with her friends at home.",
-        "question": "Where does she often study with friends?",
-        "keyword": "at home"
+        "statement": "She memorizes vocabulary for a test.",
+        "question": "What does she memorize?",
+        "answer": "Vocabulary"
     },
     "8": {
-        "statement": "They like to attend school events together.",
-        "question": "What do they like attending together?",
-        "keyword": "school events"
+        "statement": "He learns coding in his computer class.",
+        "question": "What does he learn?",
+        "answer": "Coding"
     },
     "9": {
-        "statement": "He usually completes his homework on time.",
-        "question": "When does he usually complete his homework?",
-        "keyword": "on time"
+        "statement": "They review notes before exams.",
+        "question": "What do they review?",
+        "answer": "Notes"
     },
     "10": {
-        "statement": "She loves learning new languages at school.",
-        "question": "What does she love learning at school?",
-        "keyword": "new languages"
+        "statement": "She draws diagrams in her notebook.",
+        "question": "What does she draw?",
+        "answer": "Diagrams"
     },
     "11": {
-        "statement": "They often take notes during lectures.",
-        "question": "What do they often do during lectures?",
-        "keyword": "take notes"
+        "statement": "He writes poems in English class.",
+        "question": "What does he write?",
+        "answer": "Poems"
     },
     "12": {
-        "statement": "He prefers studying in quiet environments.",
-        "question": "Where does he prefer studying?",
-        "keyword": "quiet environments"
+        "statement": "They discuss literature in the library.",
+        "question": "What do they discuss?",
+        "answer": "Literature"
     },
     "13": {
-        "statement": "She enjoys participating in school clubs.",
-        "question": "What does she enjoy participating in?",
-        "keyword": "school clubs"
+        "statement": "She reads articles on environmental science.",
+        "question": "What does she read?",
+        "answer": "articles on environmental science"
     },
     "14": {
-        "statement": "They like discussing topics with their teachers.",
-        "question": "Who do they like discussing topics with?",
-        "keyword": "their teachers"
+        "statement": "He takes notes during the lecture.",
+        "question": "What does he do during the lecture?",
+        "answer": "takes notes"
     },
     "15": {
-        "statement": "He often helps his classmates with homework.",
-        "question": "Who does he often help with homework?",
-        "keyword": "his classmates"
+        "statement": "They give presentations on historical topics.",
+        "question": "What do they give?",
+        "answer": "Presentations"
     },
     "16": {
-        "statement": "She loves doing experiments in science class.",
-        "question": "What does she love doing in science class?",
-        "keyword": "experiments"
+        "statement": "She practices grammar exercises.",
+        "question": "What does she practice?",
+        "answer": "Grammar exercises"
     },
     "17": {
-        "statement": "They frequently prepare for exams together.",
-        "question": "What do they frequently prepare for together?",
-        "keyword": "exams"
+        "statement": "He researches famous inventors for homework.",
+        "question": "What does he research?",
+        "answer": "Famous inventors"
     },
     "18": {
-        "statement": "He enjoys reading about history during class.",
-        "question": "What does he enjoy reading about during class?",
-        "keyword": "history"
+        "statement": "They study group projects on weekends.",
+        "question": "What do they study?",
+        "answer": "Group projects"
     },
     "19": {
-        "statement": "She likes working on art projects in school.",
-        "question": "What does she like working on in school?",
-        "keyword": "art projects"
+        "statement": "She completes worksheets in class.",
+        "question": "What does she complete?",
+        "answer": "Worksheets"
     },
     "20": {
-        "statement": "They often engage in discussions about literature.",
-        "question": "What do they often discuss about?",
-        "keyword": "literature"
+        "statement": "He watches educational videos at home.",
+        "question": "What does he watch?",
+        "answer": "Educational videos"
     },
     "21": {
-        "statement": "He prefers practical lessons over theoretical ones.",
-        "question": "What type of lessons does he prefer?",
-        "keyword": "practical lessons"
+        "statement": "They solve puzzles in their free time.",
+        "question": "What do they solve?",
+        "answer": "Puzzles"
     },
     "22": {
-        "statement": "She enjoys tutoring younger students after school.",
-        "question": "What does she enjoy doing after school?",
-        "keyword": "tutoring younger students"
+        "statement": "She answers questions in geography class.",
+        "question": "What does she do?",
+        "answer": "answers questions"
     },
     "23": {
-        "statement": "They love learning about technology in class.",
-        "question": "What do they love learning about in class?",
-        "keyword": "technology"
+        "statement": "He learns about world maps in school.",
+        "question": "What does he learn about?",
+        "answer": "World maps"
     },
     "24": {
-        "statement": "He often asks questions to understand better.",
-        "question": "What does he often do to understand better?",
-        "keyword": "asks questions"
+        "statement": "They debate current events in the classroom.",
+        "question": "What do they debate?",
+        "answer": "Current events"
     },
     "25": {
-        "statement": "She likes studying various subjects every term.",
-        "question": "What does she like studying every term?",
-        "keyword": "various subjects"
+        "statement": "She uses flashcards to study.",
+        "question": "What does she use to study?",
+        "answer": "Flashcards"
     },
     "26": {
-        "statement": "They often celebrate academic achievements together.",
-        "question": "What do they often celebrate together?",
-        "keyword": "academic achievements"
+        "statement": "He writes a report on ancient civilizations.",
+        "question": "What does he write?",
+        "answer": "A report"
     },
     "27": {
-        "statement": "He enjoys attending guest lectures at school.",
-        "question": "What does he enjoy attending at school?",
-        "keyword": "guest lectures"
+        "statement": "They attend workshops on robotics.",
+        "question": "What do they attend?",
+        "answer": "Workshops on robotics"
     },
     "28": {
-        "statement": "She loves writing essays for her classes.",
-        "question": "What does she love doing for her classes?",
-        "keyword": "writing essays"
+        "statement": "She participates in science fairs.",
+        "question": "What does she participate in?",
+        "answer": "Science fairs"
     },
     "29": {
-        "statement": "They like exploring new educational resources.",
-        "question": "What do they like exploring?",
-        "keyword": "new educational resources"
+        "statement": "He builds models for a class project.",
+        "question": "What does he build?",
+        "answer": "Models"
     },
     "30": {
-        "statement": "He prefers interactive lessons over lectures.",
-        "question": "What does he prefer over lectures?",
-        "keyword": "interactive lessons"
+        "statement": "They brainstorm ideas for essays.",
+        "question": "What do they do?",
+        "answer": "brainstorm ideas"
     },
     "31": {
-        "statement": "She enjoys collaborating on projects with peers.",
-        "question": "What does she enjoy doing with peers?",
-        "keyword": "collaborating on projects"
+        "statement": "She prepares flashcards for revision.",
+        "question": "What does she prepare?",
+        "answer": "Flashcards"
     },
     "32": {
-        "statement": "They often engage in extracurricular activities.",
-        "question": "What do they often engage in?",
-        "keyword": "extracurricular activities"
+        "statement": "He studies algebra for his math test.",
+        "question": "What does he study?",
+        "answer": "Algebra"
     },
     "33": {
-        "statement": "He likes participating in school competitions.",
-        "question": "What does he like participating in?",
-        "keyword": "school competitions"
+        "statement": "They share resources for group study.",
+        "question": "What do they share?",
+        "answer": "Resources"
     },
     "34": {
-        "statement": "She often reflects on her learning experiences.",
-        "question": "What does she often reflect on?",
-        "keyword": "learning experiences"
+        "statement": "She practices speeches for the debate team.",
+        "question": "What does she practice?",
+        "answer": "Speeches"
     },
     "35": {
-        "statement": "They use technology to enhance learning.",
-        "question": "What do they do to enhance learning?",
-        "keyword": "use technology"
+        "statement": "He completes assignments before deadlines.",
+        "question": "What does he complete?",
+        "answer": "Assignments"
     }
 }

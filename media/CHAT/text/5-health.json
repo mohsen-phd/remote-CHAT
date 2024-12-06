@@ -1,177 +1,177 @@
 {
     "1": {
-        "statement": "She practices meditation every morning.",
-        "question": "When does she practice meditation?",
-        "keyword": "morning"
+        "statement": "She exercises every morning.",
+        "question": "What does she do every morning?",
+        "answer": "Exercises"
     },
     "2": {
-        "statement": "They enjoy exercising at the gym.",
-        "question": "Where do they enjoy exercising?",
-        "keyword": "gym"
+        "statement": "He drinks apple juice daily.",
+        "question": "What does he drink daily?",
+        "answer": "apple juice"
     },
     "3": {
-        "statement": "He eats fruits daily.",
-        "question": "What does he eat daily?",
-        "keyword": "fruits"
+        "statement": "They meditate for relaxation.",
+        "question": "What do they do for relaxation?",
+        "answer": "Meditate"
     },
     "4": {
-        "statement": "She takes regular breaks during work hours.",
-        "question": "What does she take during work hours?",
-        "keyword": "breaks"
+        "statement": "She practices yoga every evening.",
+        "question": "What does she practice every evening?",
+        "answer": "Yoga"
     },
     "5": {
-        "statement": "They often go for walks after dinner.",
-        "question": "When do they often go for walks?",
-        "keyword": "after dinner"
+        "statement": "He avoids junk food to stay fit.",
+        "question": "What does he do to stay fit?",
+        "answer": "avoids Junk food"
     },
     "6": {
-        "statement": "He drinks plenty of water throughout the day.",
-        "question": "What does he drink throughout the day?",
-        "keyword": "water"
+        "statement": "They go jogging in the park.",
+        "question": "What do they do in the park?",
+        "answer": "jogging"
     },
     "7": {
-        "statement": "She enjoys practicing yoga for flexibility.",
-        "question": "What does she practice for flexibility?",
-        "keyword": "yoga"
+        "statement": "She takes vitamins every day.",
+        "question": "What does she take every day?",
+        "answer": "Vitamins"
     },
     "8": {
-        "statement": "They focus on maintaining a balanced diet.",
-        "question": "What do they focus on maintaining?",
-        "keyword": "balanced diet"
+        "statement": "He walks for 1 hour every day.",
+        "question": "What does he do daily?",
+        "answer": "walks"
     },
     "9": {
-        "statement": "He attends regular check ups with his doctor.",
-        "question": "What does he attend with his doctor?",
-        "keyword": "check ups"
+        "statement": "They visit the gym three times a week.",
+        "question": "What do they visit three times a week?",
+        "answer": "gym"
     },
     "10": {
-        "statement": "She enjoys taking long baths to relax.",
-        "question": "What does she enjoy doing to relax?",
-        "keyword": "baths"
+        "statement": "She eats fresh vegetables for better health.",
+        "question": "What does she eat for better health?",
+        "answer": "Fresh vegetables"
     },
     "11": {
-        "statement": "They often cook healthy meals together.",
-        "question": "What do they often do together?",
-        "keyword": "cook"
+        "statement": "He swims every night.",
+        "question": "What does he do every night every night?",
+        "answer": "swims"
     },
     "12": {
-        "statement": "He practices mindfulness to reduce stress.",
-        "question": "What does he practice to reduce stress?",
-        "keyword": "mindfulness"
+        "statement": "They take breaks during work.",
+        "question": "What do they do during work?",
+        "answer": "Take breaks"
     },
     "13": {
-        "statement": "She loves running in the gym on weekends.",
-        "question": "Where does she love running on weekends?",
-        "keyword": "gym"
+        "statement": "She drinks carrot juice in the afternoon.",
+        "question": "What does she drink in the afternoon?",
+        "answer": "Carrot juice"
     },
     "14": {
-        "statement": "They regularly join fitness classes at the gym.",
-        "question": "What do they do at the gym?",
-        "keyword": "fitness classes"
+        "statement": "He tracks his calorie intake.",
+        "question": "What does he track?",
+        "answer": "His calorie intake"
     },
     "15": {
-        "statement": "He enjoys cycling as a form of exercise.",
-        "question": "What does he enjoy as exercise?",
-        "keyword": "cycling"
+        "statement": "They eat fruits as snacks.",
+        "question": "What do they eat as snacks?",
+        "answer": "Fruits"
     },
     "16": {
-        "statement": "She prioritizes sleep for overall well being.",
-        "question": "What does she prioritize for well being?",
-        "keyword": "sleep"
+        "statement": "She takes a walk after every meal.",
+        "question": "What does she do after every meal?",
+        "answer": "Takes a walk"
     },
     "17": {
-        "statement": "They often discuss mental health openly.",
-        "question": "What do they often discuss openly?",
-        "keyword": "mental health"
+        "statement": "He avoids sugary drinks to stay healthy.",
+        "question": "What does he avoid to stay healthy?",
+        "answer": "Sugary drinks"
     },
     "18": {
-        "statement": "He tracks his fitness goals every week.",
-        "question": "What does he track every week?",
-        "keyword": "fitness goals"
+        "statement": "They swim regularly for exercise.",
+        "question": "What do they do regularly for exercise?",
+        "answer": "Swim"
     },
     "19": {
-        "statement": "She enjoys hiking for both fun and fitness.",
-        "question": "Why does she enjoy hiking?",
-        "keyword": "fun and fitness"
+        "statement": "She schedules regular health checkups.",
+        "question": "What does she schedule?",
+        "answer": "health checkups"
     },
     "20": {
-        "statement": "They practice deep breathing exercises together.",
-        "question": "What do they practice together?",
-        "keyword": "deep breathing"
+        "statement": "He practices deep breathing for stress relief.",
+        "question": "What does he practice for stress relief?",
+        "answer": "Deep breathing"
     },
     "21": {
-        "statement": "He avoids sugary drinks for better health.",
-        "question": "What does he avoid for better health?",
-        "keyword": "sugary drinks"
+        "statement": "They stay hydrated throughout the day.",
+        "question": "What do they do throughout the day?",
+        "answer": "Stay hydrated"
     },
     "22": {
-        "statement": "She loves attending health workshops in her area.",
-        "question": "What does she love attending in her area?",
-        "keyword": "health workshops"
+        "statement": "She uses sunscreen to protect her skin.",
+        "question": "What does she use?",
+        "answer": "Sunscreen"
     },
     "23": {
-        "statement": "They engage in outdoor activities during weekends.",
-        "question": "What do they engage in during weekends?",
-        "keyword": "outdoor activities"
+        "statement": "He avoids eating late at night.",
+        "question": "What does he avoid doing at night?",
+        "answer": "Eating late"
     },
     "24": {
-        "statement": "He enjoys cooking pasta for dinner.",
-        "question": "What does he enjoy cooking for dinner?",
-        "keyword": "pasta"
+        "statement": "They focus on maintaining a balanced diet.",
+        "question": "What do they focus on maintaining?",
+        "answer": "A balanced diet"
     },
     "25": {
-        "statement": "She regularly practices gratitude for her well being.",
-        "question": "What does she regularly practice for well being?",
-        "keyword": "gratitude"
+        "statement": "She drinks herbal tea to relax.",
+        "question": "What does she drink to relax?",
+        "answer": "Herbal tea"
     },
     "26": {
-        "statement": "They participate in local charity runs for health.",
-        "question": "What do they participate in?",
-        "keyword": "charity runs"
+        "statement": "He practices good posture while sitting.",
+        "question": "What does he practice while sitting?",
+        "answer": "Good posture"
     },
     "27": {
-        "statement": "He loves learning about food nutrition.",
-        "question": "What does he love learning about?",
-        "keyword": "food nutrition"
+        "statement": "They cycle to work for fitness.",
+        "question": "What do they do for fitness?",
+        "answer": "Cycle to work"
     },
     "28": {
-        "statement": "She enjoys spending time in nature for peace.",
-        "question": "Where does she enjoy spending time for peace?",
-        "keyword": "nature"
+        "statement": "She avoids fried foods for better health.",
+        "question": "What does she avoid for better health?",
+        "answer": "Fried foods"
     },
     "29": {
-        "statement": "They often share health tips with each other.",
-        "question": "What do they often share with each other?",
-        "keyword": "health tips"
+        "statement": "He reads about healthy living habits.",
+        "question": "What does he read about?",
+        "answer": "Healthy living habits"
     },
     "30": {
-        "statement": "He takes time for self care on weekends.",
-        "question": "When does he take time for self care?",
-        "keyword": "on weekends"
+        "statement": "They eat yogurt for gut health.",
+        "question": "What do they eat for gut health?",
+        "answer": "yogurt"
     },
     "31": {
-        "statement": "She loves swimming for relaxation.",
-        "question": "Why does she love swimming?",
-        "keyword": "relaxation"
+        "statement": "She stretches every morning after waking up.",
+        "question": "What does she do every morning?",
+        "answer": "Stretches"
     },
     "32": {
-        "statement": "They practice positive affirmations every morning.",
-        "question": "What do they practice every morning?",
-        "keyword": "positive affirmations"
+        "statement": "He eats nuts for a healthy snack.",
+        "question": "What does he eat for a healthy snack?",
+        "answer": "Nuts"
     },
     "33": {
-        "statement": "He enjoys participating in community sports leagues.",
-        "question": "What does he enjoy participating in?",
-        "keyword": "community sports leagues"
+        "statement": "They focus on getting enough fiber in their diet.",
+        "question": "What do they focus on getting?",
+        "answer": "Enough fiber"
     },
     "34": {
-        "statement": "She focuses on personal growth.",
-        "question": "What does she focus on for wellness?",
-        "keyword": "personal growth"
+        "statement": "She walks in the evening for relaxation.",
+        "question": "What does she do in the evening?",
+        "answer": "Walks"
     },
     "35": {
-        "statement": "They celebrate small health victories together.",
-        "question": "What do they celebrate together?",
-        "keyword": "health victories"
+        "statement": "He practices mindfulness to reduce stress.",
+        "question": "What does he practice to reduce stress?",
+        "answer": "Mindfulness"
     }
 }

@@ -1,177 +1,177 @@
 {
     "1": {
-        "statement": "She enjoys studying biology in college.",
-        "question": "What subject does she enjoy studying?",
-        "keyword": "biology"
+        "statement": "She writes reports for her job.",
+        "question": "What does she write?",
+        "answer": "Reports"
     },
     "2": {
-        "statement": "They plan to start their new jobs.",
-        "question": "What do they plan to start?",
-        "keyword": "new jobs"
+        "statement": "He attends online lectures for his course.",
+        "question": "What does he do?",
+        "answer": "attends Online lectures"
     },
     "3": {
-        "statement": "He often studies at night.",
-        "question": "When does he often study?",
-        "keyword": "at night"
+        "statement": "They complete assignments before deadlines.",
+        "question": "What do they complete?",
+        "answer": "Assignments"
     },
     "4": {
-        "statement": "The teacher gives homework on Mondays.",
-        "question": "When does the teacher give homework?",
-        "keyword": "Mondays"
+        "statement": "She prepares presentations for meetings.",
+        "question": "What does she prepare?",
+        "answer": "Presentations"
     },
     "5": {
-        "statement": "She prefers working in a quiet environment.",
-        "question": "Where does she prefer working?",
-        "keyword": "quiet environment"
+        "statement": "He studies in the library after classes.",
+        "question": "Where does he study?",
+        "answer": "Library"
     },
     "6": {
-        "statement": "They completed their project last week.",
-        "question": "When did they complete their project?",
-        "keyword": "last week"
+        "statement": "They discuss projects with their team.",
+        "question": "What do they discuss?",
+        "answer": "Projects"
     },
     "7": {
-        "statement": "He takes notes during the lectures.",
-        "question": "What does he do during lectures?",
-        "keyword": "takes notes"
+        "statement": "She takes notes during lectures.",
+        "question": "What does she take?",
+        "answer": "Notes"
     },
     "8": {
-        "statement": "She aims to graduate with honors.",
-        "question": "What does she aim to achieve?",
-        "keyword": "graduate with honors"
+        "statement": "He works on coding tasks for his job.",
+        "question": "What does he work on?",
+        "answer": "Coding tasks"
     },
     "9": {
-        "statement": "They hold meetings to discuss project.",
-        "question": "What do they hold meetings for?",
-        "keyword": "discuss project"
+        "statement": "They attend workshops for skill development.",
+        "question": "What do they attend?",
+        "answer": "Workshops"
     },
     "10": {
-        "statement": "He studies best in the morning.",
-        "question": "When does he study best?",
-        "keyword": "morning"
+        "statement": "She reads articles for her research.",
+        "question": "What does she read?",
+        "answer": "Articles"
     },
     "11": {
-        "statement": "The internship provides work experience.",
-        "question": "What does the internship provide?",
-        "keyword": "work experience"
+        "statement": "He grades papers as part of his teaching job.",
+        "question": "What does he grade?",
+        "answer": "Papers"
     },
     "12": {
-        "statement": "She reviews her notes before exams.",
-        "question": "What does she review before exams?",
-        "keyword": "notes"
+        "statement": "They practice presentations before the event.",
+        "question": "What do they practice?",
+        "answer": "Presentations"
     },
     "13": {
-        "statement": "He works part time while attending university.",
-        "question": "What does he do while attending university?",
-        "keyword": "works part time"
+        "statement": "She revises her notes for exams.",
+        "question": "What does she revise?",
+        "answer": "Notes"
     },
     "14": {
-        "statement": "The library has many articles.",
-        "question": "What does the library have?",
-        "keyword": "articles"
+        "statement": "He organizes files on his computer.",
+        "question": "What does he organize?",
+        "answer": "Files"
     },
     "15": {
-        "statement": "They often collaborate on group assignments.",
-        "question": "What do they often collaborate on?",
-        "keyword": "group assignments"
+        "statement": "They conduct experiments in the lab.",
+        "question": "What do they conduct?",
+        "answer": "Experiments"
     },
     "16": {
-        "statement": "She attends workshops to improve her skills.",
-        "question": "What does she attend?",
-        "keyword": "workshops"
+        "statement": "She reviews her performance.",
+        "question": "What does she review?",
+        "answer": "Performance"
     },
     "17": {
-        "statement": "He prefers online courses for flexibility.",
-        "question": "Why does he prefer online courses?",
-        "keyword": "for flexibility"
+        "statement": "He manages tasks using a planner.",
+        "question": "What does he manage?",
+        "answer": "Tasks"
     },
     "18": {
-        "statement": "The seminar covers marketing topics.",
-        "question": "What does the seminar cover?",
-        "keyword": "marketing topics"
+        "statement": "They research new topics for a project.",
+        "question": "What do they research?",
+        "answer": "New topics"
     },
     "19": {
-        "statement": "She practices public speaking every week.",
-        "question": "what does she practice ?",
-        "keyword": "public speaking"
+        "statement": "She attends conferences to learn.",
+        "question": "What does she attend?",
+        "answer": "Conferences"
     },
     "20": {
-        "statement": "They discuss their ideas during brainstorming sessions.",
-        "question": "What do they discuss during sessions?",
-        "keyword": "ideas"
+        "statement": "He solves math problems.",
+        "question": "What does he solve?",
+        "answer": "math problems"
     },
     "21": {
-        "statement": "The manager encourages teamwork among employees.",
-        "question": "What does the manager encourage?",
-        "keyword": "teamwork"
+        "statement": "They write essays for their assignments.",
+        "question": "What do they write?",
+        "answer": "Essays"
     },
     "22": {
-        "statement": "He learns best through experience.",
-        "question": "How does he learn best?",
-        "keyword": "through experience"
+        "statement": "She completes quizzes in online classes.",
+        "question": "What does she complete?",
+        "answer": "Quizzes"
     },
     "23": {
-        "statement": "The course requires students to write essays.",
-        "question": "What does the course require students to do?",
-        "keyword": "write essays"
+        "statement": "He proofreads assignments for accuracy.",
+        "question": "What does he proofread?",
+        "answer": "assignments"
     },
     "24": {
-        "statement": "She balances work and study effectively.",
-        "question": "What does she balance?",
-        "keyword": "work and study"
+        "statement": "They schedule meetings with supervisors.",
+        "question": "What do they do?",
+        "answer": "schedule meetings"
     },
     "25": {
-        "statement": "They provide feedback to improve performance.",
-        "question": "What do they provide to improve performance?",
-        "keyword": "feedback"
+        "statement": "She brainstorms ideas for group projects.",
+        "question": "What does she do?",
+        "answer": "brainstorms ideas "
     },
     "26": {
-        "statement": "He aims to secure a promotion soon.",
-        "question": "What does he aim to secure?",
-        "keyword": "promotion"
+        "statement": "He prepares slides for his presentation.",
+        "question": "What does he prepare?",
+        "answer": "Slides"
     },
     "27": {
-        "statement": "The assignment is due by Friday.",
-        "question": "When is the assignment due?",
-        "keyword": "Friday"
+        "statement": "They draft proposals for new projects.",
+        "question": "What do they?",
+        "answer": "draft proposals"
     },
     "28": {
-        "statement": "She often reads articles related to her field.",
-        "question": "What does she often read?",
-        "keyword": "articles"
+        "statement": "She calculates data for her report.",
+        "question": "What does she calculate?",
+        "answer": "Data"
     },
     "29": {
-        "statement": "They attend networking events for career opportunities.",
-        "question": "Why do they attend networking events?",
-        "keyword": "career opportunities"
+        "statement": "He reviews research papers in his field.",
+        "question": "What does he review?",
+        "answer": "Research papers"
     },
     "30": {
-        "statement": "He finds group work challenging.",
-        "question": "What does he find challenging?",
-        "keyword": "group work"
+        "statement": "They edit videos for an online course.",
+        "question": "What do they do?",
+        "answer": "edit videos"
     },
     "31": {
-        "statement": "She prepares presentations for team meetings.",
-        "question": "What does she prepare for meetings?",
-        "keyword": "presentations"
+        "statement": "She schedules time for study breaks.",
+        "question": "What does she schedule?",
+        "answer": "Study breaks"
     },
     "32": {
-        "statement": "They celebrated at the end of projects.",
-        "question": "What did they do at the end of projects?",
-        "keyword": "celebrated"
+        "statement": "He learns new software for his work.",
+        "question": "What does he learn?",
+        "answer": "New software"
     },
     "33": {
-        "statement": "He uses software to enhance his productivity.",
-        "question": "What does he use to enhance productivity?",
-        "keyword": "software"
+        "statement": "They attend training sessions at work.",
+        "question": "What do they attend?",
+        "answer": "Training sessions"
     },
     "34": {
-        "statement": "The curriculum includes practical assignments.",
-        "question": "What does the curriculum include?",
-        "keyword": "practical assignments"
+        "statement": "She submits her project on time.",
+        "question": "What does she do?",
+        "answer": "submits her project"
     },
     "35": {
-        "statement": "She takes breaks to refresh her mind.",
-        "question": "Why does she take breaks?",
-        "keyword": "refresh her mind"
+        "statement": "He mentors interns in his department.",
+        "question": "Who does he mentor?",
+        "answer": "Interns"
     }
 }

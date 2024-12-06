@@ -37,6 +37,6 @@ vocalization_mode: recorded #[tts, recorded]
 test_name: din #[din, asl]
 
 ml:
-  asr_type: wav2vec2 #[SpeechBrain, SimpleASR,whisper, wav2vec2]
+  asr_type: whisper #[SpeechBrain, SimpleASR,whisper, wav2vec2]
   asr_source: "speechbrain/asr-wav2vec2-commonvoice-en" #["speechbrain/asr-wav2vec2-commonvoice-en","speechbrain/asr-crdnn-rnnlm-librispeech"]
   asr_save_dir: "models/asr/asr-wav2vec2-commonvoice-en" #["models/asr/asr-wav2vec2-commonvoice-en","models/asr/asr-crdnn-rnnlm-librispeech"]

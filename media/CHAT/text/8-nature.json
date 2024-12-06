@@ -1,177 +1,177 @@
 {
     "1": {
-        "statement": "She enjoys hiking in the mountains every summer.",
-        "question": "What does she enjoy doing every summer?",
-        "keyword": "hiking"
+        "statement": "She hikes in the forest every weekend.",
+        "question": "Where does she hike every weekend?",
+        "answer": "Forest"
     },
     "2": {
-        "statement": "They are planting trees to improve air quality.",
-        "question": "Why are they planting trees?",
-        "keyword": "improve air quality"
+        "statement": "He plants trees in his garden.",
+        "question": "What does he do?",
+        "answer": "plants trees"
     },
     "3": {
-        "statement": "He loves observing birds in their natural habitats.",
-        "question": "What does he love observing in nature?",
-        "keyword": "birds"
+        "statement": "They enjoy watching sunsets at the beach.",
+        "question": "What do they enjoy watching?",
+        "answer": "Sunsets"
     },
     "4": {
-        "statement": "The park features beautiful walking trails and lakes.",
-        "question": "What does the park feature?",
-        "keyword": "walking trails and lakes"
+        "statement": "She listens to birds singing in the morning.",
+        "question": "What does she listen to in the morning?",
+        "answer": "Birds singing"
     },
     "5": {
-        "statement": "She is learning about renewable energy sources.",
-        "question": "What is she learning about?",
-        "keyword": "renewable energy sources"
+        "statement": "He collects rocks from rivers.",
+        "question": "What does he collect?",
+        "answer": "Rocks"
     },
     "6": {
-        "statement": "They often go camping in the forest.",
-        "question": "Where do they often go camping?",
-        "keyword": "in the forest"
+        "statement": "They photograph wildflowers in spring.",
+        "question": "What do they photograph in spring?",
+        "answer": "Wildflowers"
     },
     "7": {
-        "statement": "He enjoys photographing wildlife in national parks.",
-        "question": "What does he enjoy photographing?",
-        "keyword": "wildlife"
+        "statement": "She walks along mountain trails.",
+        "question": "Where does she walk?",
+        "answer": "Mountain trails"
     },
     "8": {
-        "statement": "The community is organizing a clean up event.",
-        "question": "What is the community organizing?",
-        "keyword": "a clean up event"
+        "statement": "He studies insects in the garden.",
+        "question": "What does he study?",
+        "answer": "Insects"
     },
     "9": {
-        "statement": "She loves gardening and growing her own food.",
-        "question": "What does she love doing?",
-        "keyword": "gardening and growing"
+        "statement": "They watch the stars on clear nights.",
+        "question": "What do they do ?",
+        "answer": "watch the stars"
     },
     "10": {
-        "statement": "They are studying the effects of climate change.",
-        "question": "What are they studying?",
-        "keyword": "effects of climate change"
+        "statement": "She takes care of a small vegetable patch.",
+        "question": "What does she take care of?",
+        "answer": "Vegetable patch"
     },
     "11": {
-        "statement": "He finds peace in nature during his walks.",
-        "question": "Where does he find peace?",
-        "keyword": "in nature"
+        "statement": "He picks flowers from meadows.",
+        "question": "What does he do?",
+        "answer": "picks flowers"
     },
     "12": {
-        "statement": "The river is home to many fish species.",
-        "question": "What is the river home to?",
-        "keyword": "fish species"
+        "statement": "They swim in a nearby lake during summer.",
+        "question": "Where do they swim during summer?",
+        "answer": "Lake"
     },
     "13": {
-        "statement": "She advocates for wildlife conservation.",
-        "question": "What does she advocate for?",
-        "keyword": "wildlife conservation"
+        "statement": "She watches butterflies in her garden.",
+        "question": "What does she watch in her garden?",
+        "answer": "Butterflies"
     },
     "14": {
-        "statement": "They often visit beaches to enjoy the ocean.",
-        "question": "Where do they often visit?",
-        "keyword": "beaches"
+        "statement": "He loves camping.",
+        "question": "What does he love doing?",
+        "answer": "Camping"
     },
     "15": {
-        "statement": "He participates in local environmental initiatives.",
-        "question": "What does he participate in?",
-        "keyword": "environmental initiatives"
+        "statement": "They collect fallen leaves in autumn.",
+        "question": "What do they collect?",
+        "answer": "Fallen leaves"
     },
     "16": {
-        "statement": "The mountain views are breathtaking at sunrise.",
-        "question": "When are the mountain views breathtaking?",
-        "keyword": "sunrise"
+        "statement": "She enjoys picnics by the river.",
+        "question": "Where does she enjoy picnics?",
+        "answer": "By the river"
     },
     "17": {
-        "statement": "She enjoys reading about different ecosystems.",
-        "question": "What does she enjoy reading about?",
-        "keyword": "different ecosystems"
+        "statement": "He observes fish in a pond.",
+        "question": "What does he observe?",
+        "answer": "Fish"
     },
     "18": {
-        "statement": "They support sustainable farming practices in their area.",
-        "question": "What do they support in their area?",
-        "keyword": "sustainable farming"
+        "statement": "They hike to see waterfalls.",
+        "question": "What do they hike to see?",
+        "answer": "Waterfalls"
     },
     "19": {
-        "statement": "He often goes fishing in the nearby lake.",
-        "question": "Where does he often go fishing?",
-        "keyword": "nearby lake"
+        "statement": "She grows herbs in small pots.",
+        "question": "What does she grow?",
+        "answer": "Herbs"
     },
     "20": {
-        "statement": "The weather affects many plants and animals.",
-        "question": "What does the weather affect?",
-        "keyword": "plants and animals"
+        "statement": "He listens to ocean waves at night.",
+        "question": "What does he listen to at night?",
+        "answer": "Ocean waves"
     },
     "21": {
-        "statement": "She participates in beach clean ups every month.",
-        "question": "what does she do every month?",
-        "keyword": "beach clean ups"
+        "statement": "They walk barefoot on wet grass.",
+        "question": "What do they walk on?",
+        "answer": "Wet grass"
     },
     "22": {
-        "statement": "They are building a wildlife habitat in the city.",
-        "question": "What are they building in the city?",
-        "keyword": "wildlife habitat"
+        "statement": "She enjoys watching clouds in the sky.",
+        "question": "What does she enjoy watching?",
+        "answer": "Clouds"
     },
     "23": {
-        "statement": "He enjoys kayaking in calm waters on weekends.",
-        "question": "what does she enjoy doing?",
-        "keyword": "kayaking"
+        "statement": "He picks berries from bushes.",
+        "question": "What does he pick?",
+        "answer": "berries"
     },
     "24": {
-        "statement": "The garden attracts various butterflies and bees.",
-        "question": "What does the garden attract?",
-        "keyword": "butterflies and bees"
+        "statement": "They admire the stars in the open sky.",
+        "question": "What do they admire?",
+        "answer": "Stars"
     },
     "25": {
-        "statement": "She loves studying the stars and planets.",
-        "question": "What does she love studying?",
-        "keyword": "stars and planets"
+        "statement": "She photographs rainbows after storms.",
+        "question": "What does she photograph?",
+        "answer": "Rainbows"
     },
     "26": {
-        "statement": "They often hike to observe local wildlife.",
-        "question": "What do they often hike to observe?",
-        "keyword": "local wildlife"
+        "statement": "He collects pinecones during forest walks.",
+        "question": "What does he collect?",
+        "answer": "Pinecones"
     },
     "27": {
-        "statement": "He enjoys camping under the starry sky.",
-        "question": "What does he enjoy doing at night?",
-        "keyword": "camping"
+        "statement": "They watch ducks on the lake.",
+        "question": "What do they watch on the lake?",
+        "answer": "Ducks"
     },
     "28": {
-        "statement": "The forest is full of diverse plant life.",
-        "question": "What is the forest full of?",
-        "keyword": "plant life"
+        "statement": "She captures pictures of snowy mountains.",
+        "question": "What does she capture?",
+        "answer": "Pictures of snowy mountains"
     },
     "29": {
-        "statement": "She loves exploring national parks during vacations.",
-        "question": "What does she love exploring during vacations?",
-        "keyword": "national parks"
+        "statement": "He spends time under an oak tree.",
+        "question": "Where does he spend time?",
+        "answer": "Under an oak tree"
     },
     "30": {
-        "statement": "They often take nature walks to relax.",
-        "question": "what do they do to relax?",
-        "keyword": "take nature walks"
+        "statement": "They walk through fields of tall grass.",
+        "question": "Where do they walk?",
+        "answer": "Fields of tall grass"
     },
     "31": {
-        "statement": "He participates in a local birdwatching group.",
-        "question": "What group does he participate in?",
-        "keyword": "birdwatching group"
+        "statement": "She grows flowers in her backyard.",
+        "question": "What does she grow?",
+        "answer": "Flowers"
     },
     "32": {
-        "statement": "The lake provides a habitat for animals.",
-        "question": "What does the lake provide?",
-        "keyword": "habitat for animals"
+        "statement": "He catches frogs in ponds.",
+        "question": "What does he catch?",
+        "answer": "Frogs"
     },
     "33": {
-        "statement": "She enjoys growing new plants in her garden.",
-        "question": "What does she enjoy doing?",
-        "keyword": "growing new plants"
+        "statement": "They explore caves in the mountains.",
+        "question": "What do they explore?",
+        "answer": "Caves"
     },
     "34": {
-        "statement": "They are working on reducing plastic waste.",
-        "question": "What are they working on?",
-        "keyword": "reducing plastic waste"
+        "statement": "She loves watching fireflies at night.",
+        "question": "What does she love watching?",
+        "answer": "Fireflies"
     },
     "35": {
-        "statement": "He loves the sound of rain in nature.",
-        "question": "What does he love in nature?",
-        "keyword": "sound of rain"
+        "statement": "He listens to the rustling of leaves in the wind.",
+        "question": "What does he listen to?",
+        "answer": "Rustling of leaves"
     }
 }

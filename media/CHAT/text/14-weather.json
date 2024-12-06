@@ -1,177 +1,177 @@
 {
     "1": {
-        "statement": "It often rains in spring.",
-        "question": "When does it often rain?",
-        "keyword": "spring"
+        "statement": "It is sunny today.",
+        "question": "What is the weather today?",
+        "answer": "Sunny"
     },
     "2": {
-        "statement": "Summer is known for its long day.",
-        "question": "What  is summer known for?",
-        "keyword": "long day"
+        "statement": "It rained heavily last night.",
+        "question": "What was the weather last night?",
+        "answer": "Rained heavily"
     },
     "3": {
-        "statement": "Winter brings snow.",
-        "question": "What does winter bring?",
-        "keyword": "snow"
+        "statement": "The sky is cloudy this afternoon.",
+        "question": "How is the sky this afternoon?",
+        "answer": "Cloudy"
     },
     "4": {
-        "statement": "Autumn is famous for colorful leaves.",
-        "question": "What is autumn famous for?",
-        "keyword": "colorful leaves"
+        "statement": "It snowed all morning.",
+        "question": "What happened all morning?",
+        "answer": "Snowed"
     },
     "5": {
-        "statement": "She enjoys sunny days.",
-        "question": "What does she enjoy?",
-        "keyword": "sunny days"
+        "statement": "The weather is windy by the coast.",
+        "question": "How is the weather by the coast?",
+        "answer": "Windy"
     },
     "6": {
-        "statement": "They prefer cold weather for hiking.",
-        "question": "What type of weather do they prefer for hiking?",
-        "keyword": "cold"
+        "statement": "Temperatures will drop tonight.",
+        "question": "What will happen tonight?",
+        "answer": "Temperatures will drop"
     },
     "7": {
-        "statement": "He likes to drink hot chocolate in winter.",
-        "question": "What does he like to drink in winter?",
-        "keyword": "hot chocolate"
+        "statement": "It is foggy in the early hours.",
+        "question": "What is the weather in the early hours?",
+        "answer": "Foggy"
     },
     "8": {
-        "statement": "He prefers to stay indoor in rainy days.",
-        "question": "When does he prefer to stay indoor?",
-        "keyword": "in rainy days"
+        "statement": "The weather forecast predicts rain.",
+        "question": "What does the forecast predict?",
+        "answer": "rain"
     },
     "9": {
-        "statement": "She loves it when flowers bloom.",
-        "question": "What does she loves?",
-        "keyword": "when flowers bloom"
+        "statement": "It is humid during the afternoon.",
+        "question": "How is the weather during the afternoon?",
+        "answer": "Humid"
     },
     "10": {
-        "statement": "Thunderstorms are common in summer.",
-        "question": "What is common in summer?",
-        "keyword": "Thunderstorms"
+        "statement": "Thunderstorms are expected tomorrow.",
+        "question": "What is expected tomorrow?",
+        "answer": "Thunderstorms"
     },
     "11": {
-        "statement": "He enjoys watching snow fall in winter.",
-        "question": "What does he enjoy watching?",
-        "keyword": "snow"
+        "statement": "The wind is strong near the mountains.",
+        "question": "How is the wind near the mountains?",
+        "answer": "Strong"
     },
     "12": {
-        "statement": "The weather is usually mild in autumn.",
-        "question": "What is the weather usually like in autumn?",
-        "keyword": "mild"
+        "statement": "It was freezing last night.",
+        "question": "How was the weather last night?",
+        "answer": "Freezing"
     },
     "13": {
-        "statement": "She takes allergy medication during spring.",
-        "question": "what does she take in spring?",
-        "keyword": "allergy medication"
+        "statement": "The sun is shining brightly now.",
+        "question": "What is the sun doing now?",
+        "answer": "Shining brightly"
     },
     "14": {
-        "statement": "Sunny weather makes her happy.",
-        "question": "What does makes her happy?",
-        "keyword": "sunny weather"
+        "statement": "The morning started with light drizzle.",
+        "question": "How did the morning start?",
+        "answer": "With light drizzle"
     },
     "15": {
-        "statement": "They like to go for walks in cold weather.",
-        "question": "When do they like to go for walks?",
-        "keyword": "in cold weather"
+        "statement": "It will be cloudy tomorrow.",
+        "question": "What will the weather be like tomorrow?",
+        "answer": "Cloudy"
     },
     "16": {
-        "statement": "He wears a jacket when it gets chilly.",
-        "question": "What does he do when it gets chilly?",
-        "keyword": "wears a jacket"
+        "statement": "Tomorrow afternoon is hot.",
+        "question": "How is the weather tomorrow afternoon?",
+        "answer": "hot"
     },
     "17": {
-        "statement": "She enjoys clear skies during summer.",
-        "question": "What does she enjoy in summer?",
-        "keyword": "clear skies"
+        "statement": "It is chilly in the early morning.",
+        "question": "How is the weather in the early morning?",
+        "answer": "Chilly"
     },
     "18": {
-        "statement": "Foggy mornings are common in autumn.",
-        "question": "What is common in autumn?",
-        "keyword": "foggy mornings"
+        "statement": "A rainbow appeared after the rain.",
+        "question": "What happened after the rain?",
+        "answer": "A rainbow appeared"
     },
     "19": {
-        "statement": "He prefers warm weather for outdoor sports.",
-        "question": "What weather does he prefer for outdoor sports?",
-        "keyword": "warm"
+        "statement": "The weather is mild in spring.",
+        "question": "How is the weather in spring?",
+        "answer": "Mild"
     },
     "20": {
-        "statement": "She loves to take pictures of snowy landscapes.",
-        "question": "What does she love to take pictures of?",
-        "keyword": "snowy landscapes"
+        "statement": "Snowfall is expected this weekend.",
+        "question": "What is expected this weekend?",
+        "answer": "snowfall"
     },
     "21": {
-        "statement": "The air is fresh in fall.",
-        "question": "How is the air in fall?",
-        "keyword": "fresh"
+        "statement": "The sky cleared after the storm.",
+        "question": "What happened after the storm?",
+        "answer": "The sky cleared"
     },
     "22": {
-        "statement": "Raincoats are essential during the rainy season.",
-        "question": "What is essential during the rainy season?",
-        "keyword": "raincoats"
+        "statement": "The weather is dry in the desert.",
+        "question": "How is the weather?",
+        "answer": "Dry"
     },
     "23": {
-        "statement": "He enjoys the sun in summer.",
-        "question": "What does he enjoy in summer?",
-        "keyword": "sun"
+        "statement": "It was windy all afternoon.",
+        "question": "How was the weather all afternoon?",
+        "answer": "Windy"
     },
     "24": {
-        "statement": "Snowflakes are unique and beautiful.",
-        "question": "What are unique and beautiful?",
-        "keyword": "Snowflakes"
+        "statement": "A hailstorm damaged the crops.",
+        "question": "What damaged the crops?",
+        "answer": "A hailstorm"
     },
     "25": {
-        "statement": "They often have barbecues in warm weather.",
-        "question": "what do they do in warm weather?",
-        "keyword": "have barbecues"
+        "statement": "The air feels fresh after the rain.",
+        "question": "How does the air feel?",
+        "answer": "Fresh"
     },
     "26": {
-        "statement": "She likes to eat soup in winter.",
-        "question": "What does she like to do in winter?",
-        "keyword": "eat soup"
+        "statement": "The snow covered the roads overnight.",
+        "question": "What covered the roads overnight?",
+        "answer": "snow"
     },
     "27": {
-        "statement": "She collects leaves in autumn .",
-        "question": "What does she collect in autumn?",
-        "keyword": "leaves"
+        "statement": "The weather was perfect for a picnic.",
+        "question": "How was the weather for a picnic?",
+        "answer": "Perfect"
     },
     "28": {
-        "statement": "Thunderstorms are very loud .",
-        "question": "How are thunderstorms?",
-        "keyword": "loud"
+        "statement": "It is drizzling lightly this morning.",
+        "question": "How is it raining this morning?",
+        "answer": "Drizzling lightly"
     },
     "29": {
-        "statement": "He likes to run in the morning.",
-        "question": "When does he like to run?",
-        "keyword": "morning"
+        "statement": "Temperatures rise during summer.",
+        "question": "What happens during the summer?",
+        "answer": "Temperatures rise "
     },
     "30": {
-        "statement": "She wears sunglasses on sunny days.",
-        "question": "What does she wear on sunny days?",
-        "keyword": "sunglasses"
+        "statement": "The fog made driving difficult.",
+        "question": "What made driving difficult?",
+        "answer": "The fog"
     },
     "31": {
-        "statement": "He prefers to stay indoors during heavy rain.",
-        "question": "When does he prefer to stay indoors?",
-        "keyword": "during heavy rain"
+        "statement": "The storm caused power outages.",
+        "question": "What did the storm cause?",
+        "answer": "Power outages"
     },
     "32": {
-        "statement": "She enjoys watching the leaves change color.",
-        "question": "What does she enjoy watching change color?",
-        "keyword": "leaves"
+        "statement": "It will be sunny tomorrow.",
+        "question": "How will the weather be tomorrow?",
+        "answer": "Sunny"
     },
     "33": {
-        "statement": "They often go skiing in winter.",
-        "question": "What do they often do in winter?",
-        "keyword": "skiing"
+        "statement": "A cool breeze is blowing this evening.",
+        "question": "What is happening this evening?",
+        "answer": "A cool breeze"
     },
     "34": {
-        "statement": "He likes to plant flowers.",
-        "question": "What does he like to do?",
-        "keyword": "plant flowers"
+        "statement": "The frost covered the grass overnight.",
+        "question": "What covered the grass overnight?",
+        "answer": "The frost"
     },
     "35": {
-        "statement": "He likes to surf in summer.",
-        "question": "What does he like to do in summer?",
-        "keyword": "surf"
+        "statement": "The storm passed quickly.",
+        "question": "What passed quickly?",
+        "answer": "The storm"
     }
 }

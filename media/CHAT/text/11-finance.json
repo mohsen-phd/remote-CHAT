@@ -1,0 +1,177 @@
+{
+    "1": {
+        "statement": "She saves money every month.",
+        "question": "What does she do?",
+        "answer": "saves money"
+    },
+    "2": {
+        "statement": "He pays his rent on time.",
+        "question": "What does he pay?",
+        "answer": "Rent"
+    },
+    "3": {
+        "statement": "They spend less on groceries.",
+        "question": "What do they spend less on?",
+        "answer": "Groceries"
+    },
+    "4": {
+        "statement": "She invests in stocks.",
+        "question": "What does she do?",
+        "answer": "invest in stocks"
+    },
+    "5": {
+        "statement": "He opens a new bank account.",
+        "question": "What does he open?",
+        "answer": "A bank account"
+    },
+    "6": {
+        "statement": "They borrow money from the bank.",
+        "question": "What do they do?",
+        "answer": "borrow money"
+    },
+    "7": {
+        "statement": "She calculates her monthly expenses.",
+        "question": "What does she calculate?",
+        "answer": "Monthly expenses"
+    },
+    "8": {
+        "statement": "He pays his credit card bill.",
+        "question": "What does he pay?",
+        "answer": "Credit card bill"
+    },
+    "9": {
+        "statement": "They budget their income carefully.",
+        "question": "What do they do?",
+        "answer": "budget their income"
+    },
+    "10": {
+        "statement": "She deposits cash at the bank.",
+        "question": "What does she do?",
+        "answer": "deposits cash"
+    },
+    "11": {
+        "statement": "He withdraws money from the ATM.",
+        "question": "What does he do?",
+        "answer": "withdraws money"
+    },
+    "12": {
+        "statement": "They track their daily spending.",
+        "question": "What do they track?",
+        "answer": "Daily spending"
+    },
+    "13": {
+        "statement": "She saves for her future.",
+        "question": "What does she save for?",
+        "answer": "Her future"
+    },
+    "14": {
+        "statement": "He earns interest on his savings.",
+        "question": "What does he earn?",
+        "answer": "Interest"
+    },
+    "15": {
+        "statement": "They buy insurance for their house.",
+        "question": "What do they buy insurance for?",
+        "answer": "Their house"
+    },
+    "16": {
+        "statement": "She pays for her car loan.",
+        "question": "What does she pay for?",
+        "answer": "Car loan"
+    },
+    "17": {
+        "statement": "He plans a budget for the trip.",
+        "question": "What does he plan?",
+        "answer": "A budget"
+    },
+    "18": {
+        "statement": "They invest in real estate.",
+        "question": "What do they invest in?",
+        "answer": "Real estate"
+    },
+    "19": {
+        "statement": "She donates money to charity.",
+        "question": "What does she do?",
+        "answer": "donates money"
+    },
+    "20": {
+        "statement": "He keeps track of his bank statements.",
+        "question": "What does he keep track of?",
+        "answer": "Bank statements"
+    },
+    "21": {
+        "statement": "They save for their children's education.",
+        "question": "What do they save for?",
+        "answer": "Children's education"
+    },
+    "22": {
+        "statement": "She avoids unnecessary expenses.",
+        "question": "What does she avoid?",
+        "answer": "Unnecessary expenses"
+    },
+    "23": {
+        "statement": "He saves for retirement.",
+        "question": "What does he save for?",
+        "answer": "Retirement"
+    },
+    "24": {
+        "statement": "They use coupons to save money.",
+        "question": "What do they use?",
+        "answer": "Coupons"
+    },
+    "25": {
+        "statement": "She buys groceries within her budget.",
+        "question": "What does she buy?",
+        "answer": "Groceries"
+    },
+    "26": {
+        "statement": "He sells old items for extra cash.",
+        "question": "What does he sell?",
+        "answer": "Old items"
+    },
+    "27": {
+        "statement": "They check their account balance daily.",
+        "question": "What do they check?",
+        "answer": "Account balance"
+    },
+    "28": {
+        "statement": "She invests in a retirement plan.",
+        "question": "What does she invest in?",
+        "answer": "A retirement plan"
+    },
+    "29": {
+        "statement": "He repays his loan monthly.",
+        "question": "What does he repay?",
+        "answer": "Loan"
+    },
+    "30": {
+        "statement": "They split bills with roommates.",
+        "question": "What do they do?",
+        "answer": "split bills"
+    },
+    "31": {
+        "statement": "She saves money for emergencies.",
+        "question": "What does she save for?",
+        "answer": "Emergencies"
+    },
+    "32": {
+        "statement": "He tracks his income using an app.",
+        "question": "What does he track?",
+        "answer": "Income"
+    },
+    "33": {
+        "statement": "They use a calculator for their budget.",
+        "question": "What do they use?",
+        "answer": "calculator"
+    },
+    "34": {
+        "statement": "She compares prices before shopping.",
+        "question": "What does she do?",
+        "answer": "compares prices"
+    },
+    "35": {
+        "statement": "He avoids overspending on entertainment.",
+        "question": "What does he avoid?",
+        "answer": "Overspending"
+    }
+}

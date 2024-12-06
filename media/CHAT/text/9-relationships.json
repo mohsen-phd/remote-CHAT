@@ -1,177 +1,177 @@
 {
     "1": {
-        "statement": "She enjoys spending time with her friends.",
-        "question": "What does she enjoy doing with her friends?",
-        "keyword": "spending time"
+        "statement": "She writes letters to her grandparents.",
+        "question": "Who does she write to?",
+        "answer": "her grandparents"
     },
     "2": {
-        "statement": "They often host game nights at their home.",
-        "question": "What do they often host at their home?",
-        "keyword": "game nights"
+        "statement": "He calls his brother every evening.",
+        "question": "What does he do every evening?",
+        "answer": "Calls his brother"
     },
     "3": {
-        "statement": "He values honesty in all his relationships.",
-        "question": "What does he value in his relationships?",
-        "keyword": "honesty"
+        "statement": "They visit their parents on weekends.",
+        "question": "Who do they visit on weekends?",
+        "answer": "Parents"
     },
     "4": {
-        "statement": "She loves going to concerts with her partner.",
-        "question": "Who does she love going to concerts with?",
-        "keyword": "her partner"
+        "statement": "She spends time with her best friend.",
+        "question": "Who does she spend time with?",
+        "answer": "Her best friend"
     },
     "5": {
-        "statement": "They frequently go out for dinner together.",
-        "question": "What do they frequently do together?",
-        "keyword": "go out for dinner"
+        "statement": "He buys gifts for his girlfriend.",
+        "question": "What does he do for his girlfriend?",
+        "answer": "Buys gifts"
     },
     "6": {
-        "statement": "He enjoys meeting new people at events.",
-        "question": "Where does he enjoy meeting new people?",
-        "keyword": "events"
+        "statement": "They go on vacations with their family.",
+        "question": "What do they do with their family?",
+        "answer": "go on vacations"
     },
     "7": {
-        "statement": "She often helps friends with their problems.",
-        "question": "What does she often help friends with?",
-        "keyword": "their problems"
+        "statement": "She shares stories with her younger siblings.",
+        "question": "What does she share with her siblings?",
+        "answer": "Stories"
     },
     "8": {
-        "statement": "They are planning a trip with close friends.",
-        "question": "What are they planning with close friends?",
-        "keyword": "trip"
+        "statement": "He helps his father with gardening.",
+        "question": "Who does he help with gardening?",
+        "answer": "His father"
     },
     "9": {
-        "statement": "He likes to celebrate birthdays with family.",
-        "question": "Who does he like to celebrate birthdays with?",
-        "keyword": "family"
+        "statement": "They celebrate birthdays together.",
+        "question": "What do they celebrate together?",
+        "answer": "Birthdays"
     },
     "10": {
-        "statement": "She enjoys volunteering at the local shelter.",
-        "question": "Where does she enjoy volunteering?",
-        "keyword": "local shelter"
+        "statement": "She gives advice to her friends.",
+        "question": "What does she give to her friends?",
+        "answer": "Advice"
     },
     "11": {
-        "statement": "They often attend community events together.",
-        "question": "What do they often attend together?",
-        "keyword": "community events"
+        "statement": "He spends weekends with his cousin.",
+        "question": "Who does he spend weekends with?",
+        "answer": "His cousin"
     },
     "12": {
-        "statement": "He values quality time with loved ones.",
-        "question": "What does he value with loved ones?",
-        "keyword": "quality time"
+        "statement": "They cook meals for each other.",
+        "question": "What do they do for each other?",
+        "answer": "Cook meals"
     },
     "13": {
-        "statement": "She has a small group of friends.",
-        "question": "What kind of group does she have?",
-        "keyword": "small group of friends"
+        "statement": "She plans surprises for her partner.",
+        "question": "What does she plan for her partner?",
+        "answer": "Surprises"
     },
     "14": {
-        "statement": "They regularly catch up over coffee.",
-        "question": "What do they regularly do over coffee?",
-        "keyword": "catch up"
+        "statement": "He takes care of his grandparents.",
+        "question": "Who does he take care of?",
+        "answer": "Grandparents"
     },
     "15": {
-        "statement": "He enjoys going for walks with his dog.",
-        "question": "What does he enjoy doing with his dog?",
-        "keyword": "walks"
+        "statement": "They organize reunions with old classmates.",
+        "question": "What do they organize with their classmates?",
+        "answer": "reunions"
     },
     "16": {
-        "statement": "She often shares meals with her family.",
-        "question": "What does she often share with her family?",
-        "keyword": "meals"
+        "statement": "She invites friends for dinner.",
+        "question": "Who does she invite for dinner?",
+        "answer": "Friends"
     },
     "17": {
-        "statement": "They like to support each other  goals.",
-        "question": "What do they like to support in each other?",
-        "keyword": "goals"
+        "statement": "He writes thank-you notes to his teachers.",
+        "question": "What does he write to his teachers?",
+        "answer": "Thank-you notes"
     },
     "18": {
-        "statement": "He often invites friends over for movies.",
-        "question": "What does he often invite friends over for?",
-        "keyword": "movies"
+        "statement": "They enjoy festivals with their neighbors.",
+        "question": "Who do they enjoy festivals with?",
+        "answer": "Neighbors"
     },
     "19": {
-        "statement": "She enjoys discussing life with her parents.",
-        "question": "Who does she enjoy discussing life with?",
-        "keyword": "parents"
+        "statement": "She listens to her mother's advice.",
+        "question": "Whose advice does she listen to?",
+        "answer": "Her mother"
     },
     "20": {
-        "statement": "They have regular family gatherings every month.",
-        "question": "When do they have family gatherings?",
-        "keyword": "every month"
+        "statement": "He supports his friends during hard times.",
+        "question": "What does he do for his friends?",
+        "answer": "Supports them"
     },
     "21": {
-        "statement": "He often writes letters to his grandparents.",
-        "question": "Who does he often write letters to?",
-        "keyword": "his grandparents"
+        "statement": "They visit friends in different cities.",
+        "question": "Who do they visit?",
+        "answer": "Friends"
     },
     "22": {
-        "statement": "She loves hosting dinner parties for friends.",
-        "question": "What does she love to do?",
-        "keyword": "hosting dinner parties"
+        "statement": "She walks her neighbor's dog.",
+        "question": "What does she do for her neighbor?",
+        "answer": "walks her neighbor's dog"
     },
     "23": {
-        "statement": "They often support local charities as a team.",
-        "question": "What do they often support as a team?",
-        "keyword": "local charities"
+        "statement": "He cheers his brother at sports events.",
+        "question": "What does he do at sports events?",
+        "answer": "Cheers his brother"
     },
     "24": {
-        "statement": "He enjoys playing sports with his friends.",
-        "question": "What does he enjoy doing with friends?",
-        "keyword": "playing sports"
+        "statement": "They organize charity events together.",
+        "question": "What do they organize?",
+        "answer": "Charity events"
     },
     "25": {
-        "statement": "She has made many friends at school.",
-        "question": "Where has she made many friends?",
-        "keyword": "school"
+        "statement": "She gives flowers to her aunt.",
+        "question": "What does she give to her aunt?",
+        "answer": "Flowers"
     },
     "26": {
-        "statement": "They enjoy discussing books at their club.",
-        "question": "What do they enjoy discussing at their club?",
-        "keyword": "books"
+        "statement": "He plays board games with his family.",
+        "question": "What does he play with his family?",
+        "answer": "Board games"
     },
     "27": {
-        "statement": "He values his friendship with old classmates.",
-        "question": "What does he value with old classmates?",
-        "keyword": "friendship"
+        "statement": "They share memories over old photos.",
+        "question": "What do they share over photos?",
+        "answer": "Memories"
     },
     "28": {
-        "statement": "She loves sending postcards from her travels.",
-        "question": "What does she love sending from her travels?",
-        "keyword": "postcards"
+        "statement": "She volunteers with her siblings.",
+        "question": "Who does she volunteer with?",
+        "answer": "Her siblings"
     },
     "29": {
-        "statement": "They often share laughs over coffee dates.",
-        "question": "What do they often do over coffee dates?",
-        "keyword": "share laughs"
+        "statement": "He learns recipes from his grandmother.",
+        "question": "What does he learn from his grandmother?",
+        "answer": "Recipes"
     },
     "30": {
-        "statement": "He often attends family reunions each summer.",
-        "question": "When does he often at summer?",
-        "keyword": "attends family reunions"
+        "statement": "They play soccer with neighborhood kids.",
+        "question": "Who do they play soccer with?",
+        "answer": "Neighborhood kids"
     },
     "31": {
-        "statement": "She enjoys planning surprise parties for friends.",
-        "question": "What does she enjoy planning for friends?",
-        "keyword": "surprise parties"
+        "statement": "She visits her friend often.",
+        "question": "Who does she visit often?",
+        "answer": "Her friend"
     },
     "32": {
-        "statement": "They have a book club that meets monthly.",
-        "question": "What do they have that meets monthly?",
-        "keyword": "book club"
+        "statement": "He talks to his cousin every night.",
+        "question": "Who does he talk to every night?",
+        "answer": "His cousin"
     },
     "33": {
-        "statement": "He loves going on adventures with friends.",
-        "question": "What does he love doing with friends?",
-        "keyword": "going on adventures"
+        "statement": "They surprise their parents with gifts.",
+        "question": "What do they surprise their parents with?",
+        "answer": "Gifts"
     },
     "34": {
-        "statement": "She often shares her hobbies with her partner.",
-        "question": "What does she often share with her partner?",
-        "keyword": "hobbies"
+        "statement": "She discusses her day with her spouse.",
+        "question": "Who does she discuss her day with?",
+        "answer": "Her spouse"
     },
     "35": {
-        "statement": "They communicate regularly through video calls.",
-        "question": "How do they communicate regularly?",
-        "keyword": "through video calls"
+        "statement": "He watches movies with his siblings.",
+        "question": "Who does he watch movies with?",
+        "answer": "His siblings"
     }
 }

@@ -1,177 +1,177 @@
 {
     "1": {
-        "statement": "She loves trying new recipes every week.",
-        "question": "What does she love to do every week?",
-        "keyword": "trying new recipes"
+        "statement": "She loves eating pizza on weekends.",
+        "question": "What does she love eating?",
+        "answer": "Pizza"
     },
     "2": {
-        "statement": "They enjoy cooking together on weekends.",
-        "question": "When do they enjoy cooking together?",
-        "keyword": "on weekends"
+        "statement": "He drinks fresh orange juice every morning.",
+        "question": "What does he drink every morning?",
+        "answer": "orange juice"
     },
     "3": {
-        "statement": "He prefers healthy meals for dinner.",
-        "question": "What does he prefer for dinner?",
-        "keyword": "healthy meals"
+        "statement": "They have salad for lunch.",
+        "question": "What do they have for lunch?",
+        "answer": "Salad"
     },
     "4": {
-        "statement": "The restaurant serves delicious Italian dishes.",
-        "question": "What type of dishes does the restaurant serve?",
-        "keyword": "Italian dishes"
+        "statement": "She bakes chocolate cake for dessert.",
+        "question": "What does she bake?",
+        "answer": "Chocolate cake"
     },
     "5": {
-        "statement": "She often bakes desserts for special occasions.",
-        "question": "What does she often bake for special occasions?",
-        "keyword": "desserts"
+        "statement": "He prefers vegetarian food.",
+        "question": "What kind of food does he prefer?",
+        "answer": "Vegetarian food"
     },
     "6": {
-        "statement": "They are learning to make homemade pasta.",
-        "question": "What are they learning to make?",
-        "keyword": "homemade pasta"
+        "statement": "They eat sushi on Fridays.",
+        "question": "What do they eat on Fridays?",
+        "answer": "Sushi"
     },
     "7": {
-        "statement": "He likes to experiment with spices in cooking.",
-        "question": "What does he like to experiment with?",
-        "keyword": "spices"
+        "statement": "She makes pasta for dinner.",
+        "question": "What does she make for dinner?",
+        "answer": "Pasta"
     },
     "8": {
-        "statement": "The chef prepares meals with fresh ingredients.",
-        "question": "What does the chef prepare meals with?",
-        "keyword": "fresh ingredients"
+        "statement": "He enjoys drinking coffee with breakfast.",
+        "question": "What does he enjoy drinking with breakfast?",
+        "answer": "Coffee"
     },
     "9": {
-        "statement": "She enjoys grilling food during summer nights.",
-        "question": "When does she enjoy grilling food?",
-        "keyword": "summer nights"
+        "statement": "They order burgers for lunch.",
+        "question": "What do they order for lunch?",
+        "answer": "Burgers"
     },
     "10": {
-        "statement": "They often visit farmers' markets for fresh produce.",
-        "question": "Where do they often visit for fresh produce?",
-        "keyword": "farmers' markets"
+        "statement": "She eats fruit for a snack.",
+        "question": "What does she eat for a snack?",
+        "answer": "Fruit"
     },
     "11": {
-        "statement": "He shares cooking tips on his blog.",
-        "question": "What does he share on his blog?",
-        "keyword": "cooking tips"
+        "statement": "He loves eating ice cream after dinner.",
+        "question": "What does he love eating after dinner?",
+        "answer": "Ice cream"
     },
     "12": {
-        "statement": "The cookbook includes many vegetarian recipes.",
-        "question": "What does the cookbook include?",
-        "keyword": "vegetarian recipes"
+        "statement": "They cook soup when it's cold.",
+        "question": "What do they cook when it's cold?",
+        "answer": "Soup"
     },
     "13": {
-        "statement": "She likes to meal prep for the week.",
-        "question": "What does she like to do for the week?",
-        "keyword": "meal prep"
+        "statement": "She makes sandwiches for lunch.",
+        "question": "What does she make for lunch?",
+        "answer": "Sandwiches"
     },
     "14": {
-        "statement": "They are hosting a dinner party this weekend.",
-        "question": "What are they hosting this weekend?",
-        "keyword": "dinner party"
+        "statement": "He prepares scrambled eggs in the morning.",
+        "question": "What does he prepare in the morning?",
+        "answer": "Scrambled eggs"
     },
     "15": {
-        "statement": "He finds cooking relaxing after a long day.",
-        "question": "What does he find relaxing after a long day?",
-        "keyword": "cooking"
+        "statement": "They love having pancakes on Sundays.",
+        "question": "What do they love having on Sundays?",
+        "answer": "Pancakes"
     },
     "16": {
-        "statement": "The food festival features dishes from around the world.",
-        "question": "What does the food festival feature?",
-        "keyword": "dishes from around the world"
+        "statement": "She serves roast chicken for dinner.",
+        "question": "What does she serve for dinner?",
+        "answer": "Roast chicken"
     },
     "17": {
-        "statement": "She enjoys watching cooking shows for inspiration.",
-        "question": "What does she enjoy watching for inspiration?",
-        "keyword": "cooking shows"
+        "statement": "He orders pizza for dinner.",
+        "question": "What does he order for dinner?",
+        "answer": "Pizza"
     },
     "18": {
-        "statement": "They often try new restaurants in the city.",
-        "question": "What do they often try in the city?",
-        "keyword": "new restaurants"
+        "statement": "They enjoy homemade burgers on weekends.",
+        "question": "What do they enjoy on weekends?",
+        "answer": "Homemade burgers"
     },
     "19": {
-        "statement": "He loves making breakfast for his family.",
-        "question": "What does he love making for his family?",
-        "keyword": "breakfast"
+        "statement": "She makes fruit smoothies in the morning.",
+        "question": "What does she make in the morning?",
+        "answer": "Fruit smoothies"
     },
     "20": {
-        "statement": "The recipe calls for garlic and olive oil.",
-        "question": "What does the recipe call for?",
-        "keyword": "garlic and olive oil"
+        "statement": "He drinks water during lunch.",
+        "question": "What does he drink during lunch?",
+        "answer": "Water"
     },
     "21": {
-        "statement": "She prefers baking over cooking savory dishes.",
-        "question": "What does she prefer over cooking?",
-        "keyword": "baking"
+        "statement": "They eat cereal for breakfast.",
+        "question": "What do they eat for breakfast?",
+        "answer": "Cereal"
     },
     "22": {
-        "statement": "They are tasting different wines for pairing.",
-        "question": "What are they tasting for pairing?",
-        "keyword": "different wines"
+        "statement": "She loves having cheese with crackers.",
+        "question": "What does she love having?",
+        "answer": "Cheese with crackers"
     },
     "23": {
-        "statement": "He likes to cook traditional meals on holidays.",
-        "question": "What does he like to cook on holidays?",
-        "keyword": "traditional meals"
+        "statement": "He likes to snack on nuts.",
+        "question": "What does he snack on?",
+        "answer": "Nuts"
     },
     "24": {
-        "statement": "The market offers a variety of spices.",
-        "question": "What does the market offer?",
-        "keyword": "spices"
+        "statement": "They order pasta.",
+        "question": "What do they order?",
+        "answer": "Pasta"
     },
     "25": {
-        "statement": "She often invites friends over for dinner.",
-        "question": "Who does she often invite over?",
-        "keyword": "friends"
+        "statement": "She prepares salad with fresh vegetables.",
+        "question": "What does she prepare?",
+        "answer": "Salad with fresh vegetables"
     },
     "26": {
-        "statement": "They are experimenting with vegan ingredients.",
-        "question": "What are they experimenting with?",
-        "keyword": "vegan ingredients"
+        "statement": "He enjoys grilled cheese sandwiches.",
+        "question": "What does he enjoy?",
+        "answer": "Grilled cheese sandwiches"
     },
     "27": {
-        "statement": "He enjoys preparing snacks for movie nights.",
-        "question": "What does he enjoy preparing for movie nights?",
-        "keyword": "snacks"
+        "statement": "They bake cookies for dessert.",
+        "question": "What do they bake for dessert?",
+        "answer": "Cookies"
     },
     "28": {
-        "statement": "The meal was flavorful and satisfying.",
-        "question": "How was the meal?",
-        "keyword": "flavorful and satisfying"
+        "statement": "She likes to eat yogurt with fruit.",
+        "question": "What does she eat with fruit?",
+        "answer": "Yogurt"
     },
     "29": {
-        "statement": "She is learning to bake bread from scratch.",
-        "question": "What is she learning to bake?",
-        "keyword": "bread"
+        "statement": "He drinks smoothies after the gym.",
+        "question": "What does he drink after the gym?",
+        "answer": "Smoothies"
     },
     "30": {
-        "statement": "They often make smoothies for breakfast.",
-        "question": "What do they often make for breakfast?",
-        "keyword": "smoothies"
+        "statement": "They make pizza for movie night.",
+        "question": "What do they make for movie night?",
+        "answer": "Pizza"
     },
     "31": {
-        "statement": "He enjoys exploring different cuisines while traveling.",
-        "question": "What does he enjoy exploring while traveling?",
-        "keyword": "different cuisines"
+        "statement": "She enjoys baking muffins on weekends.",
+        "question": "What does she enjoy baking?",
+        "answer": "Muffins"
     },
     "32": {
-        "statement": "The restaurant offers vegetarian options.",
-        "question": "What does the restaurant offer?",
-        "keyword": "vegetarian options"
+        "statement": "He loves eating steak for dinner.",
+        "question": "What does he love eating for dinner?",
+        "answer": "Steak"
     },
     "33": {
-        "statement": "She loves to share her cooking experiences online.",
-        "question": "What does she love to share online?",
-        "keyword": "her cooking experiences"
+        "statement": "They have sushi for lunch.",
+        "question": "What do they have for lunch?",
+        "answer": "Sushi"
     },
     "34": {
-        "statement": "They attended a cooking class last weekend.",
-        "question": "When did they attend a cooking class?",
-        "keyword": "last weekend"
+        "statement": "She enjoys a cup of tea in the afternoon.",
+        "question": "What does she enjoy in the afternoon?",
+        "answer": "A cup of tea"
     },
     "35": {
-        "statement": "He often watches videos to learn new techniques.",
-        "question": "What does he often watch to learn new techniques?",
-        "keyword": "videos"
+        "statement": "He eats a sandwich for lunch every day.",
+        "question": "What does he eat for lunch every day?",
+        "answer": "sandwich"
     }
 }

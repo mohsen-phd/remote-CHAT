@@ -415,10 +415,10 @@ class CHAT(TestTypes):
         )
         converted_audio_question = convert_to_specific_db_spl(question, 65)
 
-        return sample_rate, {
-            "noisy": converted_audio_statement,
-            "clean": converted_audio_question,
-        }
+        combined_stimuli = np.concatenate(
+            (converted_audio_statement, converted_audio_question)
+        )
+        return sample_rate, {"noisy": combined_stimuli}
 
     def cli_post_process(self, response: str) -> list[str]:
         """Post process the response from the CLI. and remove any common mistakes.

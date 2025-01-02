@@ -7,10 +7,11 @@ import yaml
 from loguru import logger
 from yaml import YAMLError
 
-from audio_processing.noise import Noise
+from audio_processing.noise import Noise, convert_to_specific_db_spl
 from hearing_test.test_manager import ASRTestManager, CliTestManager, TestManager
 from hearing_test.test_types import TestTypes
 from vocalizer.utils import play_sound
+from hearing_test.test_logic import SpeechInNoise
 
 
 def read_conf(src: str = "config.yaml") -> dict:
@@ -34,19 +35,26 @@ def read_conf(src: str = "config.yaml") -> dict:
 
 
 def play_stimuli(
-    hearing_test: TestTypes, snr_db: int, stimuli: list[str], noise: Noise
+    hearing_test: TestTypes,
+    stimuli: list[str],
+    noise: Noise,
+    signal_level: float,
+    noise_level: float,
 ):
     """Play the stimuli to the patient.
 
     Args:
         hearing_test (TestTypes): hearing test object. is used to get the sound wave.
-        snr_db (int): signal to noise ratio in db.
-        stimuli (str): The stimuli to play.
+        stimuli (list[str]): The stimuli to play.
         noise (Noise): object to generate noise.
+        signal_level (float): The level of the signal.
+        noise_level (float): The level of the noise.
+
     """
     sample_rate, sound_wave_dict = hearing_test.get_sound(stimuli)
 
     padding_size = sample_rate // 3
+
     if "noisy" in sound_wave_dict:
         sound_wave_noisy = np.pad(
             sound_wave_dict["noisy"],
@@ -54,7 +62,8 @@ def play_stimuli(
             "constant",
             constant_values=(0, 0),
         )
-        noise_signal = noise.generate_noise(sound_wave_noisy, snr_db)
+        noise_signal = noise.generate_noise(sound_wave_noisy, noise_level)
+        sound_wave_noisy = convert_to_specific_db_spl(sound_wave_noisy, signal_level)
         noisy_wave = sound_wave_noisy + noise_signal
         play_sound(wave=noisy_wave, fs=sample_rate)
 
@@ -65,6 +74,7 @@ def play_stimuli(
             "constant",
             constant_values=(0, 0),
         )
+        sound_wave_clean = convert_to_specific_db_spl(sound_wave_clean, signal_level)
         play_sound(wave=sound_wave_clean, fs=sample_rate)
 
 

@@ -80,22 +80,20 @@ class Babble(Noise):
         """
         self._sample_rate, self._noise = read_wav_file(noise_src)
 
-    def generate_noise(self, signal: np.ndarray, desired_snr_db: float) -> np.ndarray:
-        """Generate a babble noise signal.
-
-        Return a babble noise from the loaded file and scale it to the desired SNR.
-        a return a noise signal with the same length as the input signal.
+    def generate_noise(
+        self,
+        signal: np.ndarray,
+        noise_db: float,
+    ) -> np.ndarray:
+        """Generate babble noise with a specific SNR.
 
         Args:
-            signal (np.ndarray): numpy array containing the signal.
-            desired_snr_db (float): desired SNR of the noise relative
-                                            to the signal in dB.
+            signal (np.ndarray): Numpy containing the target signal.
+            noise_db (float): Desired level of noise in dB.
 
         Returns:
-            np.ndarray: numpy array containing the noise signal.
+            np.ndarray: Generated noise in with the same length as the signal.
         """
-        signal_db = 65
-        noise_db = signal_db - desired_snr_db
         scaled_noise = convert_to_specific_db_spl(self._noise, noise_db)
         signal_len = len(signal)
         noise_start_point = random.randint(0, len(scaled_noise) - signal_len)

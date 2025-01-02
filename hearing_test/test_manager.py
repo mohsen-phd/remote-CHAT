@@ -166,6 +166,7 @@ class ASRTestManager(TestManager):
         print(Fore.GREEN + prompt)
 
         file_src = self.recorder.listen()
+        print(Fore.GREEN + "Please Wait...")
 
         transcribe = self.response_capturer.get(src=file_src).lower()
         logger.debug(transcribe)

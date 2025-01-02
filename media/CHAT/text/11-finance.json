@@ -50,7 +50,7 @@
         "answer": "deposits cash"
     },
     "11": {
-        "statement": "He withdraws money from the ATM.",
+        "statement": "He withdraws money from the bank.",
         "question": "What does he do?",
         "answer": "withdraws money"
     },
@@ -60,8 +60,8 @@
         "answer": "Daily spending"
     },
     "13": {
-        "statement": "She saves for her future.",
-        "question": "What does she save for?",
+        "statement": "She invest for her future.",
+        "question": "Why does she invest?",
         "answer": "Her future"
     },
     "14": {
@@ -101,7 +101,7 @@
     },
     "21": {
         "statement": "They save for their children's education.",
-        "question": "What do they save for?",
+        "question": "Why do they save money?",
         "answer": "Children's education"
     },
     "22": {
@@ -110,8 +110,8 @@
         "answer": "Unnecessary expenses"
     },
     "23": {
-        "statement": "He saves for retirement.",
-        "question": "What does he save for?",
+        "statement": "He saves money for retirement.",
+        "question": "Why does he save money?",
         "answer": "Retirement"
     },
     "24": {
@@ -151,7 +151,7 @@
     },
     "31": {
         "statement": "She saves money for emergencies.",
-        "question": "What does she save for?",
+        "question": "Why does she save money?",
         "answer": "Emergencies"
     },
     "32": {

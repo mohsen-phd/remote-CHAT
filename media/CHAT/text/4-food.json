@@ -90,9 +90,9 @@
         "answer": "Homemade burgers"
     },
     "19": {
-        "statement": "She makes fruit smoothies in the morning.",
+        "statement": "She makes juice in the morning.",
         "question": "What does she make in the morning?",
-        "answer": "Fruit smoothies"
+        "answer": "juice"
     },
     "20": {
         "statement": "He drinks water during lunch.",
@@ -140,9 +140,9 @@
         "answer": "Yogurt"
     },
     "29": {
-        "statement": "He drinks smoothies after the gym.",
-        "question": "What does he drink after the gym?",
-        "answer": "Smoothies"
+        "statement": "He drinks coffee after the gym.",
+        "question": "What does do after the gym?",
+        "answer": "drinks coffee"
     },
     "30": {
         "statement": "They make pizza for movie night.",

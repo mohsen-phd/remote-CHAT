@@ -18,18 +18,18 @@ test:
       noise:
         type: babble #[white, babble]
         src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/speech_shaped_noise_ASL_tts.wav"
+        src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/speech_shaped_noise_ASL_tts.wav"
       stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/natural/22k/test"
       stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/mello/test"
     FAAF:
       noise:
         type: babble #[white, babble]
-        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/audio_processing/noise/babble.wav"
+        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/FAAF/FAAFSPN.WAV"
       stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/FAAF/natural"
-      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/mello"
     CHAT:
       noise:
         type: babble #[white, babble]
-        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/speech_shaped_noise_CHAT_tts.wav"
+        src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/speech_shaped_noise_CHAT_tts.wav"
       stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/tts"
 
 response_capturing: cli #[cli, asr]

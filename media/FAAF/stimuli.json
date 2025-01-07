@@ -6,7 +6,7 @@
             "nail",
             "dale"
         ],
-        "filename": "afaafsp01.wav",
+        "filename": "FAAF01.wav",
         "word": "bail"
     },
     "2": {
@@ -16,7 +16,7 @@
             "din",
             "tin"
         ],
-        "filename": "afaafsp02.wav",
+        "filename": "FAAF02.wav",
         "word": "bin"
     },
     "3": {
@@ -26,7 +26,7 @@
             "coast",
             "post"
         ],
-        "filename": "afaafsp03.wav",
+        "filename": "FAAF03.wav",
         "word": "post"
     },
     "4": {
@@ -36,7 +36,7 @@
             "gab",
             "tab"
         ],
-        "filename": "afaafsp04.wav",
+        "filename": "FAAF04.wav",
         "word": "gab"
     },
     "5": {
@@ -46,7 +46,7 @@
             "nan",
             "than"
         ],
-        "filename": "afaafsp05.wav",
+        "filename": "FAAF05.wav",
         "word": "van"
     },
     "6": {
@@ -56,7 +56,7 @@
             "thought",
             "port"
         ],
-        "filename": "afaafsp06.wav",
+        "filename": "FAAF06.wav",
         "word": "taught"
     },
     "7": {
@@ -66,7 +66,7 @@
             "feel",
             "zeal"
         ],
-        "filename": "afaafsp07.wav",
+        "filename": "FAAF07.wav",
         "word": "veal"
     },
     "8": {
@@ -76,7 +76,7 @@
             "sheen",
             "seen"
         ],
-        "filename": "afaafsp08.wav",
+        "filename": "FAAF08.wav",
         "word": "teen"
     },
     "9": {
@@ -86,7 +86,7 @@
             "match",
             "mats"
         ],
-        "filename": "afaafsp09.wav",
+        "filename": "FAAF09.wav",
         "word": "mash"
     },
     "10": {
@@ -96,7 +96,7 @@
             "ritz",
             "rids"
         ],
-        "filename": "afaafsp10.wav",
+        "filename": "FAAF10.wav",
         "word": "ridge"
     },
     "11": {
@@ -106,7 +106,7 @@
             "sun",
             "sub"
         ],
-        "filename": "afaafsp11.wav",
+        "filename": "FAAF11.wav",
         "word": "sud"
     },
     "12": {
@@ -116,7 +116,7 @@
             "rip",
             "rig"
         ],
-        "filename": "afaafsp12.wav",
+        "filename": "FAAF12.wav",
         "word": "rick"
     },
     "13": {
@@ -126,7 +126,7 @@
             "cop",
             "cot"
         ],
-        "filename": "afaafsp13.wav",
+        "filename": "FAAF13.wav",
         "word": "cop"
     },
     "14": {
@@ -136,7 +136,7 @@
             "bat",
             "bad"
         ],
-        "filename": "afaafsp14.wav",
+        "filename": "FAAF14.wav",
         "word": "bat"
     },
     "15": {
@@ -146,7 +146,7 @@
             "yet",
             "get"
         ],
-        "filename": "afaafsp15.wav",
+        "filename": "FAAF15.wav",
         "keyword": "bet"
     },
     "16": {
@@ -156,7 +156,7 @@
             "mick",
             "milk"
         ],
-        "filename": "afaafsp16.wav",
+        "filename": "FAAF16.wav",
         "keyword": "milk"
     },
     "17": {
@@ -166,7 +166,7 @@
             "robe",
             "rode"
         ],
-        "filename": "afaafsp17.wav",
+        "filename": "FAAF17.wav",
         "keyword": "rove"
     },
     "18": {
@@ -176,7 +176,7 @@
             "lad",
             "land"
         ],
-        "filename": "afaafsp18.wav",
+        "filename": "FAAF18.wav",
         "keyword": "land"
     },
     "19": {
@@ -186,7 +186,7 @@
             "bag",
             "ban"
         ],
-        "filename": "afaafsp19.wav",
+        "filename": "FAAF19.wav",
         "keyword": "bad"
     },
     "20": {
@@ -196,7 +196,7 @@
             "hang",
             "how"
         ],
-        "filename": "afaafsp20.wav",
+        "filename": "FAAF20.wav",
         "keyword": "how"
     },
     "21": {
@@ -206,7 +206,7 @@
             "bad",
             "bag"
         ],
-        "filename": "afaafsp21.wav",
+        "filename": "FAAF21.wav",
         "word": "ban"
     },
     "22": {
@@ -216,7 +216,7 @@
             "lads",
             "land"
         ],
-        "filename": "afaafsp22.wav",
+        "filename": "FAAF22.wav",
         "word": "lads"
     },
     "23": {
@@ -226,7 +226,7 @@
             "dale",
             "bail"
         ],
-        "filename": "afaafsp23.wav",
+        "filename": "FAAF23.wav",
         "word": "nail"
     },
     "24": {
@@ -236,7 +236,7 @@
             "sud",
             "some"
         ],
-        "filename": "afaafsp24.wav",
+        "filename": "FAAF24.wav",
         "word": "sun"
     },
     "25": {
@@ -246,7 +246,7 @@
             "mick",
             "milk"
         ],
-        "filename": "afaafsp25.wav",
+        "filename": "FAAF25.wav",
         "word": "mick"
     },
     "26": {
@@ -256,7 +256,7 @@
             "get",
             "yet"
         ],
-        "filename": "afaafsp26.wav",
+        "filename": "FAAF26.wav",
         "word": "wet"
     },
     "27": {
@@ -266,7 +266,7 @@
             "rick",
             "rib"
         ],
-        "filename": "afaafsp27.wav",
+        "filename": "FAAF27.wav",
         "word": "rig"
     },
     "28": {
@@ -276,7 +276,7 @@
             "cob",
             "cop"
         ],
-        "filename": "afaafsp28.wav",
+        "filename": "FAAF28.wav",
         "word": "cod"
     },
     "29": {
@@ -286,7 +286,7 @@
             "rich",
             "rids"
         ],
-        "filename": "afaafsp29.wav",
+        "filename": "FAAF29.wav",
         "word": "rids"
     },
     "30": {
@@ -296,7 +296,7 @@
             "din",
             "tin"
         ],
-        "filename": "afaafsp30.wav",
+        "filename": "FAAF30.wav",
         "word": "pin"
     },
     "31": {
@@ -306,7 +306,7 @@
             "teen",
             "seen"
         ],
-        "filename": "afaafsp31.wav",
+        "filename": "FAAF31.wav",
         "word": "keen"
     },
     "32": {
@@ -316,7 +316,7 @@
             "boast",
             "coast"
         ],
-        "filename": "afaafsp32.wav",
+        "filename": "FAAF32.wav",
         "word": "ghost"
     },
     "33": {
@@ -326,7 +326,7 @@
             "how",
             "ham"
         ],
-        "filename": "afaafsp33.wav",
+        "filename": "FAAF33.wav",
         "word": "high"
     },
     "34": {
@@ -336,7 +336,7 @@
             "bat",
             "back"
         ],
-        "filename": "afaafsp34.wav",
+        "filename": "FAAF34.wav",
         "word": "bag"
     },
     "35": {
@@ -346,7 +346,7 @@
             "veal",
             "feel"
         ],
-        "filename": "afaafsp35.wav",
+        "filename": "FAAF35.wav",
         "word": "seal"
     },
     "36": {
@@ -356,7 +356,7 @@
             "mats",
             "mass"
         ],
-        "filename": "afaafsp36.wav",
+        "filename": "FAAF36.wav",
         "word": "mass"
     },
     "37": {
@@ -366,7 +366,7 @@
             "tab",
             "cab"
         ],
-        "filename": "afaafsp37.wav",
+        "filename": "FAAF37.wav",
         "word": "dab"
     },
     "38": {
@@ -376,7 +376,7 @@
             "rode",
             "robe"
         ],
-        "filename": "afaafsp38.wav",
+        "filename": "FAAF38.wav",
         "word": "rose"
     },
     "39": {
@@ -386,7 +386,7 @@
             "fought",
             "taught"
         ],
-        "filename": "afaafsp39.wav",
+        "filename": "FAAF39.wav",
         "word": "thought"
     },
     "40": {
@@ -396,7 +396,7 @@
             "nan",
             "man"
         ],
-        "filename": "afaafsp40.wav",
+        "filename": "FAAF40.wav",
         "word": "than"
     },
     "41": {
@@ -406,7 +406,7 @@
             "tin",
             "bin"
         ],
-        "filename": "afaafsp41.wav",
+        "filename": "FAAF41.wav",
         "keyword": "tin"
     },
     "42": {
@@ -416,7 +416,7 @@
             "cab",
             "gab"
         ],
-        "filename": "afaafsp42.wav",
+        "filename": "FAAF42.wav",
         "keyword": "tab"
     },
     "43": {
@@ -426,7 +426,7 @@
             "land",
             "lands"
         ],
-        "filename": "afaafsp43.wav",
+        "filename": "FAAF43.wav",
         "keyword": "lad"
     },
     "44": {
@@ -436,7 +436,7 @@
             "ham",
             "high"
         ],
-        "filename": "afaafsp44.wav",
+        "filename": "FAAF44.wav",
         "keyword": "hang"
     },
     "45": {
@@ -446,7 +446,7 @@
             "sheen",
             "teen"
         ],
-        "filename": "afaafsp45.wav",
+        "filename": "FAAF45.wav",
         "keyword": "sheen"
     },
     "46": {
@@ -456,7 +456,7 @@
             "back",
             "bag"
         ],
-        "filename": "afaafsp46.wav",
+        "filename": "FAAF46.wav",
         "keyword": "bad"
     },
     "47": {
@@ -466,7 +466,7 @@
             "rib",
             "rig"
         ],
-        "filename": "afaafsp47.wav",
+        "filename": "FAAF47.wav",
         "keyword": "rib"
     },
     "48": {
@@ -476,7 +476,7 @@
             "coast",
             "post"
         ],
-        "filename": "afaafsp48.wav",
+        "filename": "FAAF48.wav",
         "keyword": "coast"
     },
     "49": {
@@ -486,7 +486,7 @@
             "ridge",
             "ritz"
         ],
-        "filename": "afaafsp49.wav",
+        "filename": "FAAF49.wav",
         "keyword": "ritz"
     },
     "50": {
@@ -496,7 +496,7 @@
             "van",
             "man"
         ],
-        "filename": "afaafsp50.wav",
+        "filename": "FAAF50.wav",
         "keyword": "man"
     },
     "51": {
@@ -506,7 +506,7 @@
             "get",
             "wet"
         ],
-        "filename": "afaafsp51.wav",
+        "filename": "FAAF51.wav",
         "keyword": "get"
     },
     "52": {
@@ -516,7 +516,7 @@
             "ban",
             "bang"
         ],
-        "filename": "afaafsp52.wav",
+        "filename": "FAAF52.wav",
         "keyword": "bang"
     },
     "53": {
@@ -526,7 +526,7 @@
             "milk",
             "mick"
         ],
-        "filename": "afaafsp53.wav",
+        "filename": "FAAF53.wav",
         "keyword": "mix"
     },
     "54": {
@@ -536,7 +536,7 @@
             "taught",
             "thought"
         ],
-        "filename": "afaafsp54.wav",
+        "filename": "FAAF54.wav",
         "keyword": "port"
     },
     "55": {
@@ -546,7 +546,7 @@
             "cob",
             "cod"
         ],
-        "filename": "afaafsp55.wav",
+        "filename": "FAAF55.wav",
         "keyword": "cob"
     },
     "56": {
@@ -556,7 +556,7 @@
             "sud",
             "sun"
         ],
-        "filename": "afaafsp56.wav",
+        "filename": "FAAF56.wav",
         "keyword": "sub"
     },
     "57": {
@@ -566,7 +566,7 @@
             "mass",
             "mats"
         ],
-        "filename": "afaafsp57.wav",
+        "filename": "FAAF57.wav",
         "keyword": "mats"
     },
     "58": {
@@ -576,7 +576,7 @@
             "veal",
             "feel"
         ],
-        "filename": "afaafsp58.wav",
+        "filename": "FAAF58.wav",
         "keyword": "feel"
     },
     "59": {
@@ -586,7 +586,7 @@
             "nail",
             "bail"
         ],
-        "filename": "afaafsp59.wav",
+        "filename": "FAAF59.wav",
         "keyword": "mail"
     },
     "60": {
@@ -596,7 +596,7 @@
             "rose",
             "rode"
         ],
-        "filename": "afaafsp60.wav",
+        "filename": "FAAF60.wav",
         "keyword": "rode"
     },
     "61": {
@@ -606,7 +606,7 @@
             "dale",
             "mail"
         ],
-        "filename": "afaafsp61.wav",
+        "filename": "FAAF61.wav",
         "keyword": "dale"
     },
     "62": {
@@ -616,7 +616,7 @@
             "pin",
             "bin"
         ],
-        "filename": "afaafsp62.wav",
+        "filename": "FAAF62.wav",
         "keyword": "din"
     },
     "63": {
@@ -626,7 +626,7 @@
             "bad",
             "bat"
         ],
-        "filename": "afaafsp63.wav",
+        "filename": "FAAF63.wav",
         "keyword": "back"
     },
     "64": {
@@ -636,7 +636,7 @@
             "boast",
             "post"
         ],
-        "filename": "afaafsp64.wav",
+        "filename": "FAAF64.wav",
         "keyword": "boast"
     },
     "65": {
@@ -646,7 +646,7 @@
             "van",
             "nan"
         ],
-        "filename": "afaafsp65.wav",
+        "filename": "FAAF65.wav",
         "keyword": "nan"
     },
     "66": {
@@ -656,7 +656,7 @@
             "port",
             "thought"
         ],
-        "filename": "afaafsp66.wav",
+        "filename": "FAAF66.wav",
         "keyword": "fought"
     },
     "67": {
@@ -666,7 +666,7 @@
             "how",
             "ham"
         ],
-        "filename": "afaafsp67.wav",
+        "filename": "FAAF67.wav",
         "keyword": "ham"
     },
     "68": {
@@ -676,7 +676,7 @@
             "keen",
             "sheen"
         ],
-        "filename": "afaafsp68.wav",
+        "filename": "FAAF68.wav",
         "keyword": "seen"
     },
     "69": {
@@ -686,7 +686,7 @@
             "cod",
             "cop"
         ],
-        "filename": "afaafsp69.wav",
+        "filename": "FAAF69.wav",
         "keyword": "cot"
     },
     "70": {
@@ -696,7 +696,7 @@
             "dab",
             "gab"
         ],
-        "filename": "afaafsp70.wav",
+        "filename": "FAAF70.wav",
         "keyword": "cab"
     },
     "71": {
@@ -706,7 +706,7 @@
             "bag",
             "ban"
         ],
-        "filename": "afaafsp71.wav",
+        "filename": "FAAF71.wav",
         "keyword": "bag"
     },
     "72": {
@@ -716,7 +716,7 @@
             "yet",
             "get"
         ],
-        "filename": "afaafsp72.wav",
+        "filename": "FAAF72.wav",
         "keyword": "yet"
     },
     "73": {
@@ -726,7 +726,7 @@
             "lands",
             "lads"
         ],
-        "filename": "afaafsp73.wav",
+        "filename": "FAAF73.wav",
         "keyword": "lands"
     },
     "74": {
@@ -736,7 +736,7 @@
             "mats",
             "mash"
         ],
-        "filename": "afaafsp74.wav",
+        "filename": "FAAF74.wav",
         "keyword": "match"
     },
     "75": {
@@ -746,7 +746,7 @@
             "sud",
             "some"
         ],
-        "filename": "afaafsp75.wav",
+        "filename": "FAAF75.wav",
         "keyword": "some"
     },
     "76": {
@@ -756,7 +756,7 @@
             "mix",
             "milk"
         ],
-        "filename": "afaafsp76.wav",
+        "filename": "FAAF76.wav",
         "keyword": "milks"
     },
     "77": {
@@ -766,7 +766,7 @@
             "feel",
             "veal"
         ],
-        "filename": "afaafsp77.wav",
+        "filename": "FAAF77.wav",
         "keyword": "zeal"
     },
     "78": {
@@ -776,7 +776,7 @@
             "rig",
             "rip"
         ],
-        "filename": "afaafsp78.wav",
+        "filename": "FAAF78.wav",
         "keyword": "rip"
     },
     "79": {
@@ -786,7 +786,7 @@
             "rove",
             "robe"
         ],
-        "filename": "afaafsp79.wav",
+        "filename": "FAAF79.wav",
         "keyword": "robe"
     },
     "80": {
@@ -796,7 +796,7 @@
             "rids",
             "ritz"
         ],
-        "filename": "afaafsp80.wav",
+        "filename": "FAAF80.wav",
         "keyword": "rich"
     }
 }

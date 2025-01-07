@@ -6,11 +6,12 @@ import sys
 from colorama import Fore
 from loguru import logger
 
+from hearing_test.test_logic import SpeechInNoise
 from util import get_test_manager, play_stimuli, read_conf, save_results
 
 logger.remove(0)
-logger.add(sys.stderr, level="DEBUG")
-# logger.add(sys.stderr, level="INFO")
+# logger.add(sys.stderr, level="DEBUG")
+logger.add(sys.stderr, level="INFO")
 
 
 def preparation() -> dict[str, str]:
@@ -25,12 +26,12 @@ def preparation() -> dict[str, str]:
     # vocalization_mode = input(Fore.GREEN + "Enter vocalization mode: ")
     # test_name = input(Fore.GREEN + "Enter test name: ")
     # todo:replace the following lines with the above lines
-    participant_id = 100
-    test_number = 1
-    response_capturing_mode = "cli"
+    participant_id = 999
+    test_number = 2
+    response_capturing_mode = "asr"
     test_name = "asl"
-    test_name_presentation = "aslt"
-    vocalization_mode = "tts"
+    test_name_presentation = "asl1"
+    vocalization_mode = "recorded"
 
     save_dir = f"records/{participant_id}"
     os.makedirs(save_dir, exist_ok=True)
@@ -81,6 +82,8 @@ def main():
     snr_db = manager.start_snr
     correct_count = incorrect_count = 0
     iteration = 1
+    signal_level = 65
+    noise_level = 60
     os.system("cls" if os.name == "nt" else "clear")
     while not manager.hearing_test.stop_condition():
         this_round = {}
@@ -93,7 +96,18 @@ def main():
         print(Fore.YELLOW + "Please listen")
         logger.debug(f"{iteration} :The stimuli is: {stimuli_text}")
         this_round["stimuli"] = stimuli_text
-        play_stimuli(manager.test_type, snr_db, stimuli_id, manager.noise)
+
+        signal_level, noise_level = SpeechInNoise.calculate_noise_signal_level(
+            signal_level, noise_level, snr_db
+        )
+        logger.debug(f"Signal level: {signal_level}, Noise level: {noise_level}")
+        play_stimuli(
+            manager.test_type,
+            stimuli_id,
+            manager.noise,
+            signal_level=signal_level,
+            noise_level=noise_level,
+        )
 
         transcribe = manager.get_response(response_getting_prompt)
         this_round["response"] = transcribe
@@ -116,6 +130,12 @@ def main():
             correct_count = incorrect_count = 0
         iteration += 1
 
+    track_results[iteration] = {
+        "snr": snr_db,
+        "stimuli": stimuli_text,
+        "response": transcribe,
+        "matched": matched,
+    }
     logger.debug(f"Final SRT: {manager.hearing_test.srt} \n")
     track_results["SRT"] = manager.hearing_test.srt
     track_results["config"] = custom_config

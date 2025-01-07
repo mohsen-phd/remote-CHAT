@@ -1,8 +1,802 @@
 {
     "1": {
-        "1": "bail",
-        "2": "bale",
-        "3": "bail",
-        "4": "bale"
+        "words": [
+            "mail",
+            "bail",
+            "nail",
+            "dale"
+        ],
+        "filename": "afaafsp01.wav",
+        "word": "bail"
+    },
+    "2": {
+        "words": [
+            "bin",
+            "pin",
+            "din",
+            "tin"
+        ],
+        "filename": "afaafsp02.wav",
+        "word": "bin"
+    },
+    "3": {
+        "words": [
+            "boast",
+            "ghost",
+            "coast",
+            "post"
+        ],
+        "filename": "afaafsp03.wav",
+        "word": "post"
+    },
+    "4": {
+        "words": [
+            "dab",
+            "cab",
+            "gab",
+            "tab"
+        ],
+        "filename": "afaafsp04.wav",
+        "word": "gab"
+    },
+    "5": {
+        "words": [
+            "man",
+            "van",
+            "nan",
+            "than"
+        ],
+        "filename": "afaafsp05.wav",
+        "word": "van"
+    },
+    "6": {
+        "words": [
+            "taught",
+            "fought",
+            "thought",
+            "port"
+        ],
+        "filename": "afaafsp06.wav",
+        "word": "taught"
+    },
+    "7": {
+        "words": [
+            "seal",
+            "veal",
+            "feel",
+            "zeal"
+        ],
+        "filename": "afaafsp07.wav",
+        "word": "veal"
+    },
+    "8": {
+        "words": [
+            "keen",
+            "teen",
+            "sheen",
+            "seen"
+        ],
+        "filename": "afaafsp08.wav",
+        "word": "teen"
+    },
+    "9": {
+        "words": [
+            "mash",
+            "mass",
+            "match",
+            "mats"
+        ],
+        "filename": "afaafsp09.wav",
+        "word": "mash"
+    },
+    "10": {
+        "words": [
+            "rich",
+            "ridge",
+            "ritz",
+            "rids"
+        ],
+        "filename": "afaafsp10.wav",
+        "word": "ridge"
+    },
+    "11": {
+        "words": [
+            "some",
+            "sud",
+            "sun",
+            "sub"
+        ],
+        "filename": "afaafsp11.wav",
+        "word": "sud"
+    },
+    "12": {
+        "words": [
+            "rib",
+            "rick",
+            "rip",
+            "rig"
+        ],
+        "filename": "afaafsp12.wav",
+        "word": "rick"
+    },
+    "13": {
+        "words": [
+            "cob",
+            "cod",
+            "cop",
+            "cot"
+        ],
+        "filename": "afaafsp13.wav",
+        "word": "cop"
+    },
+    "14": {
+        "words": [
+            "bag",
+            "back",
+            "bat",
+            "bad"
+        ],
+        "filename": "afaafsp14.wav",
+        "word": "bat"
+    },
+    "15": {
+        "words": [
+            "wet",
+            "bet",
+            "yet",
+            "get"
+        ],
+        "filename": "afaafsp15.wav",
+        "keyword": "bet"
+    },
+    "16": {
+        "words": [
+            "mix",
+            "milks",
+            "mick",
+            "milk"
+        ],
+        "filename": "afaafsp16.wav",
+        "keyword": "milk"
+    },
+    "17": {
+        "words": [
+            "rose",
+            "rove",
+            "robe",
+            "rode"
+        ],
+        "filename": "afaafsp17.wav",
+        "keyword": "rove"
+    },
+    "18": {
+        "words": [
+            "lands",
+            "lads",
+            "lad",
+            "land"
+        ],
+        "filename": "afaafsp18.wav",
+        "keyword": "land"
+    },
+    "19": {
+        "words": [
+            "bang",
+            "bad",
+            "bag",
+            "ban"
+        ],
+        "filename": "afaafsp19.wav",
+        "keyword": "bad"
+    },
+    "20": {
+        "words": [
+            "ham",
+            "high",
+            "hang",
+            "how"
+        ],
+        "filename": "afaafsp20.wav",
+        "keyword": "how"
+    },
+    "21": {
+        "words": [
+            "bang",
+            "ban",
+            "bad",
+            "bag"
+        ],
+        "filename": "afaafsp21.wav",
+        "word": "ban"
+    },
+    "22": {
+        "words": [
+            "lands",
+            "lad",
+            "lads",
+            "land"
+        ],
+        "filename": "afaafsp22.wav",
+        "word": "lads"
+    },
+    "23": {
+        "words": [
+            "mail",
+            "nail",
+            "dale",
+            "bail"
+        ],
+        "filename": "afaafsp23.wav",
+        "word": "nail"
+    },
+    "24": {
+        "words": [
+            "sun",
+            "sub",
+            "sud",
+            "some"
+        ],
+        "filename": "afaafsp24.wav",
+        "word": "sun"
+    },
+    "25": {
+        "words": [
+            "mix",
+            "milks",
+            "mick",
+            "milk"
+        ],
+        "filename": "afaafsp25.wav",
+        "word": "mick"
+    },
+    "26": {
+        "words": [
+            "wet",
+            "bet",
+            "get",
+            "yet"
+        ],
+        "filename": "afaafsp26.wav",
+        "word": "wet"
+    },
+    "27": {
+        "words": [
+            "rig",
+            "rip",
+            "rick",
+            "rib"
+        ],
+        "filename": "afaafsp27.wav",
+        "word": "rig"
+    },
+    "28": {
+        "words": [
+            "cot",
+            "cod",
+            "cob",
+            "cop"
+        ],
+        "filename": "afaafsp28.wav",
+        "word": "cod"
+    },
+    "29": {
+        "words": [
+            "ridge",
+            "ritz",
+            "rich",
+            "rids"
+        ],
+        "filename": "afaafsp29.wav",
+        "word": "rids"
+    },
+    "30": {
+        "words": [
+            "pin",
+            "bin",
+            "din",
+            "tin"
+        ],
+        "filename": "afaafsp30.wav",
+        "word": "pin"
+    },
+    "31": {
+        "words": [
+            "sheen",
+            "keen",
+            "teen",
+            "seen"
+        ],
+        "filename": "afaafsp31.wav",
+        "word": "keen"
+    },
+    "32": {
+        "words": [
+            "post",
+            "ghost",
+            "boast",
+            "coast"
+        ],
+        "filename": "afaafsp32.wav",
+        "word": "ghost"
+    },
+    "33": {
+        "words": [
+            "hang",
+            "high",
+            "how",
+            "ham"
+        ],
+        "filename": "afaafsp33.wav",
+        "word": "high"
+    },
+    "34": {
+        "words": [
+            "bad",
+            "bag",
+            "bat",
+            "back"
+        ],
+        "filename": "afaafsp34.wav",
+        "word": "bag"
+    },
+    "35": {
+        "words": [
+            "seal",
+            "zeal",
+            "veal",
+            "feel"
+        ],
+        "filename": "afaafsp35.wav",
+        "word": "seal"
+    },
+    "36": {
+        "words": [
+            "match",
+            "mash",
+            "mats",
+            "mass"
+        ],
+        "filename": "afaafsp36.wav",
+        "word": "mass"
+    },
+    "37": {
+        "words": [
+            "gab",
+            "dab",
+            "tab",
+            "cab"
+        ],
+        "filename": "afaafsp37.wav",
+        "word": "dab"
+    },
+    "38": {
+        "words": [
+            "rose",
+            "rove",
+            "rode",
+            "robe"
+        ],
+        "filename": "afaafsp38.wav",
+        "word": "rose"
+    },
+    "39": {
+        "words": [
+            "port",
+            "thought",
+            "fought",
+            "taught"
+        ],
+        "filename": "afaafsp39.wav",
+        "word": "thought"
+    },
+    "40": {
+        "words": [
+            "than",
+            "van",
+            "nan",
+            "man"
+        ],
+        "filename": "afaafsp40.wav",
+        "word": "than"
+    },
+    "41": {
+        "words": [
+            "din",
+            "pin",
+            "tin",
+            "bin"
+        ],
+        "filename": "afaafsp41.wav",
+        "keyword": "tin"
+    },
+    "42": {
+        "words": [
+            "tab",
+            "dab",
+            "cab",
+            "gab"
+        ],
+        "filename": "afaafsp42.wav",
+        "keyword": "tab"
+    },
+    "43": {
+        "words": [
+            "lad",
+            "lads",
+            "land",
+            "lands"
+        ],
+        "filename": "afaafsp43.wav",
+        "keyword": "lad"
+    },
+    "44": {
+        "words": [
+            "how",
+            "hang",
+            "ham",
+            "high"
+        ],
+        "filename": "afaafsp44.wav",
+        "keyword": "hang"
+    },
+    "45": {
+        "words": [
+            "seen",
+            "keen",
+            "sheen",
+            "teen"
+        ],
+        "filename": "afaafsp45.wav",
+        "keyword": "sheen"
+    },
+    "46": {
+        "words": [
+            "bat",
+            "bad",
+            "back",
+            "bag"
+        ],
+        "filename": "afaafsp46.wav",
+        "keyword": "bad"
+    },
+    "47": {
+        "words": [
+            "rip",
+            "rick",
+            "rib",
+            "rig"
+        ],
+        "filename": "afaafsp47.wav",
+        "keyword": "rib"
+    },
+    "48": {
+        "words": [
+            "boast",
+            "ghost",
+            "coast",
+            "post"
+        ],
+        "filename": "afaafsp48.wav",
+        "keyword": "coast"
+    },
+    "49": {
+        "words": [
+            "rids",
+            "rich",
+            "ridge",
+            "ritz"
+        ],
+        "filename": "afaafsp49.wav",
+        "keyword": "ritz"
+    },
+    "50": {
+        "words": [
+            "nan",
+            "than",
+            "van",
+            "man"
+        ],
+        "filename": "afaafsp50.wav",
+        "keyword": "man"
+    },
+    "51": {
+        "words": [
+            "bet",
+            "yet",
+            "get",
+            "wet"
+        ],
+        "filename": "afaafsp51.wav",
+        "keyword": "get"
+    },
+    "52": {
+        "words": [
+            "bad",
+            "bag",
+            "ban",
+            "bang"
+        ],
+        "filename": "afaafsp52.wav",
+        "keyword": "bang"
+    },
+    "53": {
+        "words": [
+            "mix",
+            "milks",
+            "milk",
+            "mick"
+        ],
+        "filename": "afaafsp53.wav",
+        "keyword": "mix"
+    },
+    "54": {
+        "words": [
+            "fought",
+            "port",
+            "taught",
+            "thought"
+        ],
+        "filename": "afaafsp54.wav",
+        "keyword": "port"
+    },
+    "55": {
+        "words": [
+            "cot",
+            "cop",
+            "cob",
+            "cod"
+        ],
+        "filename": "afaafsp55.wav",
+        "keyword": "cob"
+    },
+    "56": {
+        "words": [
+            "some",
+            "sub",
+            "sud",
+            "sun"
+        ],
+        "filename": "afaafsp56.wav",
+        "keyword": "sub"
+    },
+    "57": {
+        "words": [
+            "match",
+            "mash",
+            "mass",
+            "mats"
+        ],
+        "filename": "afaafsp57.wav",
+        "keyword": "mats"
+    },
+    "58": {
+        "words": [
+            "zeal",
+            "seal",
+            "veal",
+            "feel"
+        ],
+        "filename": "afaafsp58.wav",
+        "keyword": "feel"
+    },
+    "59": {
+        "words": [
+            "dale",
+            "mail",
+            "nail",
+            "bail"
+        ],
+        "filename": "afaafsp59.wav",
+        "keyword": "mail"
+    },
+    "60": {
+        "words": [
+            "rove",
+            "robe",
+            "rose",
+            "rode"
+        ],
+        "filename": "afaafsp60.wav",
+        "keyword": "rode"
+    },
+    "61": {
+        "words": [
+            "nail",
+            "bail",
+            "dale",
+            "mail"
+        ],
+        "filename": "afaafsp61.wav",
+        "keyword": "dale"
+    },
+    "62": {
+        "words": [
+            "tin",
+            "din",
+            "pin",
+            "bin"
+        ],
+        "filename": "afaafsp62.wav",
+        "keyword": "din"
+    },
+    "63": {
+        "words": [
+            "bag",
+            "back",
+            "bad",
+            "bat"
+        ],
+        "filename": "afaafsp63.wav",
+        "keyword": "back"
+    },
+    "64": {
+        "words": [
+            "coast",
+            "ghost",
+            "boast",
+            "post"
+        ],
+        "filename": "afaafsp64.wav",
+        "keyword": "boast"
+    },
+    "65": {
+        "words": [
+            "man",
+            "than",
+            "van",
+            "nan"
+        ],
+        "filename": "afaafsp65.wav",
+        "keyword": "nan"
+    },
+    "66": {
+        "words": [
+            "fought",
+            "taught",
+            "port",
+            "thought"
+        ],
+        "filename": "afaafsp66.wav",
+        "keyword": "fought"
+    },
+    "67": {
+        "words": [
+            "high",
+            "hang",
+            "how",
+            "ham"
+        ],
+        "filename": "afaafsp67.wav",
+        "keyword": "ham"
+    },
+    "68": {
+        "words": [
+            "teen",
+            "seen",
+            "keen",
+            "sheen"
+        ],
+        "filename": "afaafsp68.wav",
+        "keyword": "seen"
+    },
+    "69": {
+        "words": [
+            "cot",
+            "cob",
+            "cod",
+            "cop"
+        ],
+        "filename": "afaafsp69.wav",
+        "keyword": "cot"
+    },
+    "70": {
+        "words": [
+            "cab",
+            "tab",
+            "dab",
+            "gab"
+        ],
+        "filename": "afaafsp70.wav",
+        "keyword": "cab"
+    },
+    "71": {
+        "words": [
+            "bang",
+            "bad",
+            "bag",
+            "ban"
+        ],
+        "filename": "afaafsp71.wav",
+        "keyword": "bag"
+    },
+    "72": {
+        "words": [
+            "wet",
+            "bet",
+            "yet",
+            "get"
+        ],
+        "filename": "afaafsp72.wav",
+        "keyword": "yet"
+    },
+    "73": {
+        "words": [
+            "lad",
+            "land",
+            "lands",
+            "lads"
+        ],
+        "filename": "afaafsp73.wav",
+        "keyword": "lands"
+    },
+    "74": {
+        "words": [
+            "mass",
+            "match",
+            "mats",
+            "mash"
+        ],
+        "filename": "afaafsp74.wav",
+        "keyword": "match"
+    },
+    "75": {
+        "words": [
+            "sub",
+            "sun",
+            "sud",
+            "some"
+        ],
+        "filename": "afaafsp75.wav",
+        "keyword": "some"
+    },
+    "76": {
+        "words": [
+            "mick",
+            "milks",
+            "mix",
+            "milk"
+        ],
+        "filename": "afaafsp76.wav",
+        "keyword": "milks"
+    },
+    "77": {
+        "words": [
+            "zeal",
+            "seal",
+            "feel",
+            "veal"
+        ],
+        "filename": "afaafsp77.wav",
+        "keyword": "zeal"
+    },
+    "78": {
+        "words": [
+            "rib",
+            "rick",
+            "rig",
+            "rip"
+        ],
+        "filename": "afaafsp78.wav",
+        "keyword": "rip"
+    },
+    "79": {
+        "words": [
+            "rode",
+            "rose",
+            "rove",
+            "robe"
+        ],
+        "filename": "afaafsp79.wav",
+        "keyword": "robe"
+    },
+    "80": {
+        "words": [
+            "ridge",
+            "rich",
+            "rids",
+            "ritz"
+        ],
+        "filename": "afaafsp80.wav",
+        "keyword": "rich"
     }
 }

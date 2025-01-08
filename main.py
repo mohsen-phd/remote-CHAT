@@ -25,6 +25,7 @@ def preparation() -> dict[str, str]:
     # response_capturing_mode = input(Fore.GREEN + "Enter response capturing mode: ")
     # vocalization_mode = input(Fore.GREEN + "Enter vocalization mode: ")
     # test_name = input(Fore.GREEN + "Enter test name: ")
+    # test_mode = input(Fore.GREEN + "Enter the test mode: ")
     # todo:replace the following lines with the above lines
     participant_id = 999
     test_number = 3
@@ -32,6 +33,7 @@ def preparation() -> dict[str, str]:
     test_name = "chat"
     test_name_presentation = "chat2"
     vocalization_mode = "tts"
+    test_mode = "practice"
 
     save_dir = f"records/{participant_id}"
     os.makedirs(save_dir, exist_ok=True)
@@ -48,6 +50,7 @@ def preparation() -> dict[str, str]:
         "vocalization_mode": vocalization_mode,
         "test_name": test_name,
         "test_name_presentation": test_name_presentation,
+        "test_mode": test_mode,
     }
     return custom_config
 
@@ -69,6 +72,7 @@ def read_configs(custom_config: dict) -> dict:
     configs["test_name"] = custom_config["test_name"]
     configs["vocalization_mode"] = custom_config["vocalization_mode"]
     configs["test_name_presentation"] = custom_config["test_name_presentation"]
+    configs["test_mode"] = custom_config["test_mode"]
     logger.debug(f"Config file: {configs}")
     return configs
 
@@ -91,8 +95,11 @@ def main():
         print(Fore.RED + "Press Enter to play the next digits")
         input()
         stimuli_id, stimuli_text, response_getting_prompt = (
-            manager.test_type.stimuli_generator.get_stimuli()
+            manager.test_type.stimuli_generator.get_stimuli(
+                test_mode=configs["test_mode"]
+            )
         )
+
         print(Fore.YELLOW + "Please listen")
         logger.debug(f"{iteration} :The stimuli is: {stimuli_text}")
         this_round["stimuli"] = stimuli_text

@@ -35,7 +35,7 @@ test:
 response_capturing: cli #[cli, asr]
 vocalization_mode: recorded #[tts, recorded]
 test_name: din #[din, asl]
-
+test_mode: test #[test, practice]
 ml:
   asr_type: whisper #[SpeechBrain, SimpleASR,whisper, wav2vec2]
   asr_source: "speechbrain/asr-wav2vec2-commonvoice-en" #["speechbrain/asr-wav2vec2-commonvoice-en","speechbrain/asr-crdnn-rnnlm-librispeech"]

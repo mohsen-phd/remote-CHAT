@@ -112,24 +112,33 @@ class ASLQuestions(Questions):
         super().__init__()
         self.stimuli_list = self._read_json("media/ASL/sentences.json")
 
-    def get_stimuli(self) -> tuple[list[str], list[str], str]:
+    def get_stimuli(self, test_mode: str) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.
 
         Generate a sample stimuli consist of three words
         by randomly selecting from the list of vocab.
 
+        Args:
+            test_mode (str): is it real test or practice test. ('test' or 'practice')
+
         Returns:
             tuple[list[str], list[str],str]: stimuli ID and the main words in the stimuli. The prompt to show the user when
             asking for a response.
         """
-        counter = 0
-        while True:
-            set_num = random.randint(1, 18)
+        if test_mode == "test":
+            counter = 0
+            while True:
+                set_num = random.randint(2, 18)
+                question_num = random.randint(1, 15)
+                full_question_id = f"{set_num}-{question_num}"
+                if full_question_id not in self.previous_stimuli or counter > 80:
+                    break
+            self.previous_stimuli.add(full_question_id)
+        else:
+            set_num = 1
             question_num = random.randint(1, 15)
             full_question_id = f"{set_num}-{question_num}"
-            if full_question_id not in self.previous_stimuli or counter > 80:
-                break
-        self.previous_stimuli.add(full_question_id)
+
         stimulus = self.stimuli_list[full_question_id]
         self.question = stimulus["text"]
         self.main_words = [
@@ -252,22 +261,29 @@ class CHATQuestions(Questions):
         else:
             return False
 
-    def get_stimuli(self) -> tuple[list[str], list[str], str]:
+    def get_stimuli(self, test_mode: str) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.
 
+        Args:
+            test_mode (str): is it real test or practice test. ('test' or 'practice')
         Returns:
             tuple[list[str], list[str],str]: stimuli ID and the main words in the stimuli. The prompt to show the user when.
         """
-        counter = 0
-        while True:
-            category_num = random.randint(1, 15)
+        if test_mode == "test":
+            counter = 0
+            while True:
+                category_num = random.randint(2, 15)
+                stimulus_num = random.randint(1, 35)
+                full_question_id = f"{category_num}-{stimulus_num}"
+                if full_question_id not in self.previous_stimuli or counter > 80:
+                    break
+                counter += 1
+            self.previous_stimuli.add(full_question_id)
+        else:
+            category_num = 1
             stimulus_num = random.randint(1, 35)
             full_question_id = f"{category_num}-{stimulus_num}"
-            if full_question_id not in self.previous_stimuli or counter > 80:
-                break
-            counter += 1
 
-        self.previous_stimuli.add(full_question_id)
         stimulus = self.stimuli_list[str(category_num)][str(stimulus_num)]
         self.main_words = [stimulus["statement"], stimulus["question"]]
         self.question_id = full_question_id
@@ -307,25 +323,31 @@ class FAAFQuestions(Questions):
         else:
             return False
 
-    def get_stimuli(self) -> tuple[list[str], list[str], str]:
+    def get_stimuli(self, test_mode: str) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.
 
         Generate a sample stimuli consist of three words and the target word
         by randomly selecting from the list of vocab.
+
+        Args:
+            test_mode (str): is it real test or practice test. ('test' or 'practice')
 
         Returns:
             tuple[list[str], list[str],str]: stimuli ID and the main words in the stimuli. The prompt to show the user when
             asking for a response.
         """
 
-        counter = 0
-        while True:
-            stimuli_num = str(random.randint(1, 80))
-            if stimuli_num not in self.previous_stimuli or counter > 80:
-                break
-            counter += 1
+        if test_mode == "test":
+            counter = 0
+            while True:
+                stimuli_num = str(random.randint(5, 80))
+                if stimuli_num not in self.previous_stimuli or counter > 80:
+                    break
+                counter += 1
+            self.previous_stimuli.add(stimuli_num)
+        else:
+            stimuli_num = str(random.randint(1, 4))
 
-        self.previous_stimuli.add(stimuli_num)
         stimulus = self.stimuli_list[stimuli_num]
         self.question = stimulus["words"]
         self.main_words = stimulus["keyword"]

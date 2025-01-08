@@ -28,10 +28,10 @@ def preparation() -> dict[str, str]:
     # todo:replace the following lines with the above lines
     participant_id = 999
     test_number = 3
-    response_capturing_mode = "cli"
-    test_name = "faaf"
-    test_name_presentation = "faaf1"
-    vocalization_mode = "recorded"
+    response_capturing_mode = "asr"
+    test_name = "chat"
+    test_name_presentation = "chat2"
+    vocalization_mode = "tts"
 
     save_dir = f"records/{participant_id}"
     os.makedirs(save_dir, exist_ok=True)

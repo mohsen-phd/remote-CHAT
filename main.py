@@ -2,6 +2,7 @@
 
 import os
 import sys
+import termios
 
 from colorama import Fore
 from loguru import logger
@@ -37,7 +38,7 @@ def preparation() -> dict[str, str]:
     test_name = "faaf"
     test_name_presentation = "faaf1"
     vocalization_mode = "recorded"
-    test_mode = "practice"
+    test_mode = "test"
 
     save_dir = f"records/{participant_id}"
     os.makedirs(save_dir, exist_ok=True)
@@ -96,6 +97,7 @@ def main():
         os.system("cls" if os.name == "nt" else "clear")
         this_round = {}
         this_round["snr"] = snr_db
+        termios.tcflush(sys.stdin, termios.TCIOFLUSH)
         print(Fore.RED + "Press Enter to play the next digits")
         input()
         stimuli_id, stimuli_text, response_getting_prompt = (

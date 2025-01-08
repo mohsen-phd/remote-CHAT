@@ -1,6 +1,11 @@
 """Get respond form command line."""
-from get_response.base import CaptureResponse
+
+import sys
+import termios
+
 from colorama import Fore
+
+from get_response.base import CaptureResponse
 
 
 class CLI(CaptureResponse):
@@ -12,4 +17,5 @@ class CLI(CaptureResponse):
         Returns:
             str: File transcription.
         """
+        termios.tcflush(sys.stdin, termios.TCIOFLUSH)
         return input(Fore.GREEN + "Enter your response: ")

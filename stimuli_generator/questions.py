@@ -33,8 +33,11 @@ class Questions(ABC):
         pass
 
     @abstractmethod
-    def get_stimuli(self) -> tuple[list[str], list[str], str]:
+    def get_stimuli(self, test_mode: str) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.
+
+        Args:
+            test_mode (str): is it real test or practice test. ('test' or 'practice')
 
         Returns:
             tuple[list[str], list[str],str]: stimuli ID and the main words in the stimuli.
@@ -64,11 +67,14 @@ class DigitQuestions(Questions):
 
         super().__init__()
 
-    def get_stimuli(self) -> tuple[list[str], list[str], str]:
+    def get_stimuli(self, test_mode: str) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.
 
           Generate a sample stimuli consist of three words
           by randomly selecting from the list of vocab.
+
+        Args:
+            test_mode (str): is it real test or practice test. ('test' or 'practice')
 
         Returns:
             tuple[list[str], list[str]]: stimuli ID and the main words in the stimuli. The prompt to show the user when

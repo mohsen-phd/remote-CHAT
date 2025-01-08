@@ -33,10 +33,10 @@ def preparation() -> dict[str, str]:
     # todo:replace the following lines with the above lines
     participant_id = 999
     test_number = 3
-    response_capturing_mode = "asr"
-    test_name = "chat"
-    test_name_presentation = "chat2"
-    vocalization_mode = "tts"
+    response_capturing_mode = "cli"
+    test_name = "faaf"
+    test_name_presentation = "faaf1"
+    vocalization_mode = "recorded"
     test_mode = "practice"
 
     save_dir = f"records/{participant_id}"
@@ -92,8 +92,8 @@ def main():
     iteration = 1
     signal_level = 65
     noise_level = 60
-    os.system("cls" if os.name == "nt" else "clear")
     while not manager.hearing_test.stop_condition():
+        os.system("cls" if os.name == "nt" else "clear")
         this_round = {}
         this_round["snr"] = snr_db
         print(Fore.RED + "Press Enter to play the next digits")

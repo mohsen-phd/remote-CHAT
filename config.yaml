@@ -17,7 +17,7 @@ test:
     ASL:
       noise:
         type: babble #[white, babble]
-        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/speech_shaped_noise_ASL_tts.wav"
+        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/natural/speech_shaped_noise_ASL_natural.wav"
         src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/speech_shaped_noise_ASL_tts.wav"
       stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/natural/22k/test"
       stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/mello/test"

@@ -7,6 +7,7 @@ from abc import ABC, abstractmethod
 import re
 from openai import OpenAI
 from hearing_test.util import expand_contractions, lemmatizer, remove_contractions
+from loguru import logger
 
 
 class Questions(ABC):
@@ -223,12 +224,23 @@ class CHATQuestions(Questions):
         statement = self.main_words[0]
         question = self.main_words[1]
 
-        prompt = f"based on the statement '{statement}' is '{answer[0]}' the answer to the question '{question}'. Ignore the plural and singular differences. Consider synonymous meanings. Only consider common synonyms and do not be very creative."
+        prompt = f"""Consider that you are an audiologist that wants to decided if the patient understood the presented sentence in noise based on their response to the presented question. 
+        Statement is:  '{statement}'. Question is: '{question}'. Response is: '{answer[0]}'. Based on the statement and question, is the response correct. 
+        Consider these: 
+        1)  Ignore the plural and singular differences.
+        2)  The response does not have to be exactly the same, but cary the same meaning.
+        3)  start your response with yes or no and the give full detail.
+        4)  ignore the tense of the sentence. 
+        5)  ignore the subject of the sentence.
+        6)  response can be empty.
+        7)  response was captured by an ASR system and there is a chance of error in transcription."""
+
         chat_completion = self.chatGPT.chat.completions.create(
             model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
         )
         response = chat_completion.choices[0].message.content
+        logger.debug(f"ChatGPT response: {response}")
         if "yes" in response.lower():
             return True
         else:
@@ -250,7 +262,7 @@ class CHATQuestions(Questions):
         return [full_question_id], self.main_words, response_getting_prompt
 
 
-# todo: finish the class for FAAF
+# todo: Check this.
 class FAAFQuestions(Questions):
     """Abstract class for questions. Each type of question must use this api."""
 
@@ -259,23 +271,44 @@ class FAAFQuestions(Questions):
         super().__init__()
         self.stimuli_list = self._read_json("media/FAAF/stimuli.json")
 
-    @abstractmethod
-    def check_answer(self, answer: str) -> bool:
-        """Based on question type, check if the answer is correct or not.
+    def check_answer(self, answer: list[str]) -> bool:
+        """Check the given words are the same as the one presented to the patient.
 
         Args:
-            answer (str): answer to the question given by the patient.
+            answer (list[str]): The patient's response.
 
         Returns:
             bool: Is a match or not.
         """
-        pass
+        try:
+            answer_int = int(answer[0])
+        except (ValueError, IndexError):
+            return False
 
-    @abstractmethod
-    def get_stimuli(self) -> tuple[list[str], list[str]]:
+        self.main_words
+        try:
+            answer_word = self.question[answer_int - 1]
+        except IndexError:
+            return False
+        if self.main_words == answer_word:
+            return True
+        else:
+            return False
+
+    def get_stimuli(self) -> tuple[list[str], list[str], str]:
         """Generate a sample stimuli.
 
+        Generate a sample stimuli consist of three words and the target word
+        by randomly selecting from the list of vocab.
+
         Returns:
-            tuple[list[str], list[str]]: stimuli ID and the main words in the stimuli.
+            tuple[list[str], list[str],str]: stimuli ID and the main words in the stimuli. The prompt to show the user when
+            asking for a response.
         """
-        pass
+        stimuli_num = str(random.randint(1, 80))
+        stimulus = self.stimuli_list[stimuli_num]
+        self.question = stimulus["words"]
+        self.main_words = stimulus["keyword"]
+        self.question_id = stimuli_num
+        response_getting_prompt = f"Select the word that was played \n 1) {stimulus['words'][0]} \n 2) {stimulus['words'][1]} \n 3) {stimulus['words'][2]} \n 4) {stimulus['words'][3]}"
+        return [stimuli_num], self.main_words, response_getting_prompt

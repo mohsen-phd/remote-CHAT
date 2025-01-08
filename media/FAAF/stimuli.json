@@ -7,7 +7,7 @@
             "dale"
         ],
         "filename": "FAAF01.wav",
-        "word": "bail"
+        "keyword": "bail"
     },
     "2": {
         "words": [
@@ -17,7 +17,7 @@
             "tin"
         ],
         "filename": "FAAF02.wav",
-        "word": "bin"
+        "keyword": "bin"
     },
     "3": {
         "words": [
@@ -27,7 +27,7 @@
             "post"
         ],
         "filename": "FAAF03.wav",
-        "word": "post"
+        "keyword": "post"
     },
     "4": {
         "words": [
@@ -37,7 +37,7 @@
             "tab"
         ],
         "filename": "FAAF04.wav",
-        "word": "gab"
+        "keyword": "gab"
     },
     "5": {
         "words": [
@@ -47,7 +47,7 @@
             "than"
         ],
         "filename": "FAAF05.wav",
-        "word": "van"
+        "keyword": "van"
     },
     "6": {
         "words": [
@@ -57,7 +57,7 @@
             "port"
         ],
         "filename": "FAAF06.wav",
-        "word": "taught"
+        "keyword": "taught"
     },
     "7": {
         "words": [
@@ -67,7 +67,7 @@
             "zeal"
         ],
         "filename": "FAAF07.wav",
-        "word": "veal"
+        "keyword": "veal"
     },
     "8": {
         "words": [
@@ -77,7 +77,7 @@
             "seen"
         ],
         "filename": "FAAF08.wav",
-        "word": "teen"
+        "keyword": "teen"
     },
     "9": {
         "words": [
@@ -87,7 +87,7 @@
             "mats"
         ],
         "filename": "FAAF09.wav",
-        "word": "mash"
+        "keyword": "mash"
     },
     "10": {
         "words": [
@@ -97,7 +97,7 @@
             "rids"
         ],
         "filename": "FAAF10.wav",
-        "word": "ridge"
+        "keyword": "ridge"
     },
     "11": {
         "words": [
@@ -107,7 +107,7 @@
             "sub"
         ],
         "filename": "FAAF11.wav",
-        "word": "sud"
+        "keyword": "sud"
     },
     "12": {
         "words": [
@@ -117,7 +117,7 @@
             "rig"
         ],
         "filename": "FAAF12.wav",
-        "word": "rick"
+        "keyword": "rick"
     },
     "13": {
         "words": [
@@ -127,7 +127,7 @@
             "cot"
         ],
         "filename": "FAAF13.wav",
-        "word": "cop"
+        "keyword": "cop"
     },
     "14": {
         "words": [
@@ -137,7 +137,7 @@
             "bad"
         ],
         "filename": "FAAF14.wav",
-        "word": "bat"
+        "keyword": "bat"
     },
     "15": {
         "words": [
@@ -207,7 +207,7 @@
             "bag"
         ],
         "filename": "FAAF21.wav",
-        "word": "ban"
+        "keyword": "ban"
     },
     "22": {
         "words": [
@@ -217,7 +217,7 @@
             "land"
         ],
         "filename": "FAAF22.wav",
-        "word": "lads"
+        "keyword": "lads"
     },
     "23": {
         "words": [
@@ -227,7 +227,7 @@
             "bail"
         ],
         "filename": "FAAF23.wav",
-        "word": "nail"
+        "keyword": "nail"
     },
     "24": {
         "words": [
@@ -237,7 +237,7 @@
             "some"
         ],
         "filename": "FAAF24.wav",
-        "word": "sun"
+        "keyword": "sun"
     },
     "25": {
         "words": [
@@ -247,7 +247,7 @@
             "milk"
         ],
         "filename": "FAAF25.wav",
-        "word": "mick"
+        "keyword": "mick"
     },
     "26": {
         "words": [
@@ -257,7 +257,7 @@
             "yet"
         ],
         "filename": "FAAF26.wav",
-        "word": "wet"
+        "keyword": "wet"
     },
     "27": {
         "words": [
@@ -267,7 +267,7 @@
             "rib"
         ],
         "filename": "FAAF27.wav",
-        "word": "rig"
+        "keyword": "rig"
     },
     "28": {
         "words": [
@@ -277,7 +277,7 @@
             "cop"
         ],
         "filename": "FAAF28.wav",
-        "word": "cod"
+        "keyword": "cod"
     },
     "29": {
         "words": [
@@ -287,7 +287,7 @@
             "rids"
         ],
         "filename": "FAAF29.wav",
-        "word": "rids"
+        "keyword": "rids"
     },
     "30": {
         "words": [
@@ -297,7 +297,7 @@
             "tin"
         ],
         "filename": "FAAF30.wav",
-        "word": "pin"
+        "keyword": "pin"
     },
     "31": {
         "words": [
@@ -307,7 +307,7 @@
             "seen"
         ],
         "filename": "FAAF31.wav",
-        "word": "keen"
+        "keyword": "keen"
     },
     "32": {
         "words": [
@@ -317,7 +317,7 @@
             "coast"
         ],
         "filename": "FAAF32.wav",
-        "word": "ghost"
+        "keyword": "ghost"
     },
     "33": {
         "words": [
@@ -327,7 +327,7 @@
             "ham"
         ],
         "filename": "FAAF33.wav",
-        "word": "high"
+        "keyword": "high"
     },
     "34": {
         "words": [
@@ -337,7 +337,7 @@
             "back"
         ],
         "filename": "FAAF34.wav",
-        "word": "bag"
+        "keyword": "bag"
     },
     "35": {
         "words": [
@@ -347,7 +347,7 @@
             "feel"
         ],
         "filename": "FAAF35.wav",
-        "word": "seal"
+        "keyword": "seal"
     },
     "36": {
         "words": [
@@ -357,7 +357,7 @@
             "mass"
         ],
         "filename": "FAAF36.wav",
-        "word": "mass"
+        "keyword": "mass"
     },
     "37": {
         "words": [
@@ -367,7 +367,7 @@
             "cab"
         ],
         "filename": "FAAF37.wav",
-        "word": "dab"
+        "keyword": "dab"
     },
     "38": {
         "words": [
@@ -377,7 +377,7 @@
             "robe"
         ],
         "filename": "FAAF38.wav",
-        "word": "rose"
+        "keyword": "rose"
     },
     "39": {
         "words": [
@@ -387,7 +387,7 @@
             "taught"
         ],
         "filename": "FAAF39.wav",
-        "word": "thought"
+        "keyword": "thought"
     },
     "40": {
         "words": [
@@ -397,7 +397,7 @@
             "man"
         ],
         "filename": "FAAF40.wav",
-        "word": "than"
+        "keyword": "than"
     },
     "41": {
         "words": [

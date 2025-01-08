@@ -27,10 +27,10 @@ def preparation() -> dict[str, str]:
     # test_name = input(Fore.GREEN + "Enter test name: ")
     # todo:replace the following lines with the above lines
     participant_id = 999
-    test_number = 2
-    response_capturing_mode = "asr"
-    test_name = "asl"
-    test_name_presentation = "asl1"
+    test_number = 3
+    response_capturing_mode = "cli"
+    test_name = "faaf"
+    test_name_presentation = "faaf1"
     vocalization_mode = "recorded"
 
     save_dir = f"records/{participant_id}"
@@ -112,7 +112,7 @@ def main():
         transcribe = manager.get_response(response_getting_prompt)
         this_round["response"] = transcribe
         matched = manager.test_type.stimuli_generator.check_answer(transcribe)
-        logger.debug(f"Matched: {matched}")
+        logger.debug(f"Matched: {matched} \n")
         this_round["matched"] = matched
         if matched:
             correct_count += 1

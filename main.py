@@ -13,6 +13,10 @@ logger.remove(0)
 # logger.add(sys.stderr, level="DEBUG")
 logger.add(sys.stderr, level="INFO")
 
+import warnings
+
+warnings.filterwarnings("ignore")
+
 
 def preparation() -> dict[str, str]:
     """Prepare the test and logging system.

@@ -25,20 +25,22 @@ def preparation() -> dict[str, str]:
     Returns:
         dict: dictionary containing the custom configurations.
     """
-    # participant_id = input(Fore.GREEN + "Enter The ID: ")
-    # test_number = input(Fore.GREEN + "Enter test number: ")
-    # response_capturing_mode = input(Fore.GREEN + "Enter response capturing mode: ")
-    # vocalization_mode = input(Fore.GREEN + "Enter vocalization mode: ")
-    # test_name = input(Fore.GREEN + "Enter test name: ")
-    # test_mode = input(Fore.GREEN + "Enter the test mode: ")
+    participant_id = input(Fore.GREEN + "Enter The ID: ")
+    test_number = input(Fore.GREEN + "Enter test number: ")
+    test_name = input(Fore.GREEN + "Enter test name: ")
+    test_name_presentation = input(Fore.GREEN + "Enter test name for showing: ")
+    response_capturing_mode = input(Fore.GREEN + "Enter response capturing mode: ")
+    vocalization_mode = input(Fore.GREEN + "Enter vocalization mode: ")
+    test_mode = input(Fore.GREEN + "Enter the test mode: ")
+
     # todo:replace the following lines with the above lines
-    participant_id = 999
-    test_number = 3
-    response_capturing_mode = "cli"
-    test_name = "faaf"
-    test_name_presentation = "faaf1"
-    vocalization_mode = "recorded"
-    test_mode = "test"
+    # participant_id = 999
+    # test_number = 3
+    # response_capturing_mode = "cli"
+    # test_name = "asl"
+    # test_name_presentation = "asl"
+    # vocalization_mode = "recorded"
+    # test_mode = "test"
 
     save_dir = f"records/{participant_id}"
     os.makedirs(save_dir, exist_ok=True)
@@ -98,7 +100,7 @@ def main():
         this_round = {}
         this_round["snr"] = snr_db
         termios.tcflush(sys.stdin, termios.TCIOFLUSH)
-        print(Fore.RED + "Press Enter to play the next digits")
+        print(Fore.RED + "Press Enter for the next round")
         input()
         stimuli_id, stimuli_text, response_getting_prompt = (
             manager.test_type.stimuli_generator.get_stimuli(
@@ -106,6 +108,7 @@ def main():
             )
         )
 
+        os.system("cls" if os.name == "nt" else "clear")
         print(Fore.YELLOW + "Please listen")
         logger.debug(f"{iteration} :The stimuli is: {stimuli_text}")
         this_round["stimuli"] = stimuli_text

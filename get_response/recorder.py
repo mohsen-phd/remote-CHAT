@@ -1,4 +1,5 @@
 """Module for recording voice."""
+
 import math
 import os
 import struct
@@ -78,8 +79,9 @@ class Recorder:
         rec = []
         current = time.time()
         end = time.time() + self.timeout_length
-
-        while current <= end:
+        recording_max_length = 10
+        max_len_timer = time.time()
+        while current <= end and time.time() < recording_max_length + max_len_timer:
             data = self.stream.read(self.chunk)
             if self.rms(data) >= self.rms_threshold:
                 end = time.time() + self.timeout_length

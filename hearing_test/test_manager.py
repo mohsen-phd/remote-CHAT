@@ -2,6 +2,7 @@
 
 import os
 from abc import ABC, abstractmethod
+import time
 
 from colorama import Fore
 from loguru import logger
@@ -108,9 +109,10 @@ class CliTestManager(TestManager):
         Returns:
             list[str]: List of words in the participant's response.
         """
+        os.system("cls" if os.name == "nt" else "clear")
         print(Fore.GREEN + prompt)
         logger.debug(prompt)
-
+        time.sleep(0.2)
         listed_response = self.test_type.cli_post_process(self.response_capturer.get())
         logger.debug(listed_response)
         return listed_response
@@ -163,9 +165,12 @@ class ASRTestManager(TestManager):
         """
         logger.debug(prompt)
 
+        os.system("cls" if os.name == "nt" else "clear")
         print(Fore.GREEN + prompt)
 
         file_src = self.recorder.listen()
+
+        os.system("cls" if os.name == "nt" else "clear")
         print(Fore.GREEN + "Please Wait...")
 
         transcribe = self.response_capturer.get(src=file_src).lower()

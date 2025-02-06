@@ -246,7 +246,7 @@ class SpeechInNoise(HearingTest):
                 signal_level -= step_size
             elif 55 < noise_level + step_size < 75:
                 noise_level += step_size
-            elif 75 > signal_level - step_size >= 50:
+            elif 75 > signal_level - step_size >= 60:
                 signal_level -= step_size
             else:
                 noise_level += step_size

@@ -6,6 +6,11 @@
 records/*
 train/digit_asr/data
 keys/*
+model_checkpoints/*
+*.wav
+test.py
+*.zip
+
 
 
 
@@ -140,6 +145,3 @@ dmypy.json
 .pyre/
 models/asr/asr-wav2vec2-commonvoice-en/*
 
-model_checkpoints/*
-*.wav
-test.py

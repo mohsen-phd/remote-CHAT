@@ -408,7 +408,7 @@ class FAAF(TestTypes):
             tuple[int | float, dict[str, np.ndarray]]: Sampling rate and a dictionary containing the audio signal.
                 Dictionary contain two keys 'noisy' and 'clean' containing the audio signal indication noise should be added to which signal.
         """
-        # TODO: add 'Can you hear' before the stimuli
+
         stimulus_id = stimuli[0]
 
         sample_rate, digit_audio = read_wav_file(

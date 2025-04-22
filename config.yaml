@@ -17,20 +17,20 @@ test:
     ASL:
       noise:
         type: babble #[white, babble]
-        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/natural/speech_shaped_noise_ASL_natural.wav"
-        src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/speech_shaped_noise_ASL_tts.wav"
-      stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/natural/22k/test"
-      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/tts/mello/test"
+        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/natural/speech_shaped_noise_ASL_natural.wav"
+        src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/speech_shaped_noise_ASL_tts.wav"
+      stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/natural/22k/test"
+      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/mello/test"
     FAAF:
       noise:
         type: babble #[white, babble]
-        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/FAAF/FAAFSPN.WAV"
-      stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/FAAF/natural"
+        src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/FAAF/adjusted/FAAFSPN.WAV"
+      stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/FAAF/adjusted/natural"
     CHAT:
       noise:
         type: babble #[white, babble]
-        src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/speech_shaped_noise_CHAT_tts.wav"
-      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/tts"
+        src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/adjusted/speech_shaped_noise_CHAT_tts.wav"
+      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/adjusted/tts"
 
 response_capturing: cli #[cli, asr]
 vocalization_mode: recorded #[tts, recorded]

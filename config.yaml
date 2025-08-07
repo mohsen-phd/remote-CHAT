@@ -19,8 +19,18 @@ test:
         type: babble #[white, babble]
         src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/natural/22k/speech_shaped_noise_ASL_natural.wav"
         src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/speech_shaped_noise_ASL_tts.wav"
+        src_tts_low_pass: ""
+        src_tts_low_pass_modulation_matched: ""
+        src_tts_modulation_matched: ""
+
+        # src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/speech_shaped_noise_low_pass_8k.wav"
+
       stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/natural/22k/test"
       stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/mello/test"
+      stimuli_recordings_tts_low_pass: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/lowpass_filtered/test"
+      stimuli_recordings_tts_low_pass_modulation_matched: "/Users/user/Documents/"
+      stimuli_recordings_tts_modulation_matched: "/Users/user/Documents/"
+
     FAAF:
       noise:
         type: babble #[white, babble]

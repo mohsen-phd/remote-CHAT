@@ -7,6 +7,7 @@ Each test type inherits from the abstract base class TestTypes and implements sp
 import string
 from abc import ABC, abstractmethod
 from pathlib import Path
+from enum import Enum
 
 import nltk
 import numpy as np
@@ -277,6 +278,13 @@ class DIN(TestTypes):
         return full_audio
 
 
+class SignalProcessingType(Enum):
+    NOTHING = "n"
+    LOW_PASS = "l"
+    MODULATION_MATCHED = "m"
+    LOW_PASS_MODULATION_MATCHED = "b"
+
+
 class ASL(TestTypes):
     """Implementing the ASL test."""
 
@@ -369,14 +377,94 @@ class ASL(TestTypes):
             return WhiteNoise()
         elif configs["test"]["hearing-test"]["ASL"]["noise"]["type"] == "babble":
             if configs["vocalization_mode"] == "tts":
-                return Babble(
-                    noise_src=configs["test"]["hearing-test"]["ASL"]["noise"]["src-tts"]
-                )
+                signal_processing = self.config["signal_processing"]
+
+                if signal_processing == SignalProcessingType.NOTHING.value:
+                    return Babble(
+                        noise_src=configs["test"]["hearing-test"]["ASL"]["noise"][
+                            "src_tts"
+                        ]
+                    )
+                elif signal_processing == SignalProcessingType.LOW_PASS.value:
+                    return Babble(
+                        noise_src=configs["test"]["hearing-test"]["ASL"]["noise"][
+                            "src_tts_low_pass"
+                        ]
+                    )
+                elif signal_processing == SignalProcessingType.MODULATION_MATCHED.value:
+                    return Babble(
+                        noise_src=configs["test"]["hearing-test"]["ASL"]["noise"][
+                            "src_tts_modulation_matched"
+                        ]
+                    )
+                elif (
+                    signal_processing
+                    == SignalProcessingType.LOW_PASS_MODULATION_MATCHED.value
+                ):
+                    return Babble(
+                        noise_src=configs["test"]["hearing-test"]["ASL"]["noise"][
+                            "src_tts_low_pass_modulation_matched"
+                        ]
+                    )
             else:
                 return Babble(
                     noise_src=configs["test"]["hearing-test"]["ASL"]["noise"]["src"]
                 )
         raise NotImplementedError
+
+    def _get_stimuli_src(self, test_name) -> Path:
+        """Get the stimuli src for the test.
+
+        Args:
+            test_name (str): The name of the test.
+
+        Returns:
+            Path: The stimuli src for the test.
+
+        Raises:
+            NotImplementedError: If the stimuli vocalizer type is not supported.
+        """
+        if self.config["vocalization_mode"] == "tts":
+            if self.config["signal_processing"] == SignalProcessingType.NOTHING.value:
+                return Path(
+                    self.config["test"]["hearing-test"][test_name][
+                        "stimuli-recordings-tts"
+                    ]
+                )
+            elif (
+                self.config["signal_processing"] == SignalProcessingType.LOW_PASS.value
+            ):
+                return Path(
+                    self.config["test"]["hearing-test"][test_name][
+                        "stimuli_recordings_tts_low_pass"
+                    ]
+                )
+            elif (
+                self.config["signal_processing"]
+                == SignalProcessingType.MODULATION_MATCHED.value
+            ):
+                return Path(
+                    self.config["test"]["hearing-test"][test_name][
+                        "stimuli_recordings_tts_modulation_matched"
+                    ]
+                )
+            elif (
+                self.config["signal_processing"]
+                == SignalProcessingType.LOW_PASS_MODULATION_MATCHED.value
+            ):
+                return Path(
+                    self.config["test"]["hearing-test"][test_name][
+                        "stimuli_recordings_tts_low_pass_modulation_matched"
+                    ]
+                )
+        elif self.config["vocalization_mode"] == "recorded":
+            return Path(
+                self.config["test"]["hearing-test"][test_name][
+                    "stimuli-recordings-natural"
+                ]
+            )
+        else:
+            raise NotImplementedError
 
 
 class FAAF(TestTypes):

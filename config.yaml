@@ -18,7 +18,7 @@ test:
       noise:
         type: babble #[white, babble]
         src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/natural/22k/speech_shaped_noise_ASL_natural.wav"
-        src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/speech_shaped_noise_ASL_tts.wav"
+        src_tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/speech_shaped_noise_ASL_tts.wav"
         src_tts_low_pass: ""
         src_tts_low_pass_modulation_matched: ""
         src_tts_modulation_matched: ""

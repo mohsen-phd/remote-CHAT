@@ -19,6 +19,11 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
+def convert_test_name_presentation_to_config(test_name_presentation: str) -> str:
+    """Convert test name presentation to config format."""
+    return test_name_presentation.replace(" ", "_").lower()
+
+
 def preparation() -> dict[str, str]:
     """Prepare the test and logging system.
 
@@ -29,9 +34,22 @@ def preparation() -> dict[str, str]:
     test_number = input(Fore.GREEN + "Enter test number: ")
     test_name = input(Fore.GREEN + "Enter test name: ")
     test_name_presentation = input(Fore.GREEN + "Enter test name for showing: ")
-    response_capturing_mode = input(Fore.GREEN + "Enter response capturing mode: ")
-    vocalization_mode = input(Fore.GREEN + "Enter vocalization mode: ")
-    test_mode = input(Fore.GREEN + "Enter the test mode: ")
+
+    response_capturing_mode = input(
+        Fore.GREEN + "Enter response capturing mode (asr or cli): "
+    )
+    vocalization_mode = input(
+        Fore.GREEN + "Enter vocalization mode (tts or recorded): "
+    )
+    signal_processing = input(
+        Fore.GREEN
+        + "Enter processing mode ((n)one, (l)owpass, (m)odulation matching or (b)oth): "
+    )
+    test_mode = input(Fore.GREEN + "Enter the test mode (test or practice): ")
+
+    # todo: remove the following lines after testing
+    if test_name == "asl" and response_capturing_mode == "cli":
+        logger.add(sys.stderr, level="DEBUG")
 
     # todo:replace the following lines with the above lines
     # participant_id = 999
@@ -58,6 +76,7 @@ def preparation() -> dict[str, str]:
         "test_name": test_name,
         "test_name_presentation": test_name_presentation,
         "test_mode": test_mode,
+        "signal_processing": signal_processing,
     }
     return custom_config
 
@@ -80,6 +99,7 @@ def read_configs(custom_config: dict) -> dict:
     configs["vocalization_mode"] = custom_config["vocalization_mode"]
     configs["test_name_presentation"] = custom_config["test_name_presentation"]
     configs["test_mode"] = custom_config["test_mode"]
+    configs["signal_processing"] = custom_config["signal_processing"]
     logger.debug(f"Config file: {configs}")
     return configs
 

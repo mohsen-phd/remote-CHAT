@@ -179,14 +179,15 @@ class ASLQuestions(Questions):
         Returns:
             bool: Is a match or not.
         """
+        # todo: asnwer should be lemmatized and processed
         answer_without_space = re.sub(r"\s+", "", answer)
 
         correct_count = 0
         processed_main_words = lemmatizer(
             remove_contractions(" ".join(self.main_words))
         ).split(" ")
-        for word in processed_main_words:
-            if word in answer_without_space:
+        for org_word, word in zip(self.main_words, processed_main_words):
+            if word in answer_without_space or org_word in answer_without_space:
                 correct_count += 1
 
         if correct_count >= (len(self.main_words) - 1):

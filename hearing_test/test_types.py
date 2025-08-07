@@ -382,8 +382,6 @@ class ASL(TestTypes):
 class FAAF(TestTypes):
     """Implementing the FAAF test."""
 
-    # TODO: Check this class
-
     def __init__(self, config: dict) -> None:
         """Initialize the FAAF test.
 

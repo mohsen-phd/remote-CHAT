@@ -139,6 +139,7 @@ class ASLQuestions(Questions):
                 full_question_id = f"{set_num}-{question_num}"
                 if full_question_id not in self.previous_stimuli or counter > 80:
                     break
+                counter += 1
             self.previous_stimuli.add(full_question_id)
         else:
             set_num = 1

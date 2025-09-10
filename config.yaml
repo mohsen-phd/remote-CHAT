@@ -18,18 +18,18 @@ test:
       noise:
         type: babble #[white, babble]
         src: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/natural/22k/speech_shaped_noise_ASL_natural.wav"
-        src_tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/speech_shaped_noise_ASL_tts.wav"
-        src_tts_low_pass: ""
-        src_tts_low_pass_modulation_matched: ""
-        src_tts_modulation_matched: ""
+        src_tts: "media/ASL/adjusted/tts/speech_shaped_noise_ASL_tts_original.wav"
+        src_tts_low_pass: "media/ASL/adjusted/tts/speech_shaped_noise_stimuli_recordings_tts_low_pass.wav"
+        src_tts_low_pass_modulation_matched: "media/ASL/adjusted/tts/speech_shaped_noise_stimuli_recordings_tts_low_pass_modulation_matched.wav"
+        src_tts_modulation_matched: "media/ASL/adjusted/tts/speech_shaped_noise_stimuli_recordings_tts_modulation_matched.wav"
 
         # src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/speech_shaped_noise_low_pass_8k.wav"
 
       stimuli-recordings-natural: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/natural/22k/test"
-      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/mello/test"
-      stimuli_recordings_tts_low_pass: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/lowpass_filtered/test"
-      stimuli_recordings_tts_low_pass_modulation_matched: "/Users/user/Documents/"
-      stimuli_recordings_tts_modulation_matched: "/Users/user/Documents/"
+      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/stimuli-recordings-tts/test"
+      stimuli_recordings_tts_low_pass: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/stimuli_recordings_tts_low_pass"
+      stimuli_recordings_tts_low_pass_modulation_matched: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/ASL/adjusted/tts/stimuli_recordings_tts_low_pass_modulation_matched"
+      stimuli_recordings_tts_modulation_matched: "media/ASL/adjusted/tts/stimuli_recordings_tts_modulation_matched"
 
     FAAF:
       noise:

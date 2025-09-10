@@ -32,14 +32,14 @@ def preparation() -> dict[str, str]:
     """
     participant_id = input(Fore.GREEN + "Enter The ID: ")
     test_number = input(Fore.GREEN + "Enter test number: ")
-    test_name = input(Fore.GREEN + "Enter test name: ")
+    test_name = input(Fore.GREEN + "Enter test name: ") or "asl"
     test_name_presentation = input(Fore.GREEN + "Enter test name for showing: ")
 
     response_capturing_mode = input(
-        Fore.GREEN + "Enter response capturing mode (asr or cli): "
+        Fore.GREEN + "Enter response capturing mode (asr or cli): " or "cli"
     )
     vocalization_mode = input(
-        Fore.GREEN + "Enter vocalization mode (tts or recorded): "
+        Fore.GREEN + "Enter vocalization mode (tts or recorded): " or "tts"
     )
     signal_processing = input(
         Fore.GREEN

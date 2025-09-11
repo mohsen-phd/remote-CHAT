@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "wordnet_hearing_test"}]
 
 [tool.poetry.dependencies]
-python = "3.10.15"
+python = ">=3.10.15,<3.10.17"
 torch = "^2.5"
 torchvision = "^0.20"
 torchaudio = "^2.5"
@@ -25,6 +25,7 @@ colorama = "^0.4.6"
 librosa = "^0.10.2.post1"
 openai = "^1.54.5"
 accelerate = "^1.1.1"
+flask = "^3.1.2"
 
 
 [tool.poetry.group.dev.dependencies]

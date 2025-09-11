@@ -1,183 +1,125 @@
-"""Main entry point of the program."""
-
-import os
-import sys
-import termios
-
+from flask import Flask, request, jsonify
+import os, sys, termios, logging
 from colorama import Fore
-from loguru import logger
+from test_utils import (
+    preparation,
+    read_configs,
+    get_test_manager,
+    SpeechInNoise,
+    play_stimuli,
+    save_results,
+)
 
-from hearing_test.test_logic import SpeechInNoise
-from util import get_test_manager, play_stimuli, read_conf, save_results
+app = Flask(__name__)
 
-logger.remove(0)
-# logger.add(sys.stderr, level="DEBUG")
-logger.add(sys.stderr, level="INFO")
-
-import warnings
-
-warnings.filterwarnings("ignore")
-
-
-def convert_test_name_presentation_to_config(test_name_presentation: str) -> str:
-    """Convert test name presentation to config format."""
-    return test_name_presentation.replace(" ", "_").lower()
-
-
-def preparation() -> dict[str, str]:
-    """Prepare the test and logging system.
-
-    Returns:
-        dict: dictionary containing the custom configurations.
-    """
-    participant_id = input(Fore.GREEN + "Enter The ID: ")
-    test_number = input(Fore.GREEN + "Enter test number: ")
-    test_name = input(Fore.GREEN + "Enter test name: ") or "asl"
-    test_name_presentation = input(Fore.GREEN + "Enter test name for showing: ")
-
-    response_capturing_mode = input(
-        Fore.GREEN + "Enter response capturing mode (asr or cli): " or "cli"
-    )
-    vocalization_mode = input(
-        Fore.GREEN + "Enter vocalization mode (tts or recorded): " or "tts"
-    )
-    signal_processing = input(
-        Fore.GREEN
-        + "Enter processing mode ((n)one, (l)owpass, (m)odulation matching or (b)oth): "
-    )
-    test_mode = input(Fore.GREEN + "Enter the test mode (test or practice): ")
-
-    # todo: remove the following lines after testing
-    if test_name == "asl" and response_capturing_mode == "cli":
-        logger.add(sys.stderr, level="DEBUG")
-
-    # todo:replace the following lines with the above lines
-    # participant_id = 999
-    # test_number = 3
-    # response_capturing_mode = "cli"
-    # test_name = "asl"
-    # test_name_presentation = "asl"
-    # vocalization_mode = "recorded"
-    # test_mode = "test"
-
-    save_dir = f"records/{participant_id}"
-    os.makedirs(save_dir, exist_ok=True)
-    os.makedirs(f"save_dir/{test_name_presentation}", exist_ok=True)
-
-    logger.add(f"{save_dir}/{test_name_presentation}/out.log")
-    logger.debug(f"\nParticipant ID: {participant_id}")
-    input(Fore.RED + "Press enter to start the test ")
-    custom_config = {
-        "participant_id": participant_id,
-        "save_dir": save_dir,
-        "test_number": test_number,
-        "response_capturing_mode": response_capturing_mode,
-        "vocalization_mode": vocalization_mode,
-        "test_name": test_name,
-        "test_name_presentation": test_name_presentation,
-        "test_mode": test_mode,
-        "signal_processing": signal_processing,
-    }
-    return custom_config
+# Global state (in production: move to session/db)
+state = {
+    "manager": None,
+    "configs": None,
+    "track_results": {},
+    "snr_db": None,
+    "signal_level": 65,
+    "noise_level": 60,
+    "correct_count": 0,
+    "incorrect_count": 0,
+    "iteration": 1,
+}
 
 
-def read_configs(custom_config: dict) -> dict:
-    """Read config.yaml and update the save location and response capturing mode based on user input.
-
-    Args:
-        custom_config (dict): custom configurations provided by the user.
-
-    Returns:
-        dict: Configurations.
-    """
-    configs = read_conf("config.yaml")
-    configs["test"][
-        "record_save_dir"
-    ] = f"{custom_config['save_dir']}/{custom_config['test_name_presentation']}"
-    configs["response_capturing"] = custom_config["response_capturing_mode"]
-    configs["test_name"] = custom_config["test_name"]
-    configs["vocalization_mode"] = custom_config["vocalization_mode"]
-    configs["test_name_presentation"] = custom_config["test_name_presentation"]
-    configs["test_mode"] = custom_config["test_mode"]
-    configs["signal_processing"] = custom_config["signal_processing"]
-    logger.debug(f"Config file: {configs}")
-    return configs
-
-
-def main():
-    """Code entry point."""
+@app.route("/start", methods=["POST"])
+def start_test():
     custom_config = preparation()
     configs = read_configs(custom_config)
     manager = get_test_manager(configs)
-    track_results = {}
-    snr_db = manager.start_snr
-    correct_count = incorrect_count = 0
-    iteration = 1
-    signal_level = 65
-    noise_level = 60
-    while not manager.hearing_test.stop_condition():
-        os.system("cls" if os.name == "nt" else "clear")
-        this_round = {}
-        this_round["snr"] = snr_db
-        termios.tcflush(sys.stdin, termios.TCIOFLUSH)
-        print(Fore.RED + "Press Enter for the next round")
-        input()
-        stimuli_id, stimuli_text, response_getting_prompt = (
-            manager.test_type.stimuli_generator.get_stimuli(
-                test_mode=configs["test_mode"]
-            )
+
+    state.update(
+        {
+            "manager": manager,
+            "configs": configs,
+            "snr_db": manager.start_snr,
+            "track_results": {},
+            "signal_level": 65,
+            "noise_level": 60,
+            "correct_count": 0,
+            "incorrect_count": 0,
+            "iteration": 1,
+        }
+    )
+
+    return jsonify({"message": "Test started", "snr": state["snr_db"]})
+
+
+@app.route("/next", methods=["POST"])
+def next_round():
+    manager = state["manager"]
+    if manager.hearing_test.stop_condition():
+        state["track_results"]["SRT"] = manager.hearing_test.srt
+        state["track_results"]["config"] = state["configs"]
+        save_results(state["track_results"])
+        return jsonify({"end": True, "srt": manager.hearing_test.srt})
+
+    this_round = {"snr": state["snr_db"]}
+    stimuli_id, stimuli_text, response_prompt = (
+        manager.test_type.stimuli_generator.get_stimuli(
+            test_mode=state["configs"]["test_mode"]
         )
+    )
+    this_round["stimuli"] = stimuli_text
 
-        os.system("cls" if os.name == "nt" else "clear")
-        print(Fore.YELLOW + "Please listen")
-        logger.debug(f"{iteration} :The stimuli is: {stimuli_text}")
-        this_round["stimuli"] = stimuli_text
+    # Calculate noise/signal
+    sig_lvl, noise_lvl = SpeechInNoise.calculate_noise_signal_level(
+        state["signal_level"], state["noise_level"], state["snr_db"]
+    )
+    state["signal_level"], state["noise_level"] = sig_lvl, noise_lvl
 
-        signal_level, noise_level = SpeechInNoise.calculate_noise_signal_level(
-            signal_level, noise_level, snr_db
-        )
-        logger.debug(f"Signal level: {signal_level}, Noise level: {noise_level}")
-        play_stimuli(
-            manager.test_type,
-            stimuli_id,
-            manager.noise,
-            signal_level=signal_level,
-            noise_level=noise_level,
-        )
+    play_stimuli(
+        manager.test_type,
+        stimuli_id,
+        manager.noise,
+        signal_level=sig_lvl,
+        noise_level=noise_lvl,
+    )
 
-        transcribe = manager.get_response(response_getting_prompt)
-        this_round["response"] = transcribe
-        matched = manager.test_type.stimuli_generator.check_answer(transcribe)
-        logger.debug(f"Matched: {matched} \n")
-        this_round["matched"] = matched
-        if matched:
-            correct_count += 1
-        else:
-            incorrect_count += 1
+    state["track_results"][state["iteration"]] = this_round
+    return jsonify(
+        {
+            "stimuli_text": stimuli_text,
+            "snr": state["snr_db"],
+            "iteration": state["iteration"],
+            "prompt": response_prompt,
+        }
+    )
 
-        new_snr_db = manager.hearing_test.get_next_snr(
-            correct_count, incorrect_count, snr_db
-        )
-        manager.hearing_test.update_variables(matched, snr_db)
-        logger.debug(f"New SNR: {new_snr_db}")
-        track_results[iteration] = this_round
-        if new_snr_db != snr_db:
-            snr_db = new_snr_db
-            correct_count = incorrect_count = 0
-        iteration += 1
 
-    track_results[iteration] = {
-        "snr": snr_db,
-        "stimuli": stimuli_text,
-        "response": transcribe,
-        "matched": matched,
-    }
-    logger.debug(f"Final SRT: {manager.hearing_test.srt} \n")
-    track_results["SRT"] = manager.hearing_test.srt
-    track_results["config"] = custom_config
-    save_results(track_results)
-    print(Fore.RED + "End of the test")
+@app.route("/response", methods=["POST"])
+def handle_response():
+    data = request.json
+    transcribe = data.get("response")
+
+    manager = state["manager"]
+    this_round = state["track_results"][state["iteration"]]
+    this_round["response"] = transcribe
+
+    matched = manager.test_type.stimuli_generator.check_answer(transcribe)
+    this_round["matched"] = matched
+
+    if matched:
+        state["correct_count"] += 1
+    else:
+        state["incorrect_count"] += 1
+
+    new_snr = manager.hearing_test.get_next_snr(
+        state["correct_count"], state["incorrect_count"], state["snr_db"]
+    )
+    manager.hearing_test.update_variables(matched, state["snr_db"])
+
+    if new_snr != state["snr_db"]:
+        state["snr_db"] = new_snr
+        state["correct_count"] = state["incorrect_count"] = 0
+        state["iteration"] += 1
+
+    return jsonify({"matched": matched, "new_snr": state["snr_db"]})
 
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True)

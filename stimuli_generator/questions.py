@@ -213,7 +213,7 @@ class CHATQuestions(Questions):
             OpenAI: OpenAI client.
         """
         with open("keys/openai.txt") as f:
-            api_key = f.read()
+            api_key = f.read().strip()
         return OpenAI(api_key=api_key)
 
     def _read_chat_json(self, root_src: str) -> dict:

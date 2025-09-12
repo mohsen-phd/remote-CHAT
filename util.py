@@ -2,16 +2,79 @@
 
 import json
 import os
+
 import numpy as np
 import yaml
 from loguru import logger
 from yaml import YAMLError
 
 from audio_processing.noise import Noise, convert_to_specific_db_spl
+from hearing_test.test_logic import SpeechInNoise
 from hearing_test.test_manager import ASRTestManager, CliTestManager, TestManager
 from hearing_test.test_types import TestTypes
 from vocalizer.utils import play_sound
-from hearing_test.test_logic import SpeechInNoise
+from colorama import Fore
+
+
+def preparation() -> dict[str, str]:
+    """Prepare the test and logging system.
+
+    Returns:
+        dict: dictionary containing the custom configurations.
+    """
+    participant_id = 159
+    test_number = 1
+    test_name = "chat"
+    test_name_presentation = "chat" + "-" + str(test_number)
+
+    response_capturing_mode = "asr"
+    vocalization_mode = "tts"
+    signal_processing = "n"
+    test_mode = "test"
+
+    save_dir = f"records/{participant_id}"
+    os.makedirs(save_dir, exist_ok=True)
+    os.makedirs(f"save_dir/{test_name_presentation}", exist_ok=True)
+
+    logger.add(f"{save_dir}/{test_name_presentation}/out.log")
+    logger.debug(f"\nParticipant ID: {participant_id}")
+
+    custom_config = {
+        "participant_id": participant_id,
+        "save_dir": save_dir,
+        "test_number": test_number,
+        "response_capturing_mode": response_capturing_mode,
+        "vocalization_mode": vocalization_mode,
+        "test_name": test_name,
+        "test_name_presentation": test_name_presentation,
+        "test_mode": test_mode,
+        "signal_processing": signal_processing,
+    }
+    return custom_config
+
+
+def read_configs(custom_config: dict) -> dict:
+    """Read config.yaml and update the save location and response capturing mode based on user input.
+
+    Args:
+        custom_config (dict): custom configurations provided by the user.
+
+    Returns:
+        dict: Configurations.
+    """
+    configs = read_conf("config.yaml")
+    configs["test"][
+        "record_save_dir"
+    ] = f"{custom_config['save_dir']}/{custom_config['test_name_presentation']}"
+    configs["response_capturing"] = custom_config["response_capturing_mode"]
+    configs["test_name"] = custom_config["test_name"]
+    configs["vocalization_mode"] = custom_config["vocalization_mode"]
+    configs["test_name_presentation"] = custom_config["test_name_presentation"]
+    configs["test_mode"] = custom_config["test_mode"]
+    configs["signal_processing"] = custom_config["signal_processing"]
+    configs["participant_id"] = custom_config["participant_id"]
+    logger.debug(f"Config file: {configs}")
+    return configs
 
 
 def read_conf(src: str = "config.yaml") -> dict:
@@ -40,7 +103,7 @@ def play_stimuli(
     noise: Noise,
     signal_level: float,
     noise_level: float,
-):
+) -> tuple[np.ndarray, int]:
     """Play the stimuli to the patient.
 
     Args:
@@ -55,6 +118,7 @@ def play_stimuli(
 
     padding_size = sample_rate // 3
 
+    sound_wave = None
     if "noisy" in sound_wave_dict:
         sound_wave_noisy = np.pad(
             sound_wave_dict["noisy"],
@@ -65,7 +129,7 @@ def play_stimuli(
         noise_signal = noise.generate_noise(sound_wave_noisy, noise_level)
         sound_wave_noisy = convert_to_specific_db_spl(sound_wave_noisy, signal_level)
         noisy_wave = sound_wave_noisy + noise_signal
-        play_sound(wave=noisy_wave, fs=sample_rate)
+        sound_wave = noisy_wave
 
     if "clean" in sound_wave_dict:
         sound_wave_clean = np.pad(
@@ -75,7 +139,9 @@ def play_stimuli(
             constant_values=(0, 0),
         )
         sound_wave_clean = convert_to_specific_db_spl(sound_wave_clean, signal_level)
-        play_sound(wave=sound_wave_clean, fs=sample_rate)
+        sound_wave += noisy_wave
+
+    return sound_wave, sample_rate
 
 
 def get_test_manager(configs: dict) -> TestManager:
@@ -98,16 +164,16 @@ def get_test_manager(configs: dict) -> TestManager:
         raise NotImplementedError
 
 
-def save_results(results: dict):
+def save_results(results: dict) -> None:
     """Save the results of the test.
 
     Args:
         results (dict): Results of the test.
     """
-    filename = f"records/snr_results/{results['config']['test_name_presentation']}/{results['config']['participant_id']}.json"
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-    with open(
-        filename,
-        "w",
-    ) as outfile:
+    participant_id = results["config"]["participant_id"]
+    test_name_presentation = results["config"]["test_name_presentation"]
+    save_dir = f"records/{participant_id}/{test_name_presentation}"
+    os.makedirs(save_dir, exist_ok=True)
+    filename = f"{save_dir}/results.json"
+    with open(filename, "w") as outfile:
         json.dump(results, outfile)

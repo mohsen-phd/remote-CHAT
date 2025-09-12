@@ -154,31 +154,15 @@ class ASRTestManager(TestManager):
             return FBWav2Vec2()
         raise NotImplementedError
 
-    def get_response(self, prompt: str) -> list[str]:
+    def get_response(self, wav_file_src) -> list[str]:
         """Get the response from the participant.
-
-        Args:
-            prompt (str): The prompt to present to the participant.
 
         Returns:
             list[str]: List of words in the participant's response.
         """
-        logger.debug(prompt)
 
-        os.system("cls" if os.name == "nt" else "clear")
-        print(Fore.GREEN + prompt)
-
-        file_src = self.recorder.listen()
-
-        os.system("cls" if os.name == "nt" else "clear")
-        print(Fore.GREEN + "Please Wait...")
-
-        transcribe = self.response_capturer.get(src=file_src).lower()
+        transcribe = self.response_capturer.get(src=wav_file_src).lower()
         logger.debug(transcribe)
         results = self.test_type.asr_post_process(transcribe)
         logger.debug(results)
-        try:
-            os.remove(file_src.split("/")[-1])
-        except FileNotFoundError:
-            logger.debug("file not found")
         return results

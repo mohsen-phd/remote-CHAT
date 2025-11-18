@@ -8,7 +8,7 @@ from colorama import Fore
 from loguru import logger
 
 from hearing_test.test_logic import SpeechInNoise
-from util import get_test_manager, play_stimuli, read_conf, save_results
+from util import get_test_manager, vocalize_stimuli, read_conf, save_results
 
 logger.remove(0)
 # logger.add(sys.stderr, level="DEBUG")
@@ -137,7 +137,7 @@ def main():
             signal_level, noise_level, snr_db
         )
         logger.debug(f"Signal level: {signal_level}, Noise level: {noise_level}")
-        play_stimuli(
+        vocalize_stimuli(
             manager.test_type,
             stimuli_id,
             manager.noise,

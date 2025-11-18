@@ -284,8 +284,20 @@ class Whisper(ASR):
     https://huggingface.co/openai/whisper-large-v3
     """
 
+    _instance = None
+    _initialized = False  # Class-level flag
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(Whisper, cls).__new__(cls)
+
+        return cls._instance
+
     def __init__(self) -> None:
         """Initialize a Whisper asr model."""
+        if Whisper._initialized:
+            return
+
         super().__init__()
 
         self.device = "mps"  # "cpu , mps"
@@ -299,7 +311,7 @@ class Whisper(ASR):
             torch_dtype=self.torch_dtype,
             low_cpu_mem_usage=True,
             use_safetensors=True,
-        ).to(self.device)
+        )
 
         self.processor = AutoProcessor.from_pretrained(self.model_id)
 
@@ -311,6 +323,8 @@ class Whisper(ASR):
             torch_dtype=self.torch_dtype,
             device=self.device,
         )
+
+        Whisper._initialized = True
 
     def get(self, src: str) -> str:
         """Transcribe the input file.

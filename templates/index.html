@@ -1,14 +1,12 @@
 {% extends "base.html" %}
-
 {% block content %}
+<p>participant: {{participant_id}}, Run: {{test_number}}</p>
 <button id="startBtn">Start Test</button>
 <button id="NextBtn">Next</button>
 <div id="responseSection">
     <button id="recordBtn">🎤 Record (3s)</button>
 </div>
 <div id="output"></div>
-
 <div id="responseSection" style="display:none;">
-
 </div>
 {% endblock %}

@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Remote Hearing Test - Welcome{% endblock %}
+
+{% block content %}
+<style>
+    .hero-icon {
+        font-size: 4rem;
+        color: var(--primary-purple);
+        margin-bottom: 2rem;
+    }
+
+    .step-card {
+        transition: transform 0.3s ease;
+    }
+
+    .step-card:hover {
+        transform: translateY(-5px);
+    }
+</style>
+
+<div class="container my-5">
+
+    <!-- Instructions Section -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8">
+            <div class="card p-4">
+                <h2 class="text-purple mb-4 text-center">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Before You Begin
+                </h2>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 step-card">
+                            <div class="text-center">
+                                <i class="fas fa-headphones icon-purple mb-3" style="font-size: 2rem;"></i>
+                                <h5 class="text-purple">1. Use Headphones</h5>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 step-card">
+                            <div class="text-center">
+                                <i class="fas fa-volume-up icon-purple mb-3" style="font-size: 2rem;"></i>
+                                <h5 class="text-purple">2. Find Quiet Space</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 step-card">
+                            <div class="text-center">
+                                <i class="fas fa-clock icon-purple mb-3" style="font-size: 2rem;"></i>
+                                <h5 class="text-purple">3. Allow 10 Minutes</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 step-card">
+                            <div class="text-center">
+                                <i class="fas fa-times icon-purple mb-3" style="font-size: 2rem;"></i>
+                                <h5 class="text-purple">4. Remove Hearing Aids</h5>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Important Notes -->
+    <!-- <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card p-4">
+                <div class="alert alert-info border-0" style="background-color: var(--accent-purple);">
+                    <h5 class="text-purple">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Important Note
+                    </h5>
+                    <p class="mb-0">
+                        This is a screening test and should not replace professional medical advice.
+                        If you have concerns about your hearing, please consult with a healthcare professional
+                        or audiologist.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    </br>
+    <!-- Hero Section -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8">
+            <div class="card p-5 text-center fade-in">
+                <div class="form-check mb-4 text-start">
+                    <input class="form-check-input" type="checkbox" id="consentCheck">
+                    <label class="form-check-label" for="consentCheck">
+                        I have read and understood the participants information sheet, and I agree to participate in
+                        this
+                        study.
+                        <br />
+                        <a href="{{ url_for('static', filename='doc/PIS.pdf') }}" target="_blank">Click here for the
+                            participants information
+                            sheet</a>
+
+                    </label>
+                </div>
+
+                <a href="/calibration" class="btn btn-purple btn-lg" id="participateBtn">
+                    Please check the above box to continue.
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Optional: Disable button until checkbox is checked
+    document.addEventListener('DOMContentLoaded', function () {
+        const checkbox = document.getElementById('consentCheck');
+        const button = document.getElementById('participateBtn');
+
+        // Initially disable button
+        button.style.opacity = '0.5';
+        button.style.pointerEvents = 'none';
+
+        checkbox.addEventListener('change', function () {
+            if (this.checked) {
+                button.style.opacity = '1';
+                button.style.pointerEvents = 'auto';
+                button.textContent = 'Continue';
+            } else {
+                button.style.opacity = '0.5';
+                button.style.pointerEvents = 'none';
+                button.textContent = 'Click on the checkbox above.';
+            }
+        });
+    });
+</script>
+{% endblock %}

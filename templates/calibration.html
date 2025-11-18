@@ -1,0 +1,362 @@
+{% extends "base.html" %}
+
+{% block title %}System Calibration - Hearing Test{% endblock %}
+
+{% block content %}
+<style>
+    .calibration-section {
+        border-left: 4px solid var(--primary-purple);
+        padding-left: 20px;
+        margin-bottom: 2rem;
+    }
+
+    .audio-btn {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin: 0 auto;
+        transition: all 0.3s ease;
+    }
+
+    .audio-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .volume-slider {
+        height: 8px;
+        border-radius: 10px;
+        background: #e9ecef;
+        outline: none;
+        -webkit-appearance: none;
+    }
+
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary-purple);
+        cursor: pointer;
+    }
+
+    .volume-slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary-purple);
+        cursor: pointer;
+        border: none;
+    }
+
+    .recording-area {
+        min-height: 200px;
+        border: 2px dashed #dee2e6;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .recording-area.recording {
+        border-color: var(--primary-purple);
+        background-color: rgba(111, 66, 193, 0.1);
+    }
+
+    .record-btn {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .pulse {
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<div class="container my-5">
+
+    <!-- Audio Test & Volume Control Section -->
+    <div class="row justify-content-center mb-4">
+        <div class="col-lg-8">
+            <div class="card p-4">
+                <div class="calibration-section">
+                    <h3 class="text-purple mb-4">
+                        <i class="fas fa-volume-up me-2"></i>
+                        1. Audio Calibration
+                    </h3>
+                    <p class="mb-4">Play the audio files below and adjust the your volume until the loud file is loud
+                        but comfortable, and the quiet file is quiet but still audible.</p>
+
+                    <!-- Test Audio Buttons -->
+                    <div class="row mb-4">
+                        <div class="col-md-6 text-center">
+                            <button id="quietAudioBtn" class="btn btn-purple"
+                                style="width: 100%; padding: 1rem; background-color: #A3BE8C;color: black;"
+                                onclick="playQuietAudio()">
+                                <i class="fas fa-volume-down me-2"></i>
+                                Play Quiet Audio
+                            </button>
+                            <small class="text-muted d-block mt-2">Should be quiet but audible</small>
+                        </div>
+
+                        <div class="col-md-6 text-center">
+                            <button id="loudAudioBtn" class="btn btn-purple"
+                                style="width: 100%; padding: 1rem; background-color: #D35400;color: white; "
+                                onclick="playLoudAudio()">
+                                <i class="fas fa-volume-up me-2"></i>
+                                Play Loud Audio
+                            </button>
+                            <small class="text-muted d-block mt-2">Should be loud but comfortable</small>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navigation -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card p-4 text-center">
+                <div class="alert alert-success border-0 mb-4" style="background-color: rgba(40, 167, 69, 0.1);">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Once you've set the audio, do not change it during the test.
+                </div>
+                <!-- Button container -->
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="javascript:history.back()" class="btn btn-outline-secondary btn-lg">
+                        <i class="fas fa-arrow-left me-2"></i>
+                        Back
+                    </a>
+                    <a href="/microphone" class="btn btn-purple btn-lg">
+                        <i class="fas fa-arrow-right me-2"></i>
+                        Next
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    let mediaRecorder;
+    let recordedChunks = [];
+    let isRecording = false;
+    let currentVolume = 0.5;
+
+    // Audio elements for the wav files
+    let loudAudio, quietAudio;
+
+    // Initialize audio elements
+    window.addEventListener('DOMContentLoaded', function () {
+        // Create audio elements for the test files
+        loudAudio = new Audio('static/audio/high.wav'); // You'll need to add this file
+        quietAudio = new Audio('static/audio/low.wav'); // You'll need to add this file
+
+        // Set initial volume
+        loudAudio.volume = currentVolume;
+        quietAudio.volume = currentVolume;
+
+        // Handle audio loading errors gracefully
+        loudAudio.onerror = function () {
+            console.warn('Loud test audio file not found, using generated tone');
+            loudAudio = null;
+        };
+
+        quietAudio.onerror = function () {
+            console.warn('Quiet test audio file not found, using generated tone');
+            quietAudio = null;
+        };
+    });
+
+    function playLoudAudio() {
+        const btn = document.getElementById('loudAudioBtn');
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Playing...';
+        btn.disabled = true;
+
+        if (loudAudio && !loudAudio.error) {
+            loudAudio.currentTime = 0;
+            loudAudio.play().then(() => {
+                loudAudio.onended = function () {
+                    btn.innerHTML = '<i class="fas fa-volume-up me-2"></i>Play Loud Test';
+                    btn.disabled = false;
+                };
+            }).catch(error => {
+                console.error('Error playing loud audio:', error);
+                playFallbackTone(800, 0.7); // Fallback tone
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fas fa-volume-up me-2"></i>Play Loud Test';
+                    btn.disabled = false;
+                }, 2000);
+            });
+        } else {
+            // Fallback to generated tone if wav file not available
+            playFallbackTone(800, 0.7);
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-volume-up me-2"></i>Play Loud Test';
+                btn.disabled = false;
+            }, 2000);
+        }
+    }
+
+    function playQuietAudio() {
+        const btn = document.getElementById('quietAudioBtn');
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Playing...';
+        btn.disabled = true;
+
+        if (quietAudio && !quietAudio.error) {
+            quietAudio.currentTime = 0;
+            quietAudio.play().then(() => {
+                quietAudio.onended = function () {
+                    btn.innerHTML = '<i class="fas fa-volume-down me-2"></i>Play Quiet Test';
+                    btn.disabled = false;
+                };
+            }).catch(error => {
+                console.error('Error playing quiet audio:', error);
+                playFallbackTone(400, 0.2); // Fallback tone
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fas fa-volume-down me-2"></i>Play Quiet Test';
+                    btn.disabled = false;
+                }, 2000);
+            });
+        } else {
+            // Fallback to generated tone if wav file not available
+            playFallbackTone(400, 0.2);
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-volume-down me-2"></i>Play Quiet Test';
+                btn.disabled = false;
+            }, 2000);
+        }
+    }
+
+    // Fallback tone generation for when wav files aren't available
+    function playFallbackTone(frequency, amplitude) {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const duration = 2;
+        const sampleRate = audioContext.sampleRate;
+        const numSamples = duration * sampleRate;
+        const buffer = audioContext.createBuffer(2, numSamples, sampleRate);
+
+        for (let i = 0; i < numSamples; i++) {
+            const sample = Math.sin(2 * Math.PI * frequency * i / sampleRate) * amplitude;
+            buffer.getChannelData(0)[i] = sample;
+            buffer.getChannelData(1)[i] = sample;
+        }
+
+        const source = audioContext.createBufferSource();
+        const gainNode = audioContext.createGain();
+
+        source.buffer = buffer;
+        gainNode.gain.value = currentVolume;
+
+        source.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+
+        source.start();
+    }
+
+    async function toggleRecording() {
+        if (!isRecording) {
+            await startRecording();
+        } else {
+            stopRecording();
+        }
+    }
+
+    async function startRecording() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            recordedChunks = [];
+
+            mediaRecorder.ondataavailable = function (event) {
+                if (event.data.size > 0) {
+                    recordedChunks.push(event.data);
+                }
+            };
+
+            mediaRecorder.onstop = function () {
+                const blob = new Blob(recordedChunks, { type: 'audio/webm' });
+                const audioUrl = URL.createObjectURL(blob);
+
+                // Store the recording for playback
+                window.recordedAudio = new Audio(audioUrl);
+
+                // Show playback controls
+                document.getElementById('playbackArea').style.display = 'block';
+            };
+
+            mediaRecorder.start();
+            isRecording = true;
+
+            // Update UI
+            document.getElementById('recordingArea').classList.add('recording');
+            document.getElementById('recordBtn').classList.add('pulse');
+            document.getElementById('recordIcon').className = 'fas fa-stop';
+            document.getElementById('recordStatus').textContent = 'Recording... Click to stop';
+
+        } catch (error) {
+            console.error('Error accessing microphone:', error);
+            alert('Unable to access microphone. Please check your browser permissions.');
+        }
+    }
+
+    function stopRecording() {
+        mediaRecorder.stop();
+        isRecording = false;
+
+        // Stop all tracks
+        mediaRecorder.stream.getTracks().forEach(track => track.stop());
+
+        // Update UI
+        document.getElementById('recordingArea').classList.remove('recording');
+        document.getElementById('recordBtn').classList.remove('pulse');
+        document.getElementById('recordIcon').className = 'fas fa-microphone';
+        document.getElementById('recordStatus').textContent = 'Recording complete';
+    }
+
+    function playRecording() {
+        if (window.recordedAudio) {
+            window.recordedAudio.volume = currentVolume;
+            window.recordedAudio.play();
+        }
+    }
+
+    function clearRecording() {
+        recordedChunks = [];
+        window.recordedAudio = null;
+        document.getElementById('playbackArea').style.display = 'none';
+        document.getElementById('recordStatus').textContent = 'Click to start recording';
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,472 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Test Info Card -->
+            <div class="card mb-4 fade-in">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h4 class="text-purple mb-0">
+                                <i class="fas fa-user me-2"></i>
+                                Participant: <span class="fw-bold">{{session['participant_id']}}</span>
+                            </h4>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <h4 class="text-purple mb-0">
+                                <i class="fas fa-repeat me-2"></i>
+                                Test Run: <span class="fw-bold">{{session['test_number']}}</span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Test Card -->
+            <div class="card fade-in">
+                <div class="card-body p-5 text-center">
+                    <!-- Start Section -->
+                    <div id="startSection">
+                        <div class="mb-4">
+                            <i class="fas fa-play-circle icon-purple" style="font-size: 4rem;"></i>
+                        </div>
+                        <h2 class="text-purple mb-3">Ready to Practice?</h2>
+                        <p class="text-muted mb-4">
+                            Click the button below to start your hearing test. You'll listen to an statement and a
+                            question. Recording will start automatically after each audio clip ends.
+                        </p>
+                        <div class="alert alert-success border-0 mb-4"
+                            style="background-color: rgba(40, 167, 69, 0.1);">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Practice until you are comfortable with the test, then proceed to the actual test.
+                        </div>
+                        <button id="startBtn" class="btn btn-purple btn-lg">
+                            <i class="fas fa-play me-2"></i>Start Practice
+                        </button>
+                    </div>
+
+                    <!-- Test Progress Section -->
+                    <div id="testSection" style="display: none;">
+
+
+                        <!-- Audio Player Section -->
+                        <div id="audioSection" class="mb-4" style="display: none;">
+                            <div class="mb-3">
+                                <i class="fas fa-volume-up icon-purple" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h4 class="text-purple mb-3">Listen Carefully</h4>
+                            <p class="text-muted mb-3">An audio clip is now playing. Recording will start automatically
+                                when it ends.</p>
+                            <div class="audio-visualization mb-3">
+                                <div class="sound-wave">
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recording Section -->
+                        <div id="recordingSection" class="mb-4" style="display: none;">
+                            <div class="mb-3">
+                                <i id="micIcon" class="fas fa-microphone icon-purple" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h4 class="text-purple mb-3">Now Speak</h4>
+                            <p class="text-muted mb-3">Recording automatically started. Answer the question you heard.
+                                Recording
+                                will last 3 seconds.</p>
+                            <div id="recordingTimer" class="recording-timer">
+                                <div class="timer-circle">
+                                    <span id="timerText">3</span>
+                                </div>
+                                <p class="text-danger mt-2">Recording in progress...</p>
+                            </div>
+                        </div>
+
+                        <!-- Processing Section -->
+                        <div id="processingSection" class="mb-4" style="display: none;">
+                            <div class="mb-3">
+                                <i class="fas fa-cog fa-spin icon-purple" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h4 class="text-purple mb-3">Processing Response</h4>
+                            <p class="text-muted mb-3">Please wait...</p>
+                            <div class="spinner-border text-purple" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+
+                        <!-- Next Section -->
+                        <div id="nextSection" class="mb-4" style="display: none;">
+                            <div class="mb-3">
+                                <i class="fas fa-check-circle text-success" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h4 class="text-purple mb-3">Response Processed</h4>
+                            <div id="ASRResult" class="alert alert-success border-0 mb-4"
+                                style="background-color: rgba(40, 167, 69, 0.1);">
+                                ASR result will be shown here.
+                            </div>
+                            <button id="nextBtn" class="btn btn-outline-secondary btn-lg">
+                                <i class="fas fa-refresh me-2"></i>More Practicing
+                            </button>
+                            <a href="/test" class="btn btn-purple btn-lg">
+                                <i class="fas fa-arrow-right me-2"></i>
+                                Proceed to Test
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div id="resultsSection" style="display: none;">
+                        <div class="mb-4">
+                            <i class="fas fa-trophy text-warning" style="font-size: 4rem;"></i>
+                        </div>
+                        <h2 class="text-purple mb-3">Test Complete!</h2>
+
+                    </div>
+
+                    <!-- Output Log -->
+                    <div id="output" class="mt-4 text-start" style="display: none;">
+                        <h5 class="text-purple">Test Log:</h5>
+                        <div class="alert alert-light" id="outputContent">
+                            <!-- Log content will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Additional styles for the test page */
+    .sound-wave {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        height: 40px;
+    }
+
+    .wave-bar {
+        width: 4px;
+        background: var(--primary-purple);
+        border-radius: 2px;
+        animation: wave 1.5s ease-in-out infinite;
+    }
+
+    .wave-bar:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .wave-bar:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .wave-bar:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    .wave-bar:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+
+    .wave-bar:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+
+    @keyframes wave {
+
+        0%,
+        100% {
+            height: 10px;
+            opacity: 0.7;
+        }
+
+        50% {
+            height: 30px;
+            opacity: 1;
+        }
+    }
+
+    .recording-timer {
+        animation: pulse 1s ease-in-out infinite;
+    }
+
+    .timer-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--primary-purple);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .recording .wave-bar {
+        animation: recordingWave 0.5s ease-in-out infinite;
+    }
+
+    @keyframes recordingWave {
+
+        0%,
+        100% {
+            height: 15px;
+            background: #dc3545;
+        }
+
+        50% {
+            height: 35px;
+            background: #ff6b7a;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Element references
+        const startBtn = document.getElementById("startBtn");
+        const startTestBtn = document.getElementById("startTestBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const outputContent = document.getElementById("outputContent");
+        const outputDiv = document.getElementById("output");
+        const ASRResult = document.getElementById("ASRResult");
+        // Section references
+        const startSection = document.getElementById("startSection");
+        const testSection = document.getElementById("testSection");
+        const audioSection = document.getElementById("audioSection");
+        const recordingSection = document.getElementById("recordingSection");
+        const processingSection = document.getElementById("processingSection");
+        const nextSection = document.getElementById("nextSection");
+        const resultsSection = document.getElementById("resultsSection");
+
+        // Timer references
+        const recordingTimer = document.getElementById("recordingTimer");
+        const timerText = document.getElementById("timerText");
+
+
+        // Recording variables
+        let mediaRecorder;
+        let audioChunks = [];
+        let currentTestStep = 0;
+        let totalSteps = 0;
+
+        //Aduio player
+        const audioPlayer = new Audio();
+        audioPlayer.preload = "auto";
+        // Utility functions
+        function showSection(section) {
+            [startSection, audioSection, recordingSection, processingSection, nextSection, resultsSection].forEach(s => {
+                s.style.display = 'none';
+            });
+            section.style.display = 'block';
+        }
+
+        function logMessage(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            outputContent.innerHTML += `<small class="text-muted">[${timestamp}]</small> ${message}<br>`;
+            // outputDiv.style.display = 'block';
+            outputDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function startRecordingTimer() {
+            let timeLeft = 3;
+            timerText.textContent = timeLeft;
+            recordingTimer.style.display = 'block';
+
+            const countdown = setInterval(() => {
+                timeLeft--;
+                timerText.textContent = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    recordingTimer.style.display = 'none';
+                }
+            }, 1000);
+        }
+
+        // Auto-recording function
+        async function startAutoRecording() {
+            try {
+                logMessage('Starting automatic recording...');
+
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = async () => {
+                    try {
+                        // Show processing section immediately after recording stops
+                        logMessage('Recording completed. Processing response...');
+                        document.querySelector('.sound-wave').classList.remove('recording');
+                        showSection(processingSection);
+
+                        const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
+                        const formData = new FormData();
+                        formData.append("audio", audioBlob, "response.wav");
+
+                        // Stop all tracks to free up microphone
+                        stream.getTracks().forEach(track => track.stop());
+
+                        let res = await fetch("/response", { method: "POST", body: formData });
+                        let data = await res.json();
+
+                        logMessage(`Response processed. Matched: ${data.matched}, New SNR: ${data.new_snr}`);
+
+                        showSection(nextSection);
+                        nextBtn.disabled = false;
+                        nextBtn.innerHTML = '<i class="fas fa-refresh me-2"></i>More Practicing';
+                        ASRResult.innerHTML = `<p>You said: <strong>"${data.ASR_transcription}</strong>". If this is incorrect, make sure:</p>
+                        <ul style="margin-left: 0; padding-left: 20px; text-align: left;">
+                            <li> You are speaking after the countdown starts</li>
+                            <li> Stop before it finishes</li>
+                            <li> Speak clearly</li>
+                        </ul>`;
+                    } catch (error) {
+                        console.error('Error processing response:', error);
+                        logMessage('Error processing your response. Please try the next round.');
+
+                        // Still continue to next section even if there's an error
+                        showSection(nextSection);
+                        nextBtn.disabled = false;
+                        nextBtn.innerHTML = '<i class="fas fa-refresh me-2"></i>More Practicing';
+                    }
+                };
+
+                // Show recording section and start recording
+                showSection(recordingSection);
+                mediaRecorder.start();
+
+                startRecordingTimer();
+                document.querySelector('.sound-wave').classList.add('recording');
+
+                // Stop recording after 3 seconds
+                setTimeout(() => {
+                    if (mediaRecorder && mediaRecorder.state === 'recording') {
+                        mediaRecorder.stop();
+                        // Note: processing section will be shown in the onstop handler
+                    }
+                }, 3000);
+
+            } catch (error) {
+                console.error('Error with automatic recording:', error);
+                logMessage('Error accessing microphone for automatic recording. Please check your microphone permissions and try the next round.');
+
+                // Continue to next section even if recording fails
+                setTimeout(() => {
+                    showSection(nextSection);
+                    nextBtn.disabled = false;
+                    nextBtn.innerHTML = '<i class="fas fa-refresh me-2"></i>More Practicing';
+                }, 2000);
+            }
+        }
+
+        // Event handlers
+        startBtn.addEventListener("click", async () => {
+            try {
+                startBtn.disabled = true;
+                startBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Starting...';
+
+                let res = await fetch("/start_practice", { method: "POST" });
+                let data = await res.json();
+
+                logMessage(`Test started. SNR: ${data.snr}`);
+
+                startSection.style.display = 'none';
+                testSection.style.display = 'block';
+
+                await nextRound();
+            } catch (error) {
+                console.error('Error starting test:', error);
+                logMessage('Error starting test. Please try again.');
+                startBtn.disabled = false;
+                startBtn.innerHTML = '<i class="fas fa-play me-2"></i>Start Practice';
+            }
+        });
+
+        nextBtn.addEventListener("click", async () => {
+            nextBtn.disabled = true;
+            nextBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Loading...';
+            await nextRound();
+        });
+
+        async function nextRound() {
+            try {
+                let res = await fetch("/next", { method: "POST" });
+                let data = await res.json();
+
+
+
+                logMessage(`Round ${currentTestStep}: "${data.stimuli_text}"`);
+
+                // Show audio section and play sound
+                showSection(audioSection);
+
+                if (data.audio_base64) {
+                    const audioSrc = "data:audio/mp3;base64," + data.audio_base64;
+                    audioPlayer.src = audioSrc;
+
+                    audioPlayer.load();
+
+                    audioPlayer.onended = async () => {
+                        // Automatically start recording after audio finishes
+                        logMessage('Audio playback finished. Starting automatic recording in 0.5 seconds...');
+                        setTimeout(async () => {
+                            await startAutoRecording();
+                        }, 500);
+                    };
+
+                    audioPlayer.onerror = () => {
+                        logMessage('Error playing audio. Starting automatic recording anyway.');
+                        setTimeout(async () => {
+                            await startAutoRecording();
+                        }, 1000);
+                    };
+
+                    await audioPlayer.play();
+                } else {
+                    // No audio provided, go straight to recording
+                    logMessage('No audio provided. Starting automatic recording.');
+                    setTimeout(async () => {
+                        await startAutoRecording();
+                    }, 1000);
+                }
+
+            } catch (error) {
+                console.error('Error in next round:', error);
+                logMessage('Error loading next test item. Please try again.');
+                nextBtn.disabled = false;
+                nextBtn.innerHTML = '<i class="fas fa-refresh me-2"></i>More Practicing';
+            }
+        }
+
+
+    });
+</script>
+{% endblock %}

@@ -3,18 +3,120 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hearing Test</title>
-    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Remote Hearing Test{% endblock %}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #6f42c1;
+            --light-purple: #8b5cf6;
+            --dark-purple: #5a2d91;
+            --accent-purple: #e6d9ff;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--accent-purple) 0%, #f8f9fa 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background: var(--primary-purple) !important;
+            box-shadow: 0 2px 10px rgba(111, 66, 193, 0.2);
+        }
+
+        .btn-purple {
+            background-color: var(--primary-purple);
+            border-color: var(--primary-purple);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-purple:hover {
+            background-color: var(--dark-purple);
+            border-color: var(--dark-purple);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(111, 66, 193, 0.3);
+        }
+
+        .btn-outline-secondary {
+            background-color: white;
+            /* light background */
+            border: 2px solid var(--primary-purple);
+            /* purple border */
+            color: var(--primary-purple);
+            /* purple text */
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-purple-secondary:hover {
+            background-color: var(--dark-purple);
+            color: white;
+            border-color: var(--dark-purple);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(111, 66, 193, 0.3);
+        }
+
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+
+        .icon-purple {
+            color: var(--primary-purple);
+        }
+
+        .text-purple {
+            color: var(--primary-purple);
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>WordNet Hearing Test</h1>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold">
+                <i class="fas fa-headphones me-2"></i>
+                Hearing Test
+            </a>
+        </div>
+    </nav>
 
     <main>
         {% block content %}{% endblock %}
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/main.js') }}" defer></script> -->
+
+    {% block scripts %}{% endblock %}
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 #User
 .DS_Store
 .vscode/
-
+temp
 
 records/*
 train/digit_asr/data

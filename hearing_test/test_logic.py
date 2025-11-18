@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 from enum import Enum
 
 from loguru import logger
+import numpy as np
 
 
 class STATUS(Enum):
@@ -213,56 +214,10 @@ class SpeechInNoise(HearingTest):
 
     @staticmethod
     def calculate_noise_signal_level(
-        signal_level: float, noise_level: float, snr_db: float
+        overall_db: float, snr_db: float
     ) -> tuple[float, float]:
-        """Get the current noise level, stimuli level and desired SNR and calculate the noise and stimuli level for next iteration. Cap the noise add 75 dB.
 
-        Args:
-            signal_level (float): The level of the signal.
-            noise_level (float): The level of the noise.
-            snr_db (float): The desired SNR in dB.
+        noise_db = overall_db - 10 * np.log10(10 ** (snr_db / 10) + 1)
 
-        Returns:
-            tuple[float, float]: New levels for noise and stimuli.
-        """
-
-        def increase_snr(
-            signal_level: float, noise_level: float, step_size: float
-        ) -> tuple[float, float]:
-            if signal_level <= 60:
-                signal_level += step_size
-            elif noise_level - step_size > 50:
-                noise_level -= step_size
-            elif signal_level + step_size < 75:
-                signal_level += step_size
-            else:
-                noise_level -= step_size
-            return signal_level, noise_level
-
-        def reduce_snr(
-            signal_level: float, noise_level: float, step_size: float
-        ) -> tuple[float, float]:
-            if signal_level >= 70:
-                signal_level -= step_size
-            elif 55 < noise_level + step_size < 75:
-                noise_level += step_size
-            elif 75 > signal_level - step_size >= 60:
-                signal_level -= step_size
-            else:
-                noise_level += step_size
-            return signal_level, noise_level
-
-        current_snr = signal_level - noise_level
-        step_size = abs(current_snr - snr_db)
-
-        if current_snr == snr_db:
-            return signal_level, noise_level
-
-        if snr_db > current_snr:
-            signal_level, noise_level = increase_snr(
-                signal_level, noise_level, step_size
-            )
-        elif current_snr > snr_db:
-            signal_level, noise_level = reduce_snr(signal_level, noise_level, step_size)
-
-        return signal_level, noise_level
+        speech_db = noise_db + snr_db
+        return speech_db, noise_db

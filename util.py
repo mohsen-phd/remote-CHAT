@@ -16,21 +16,17 @@ from vocalizer.utils import play_sound
 from colorama import Fore
 
 
-def preparation() -> dict[str, str]:
+def preparation(participant_id, test_number, test_name, test_mode) -> dict[str, str]:
     """Prepare the test and logging system.
 
     Returns:
         dict: dictionary containing the custom configurations.
     """
-    participant_id = 159
-    test_number = 1
-    test_name = "chat"
-    test_name_presentation = "chat" + "-" + str(test_number)
+    test_name_presentation = test_name + "-" + str(test_number)
 
     response_capturing_mode = "asr"
     vocalization_mode = "tts"
     signal_processing = "n"
-    test_mode = "test"
 
     save_dir = f"records/{participant_id}"
     os.makedirs(save_dir, exist_ok=True)
@@ -97,14 +93,14 @@ def read_conf(src: str = "config.yaml") -> dict:
             raise exc
 
 
-def play_stimuli(
+def vocalize_stimuli(
     hearing_test: TestTypes,
     stimuli: list[str],
     noise: Noise,
     signal_level: float,
     noise_level: float,
 ) -> tuple[np.ndarray, int]:
-    """Play the stimuli to the patient.
+    """Generate sound wave of the stimuli.
 
     Args:
         hearing_test (TestTypes): hearing test object. is used to get the sound wave.

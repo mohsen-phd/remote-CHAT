@@ -20,6 +20,7 @@ app.secret_key = "supersecret"  # required for Flask sessions
 
 # Global state dictionary (keys = session user_ids)
 state = {}
+whisper = Whisper()
 
 
 def get_run_key(participant_id, run_number):
@@ -246,5 +247,4 @@ def practice():
 
 
 if __name__ == "__main__":
-    whisper = Whisper()
     app.run(debug=True)

@@ -7,7 +7,7 @@ records/*
 train/digit_asr/data
 keys/*
 model_checkpoints/*
-*.wav
+/media
 test.py
 *.zip
 

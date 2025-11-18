@@ -39,8 +39,8 @@ test:
     CHAT:
       noise:
         type: babble #[white, babble]
-        src-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/adjusted/speech_shaped_noise_CHAT.wav"
-      stimuli-recordings-tts: "/Users/user/Documents/Projects/PhD/Wordnet-Hearing-Test/media/CHAT/adjusted/tts"
+        src-tts: "media/CHAT/adjusted/speech_shaped_noise_CHAT.wav"
+      stimuli-recordings-tts: "media/CHAT/adjusted/tts"
 
 response_capturing: cli #[cli, asr]
 vocalization_mode: recorded #[tts, recorded]
